@@ -1,23 +1,27 @@
 import { Header, HeaderBrand, HeaderHandburger } from "@/ui/layout/header";
 import { Main } from "@/ui/layout/main";
 import { Footer, FooterCopyright, FooterIcon } from "@/ui/layout/footer";
-import { Hero, About, Services } from "@/ui/page/home/inext";
 import { IconBrandGithub } from "@tabler/icons-react";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { type I18nType, getDictionary } from "@/i18n/utils";
+import { About, Hero, Service } from "@/ui/page/home";
 
-export default function Home() {
+export default async function Home({ params }: { params: I18nType }) {
+  const lang = (await params).lang;
+  const dict = await getDictionary(lang);
+
   return (
     <>
       <Header>
-        <HeaderBrand title="Arcstratus" href="/" />
+        <HeaderBrand title={dict.header.title} href="/" />
         <div className="grow-1"></div>
         <ThemeToggle />
         <HeaderHandburger items={[]} />
       </Header>
       <Main>
-        <Hero />
-        <About />
-        <Services />
+        <Hero lang={lang} />
+        <About lang={lang} />
+        <Service lang={lang} />
       </Main>
       <Footer className="border-t border-border">
         <FooterCopyright year={2025} href="/" by="Arcstratus" />

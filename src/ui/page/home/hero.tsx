@@ -1,27 +1,31 @@
 import { Button } from "@/components/ui/button";
-import { useTranslation } from "@/i18n/hooks";
+import { getDictionary } from "@/i18n/utils";
 
-export function Hero() {
-  const { t } = useTranslation();
+interface HeroProps {
+  lang: "en" | "tw";
+}
+
+export async function Hero(props: HeroProps) {
+  const dict = await getDictionary(props.lang);
 
   return (
-    <section id="hero" className="">
+    <section id="hero">
       <div className="relative isolate overflow-hidden bg-gradient-to-b from-indigo-100/20">
         <div className="mx-auto max-w-7xl pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:py-40">
           <div className="px-6 lg:px-0 lg:pt-4">
             <div className="mx-auto max-w-2xl">
               <div className="max-w-lg">
-                <h1 className="mt-10 tracking-tight text-gray-900 sm:text-6xl">
-                  {t("hero.title")}
+                <h1 className="mt-10 tracking-tight text-gray-900">
+                  {dict.hero.title}
                 </h1>
-                <p className="mt-6 text-gray-600">{t("hero.subtitle")}</p>
+                <h2 className="mt-6 text-gray-600">{dict.hero.subtitle}</h2>
                 <p className="mt-6 text-base leading-7 text-gray-600">
-                  {t("hero.description")}
+                  {dict.hero.description}
                 </p>
                 <div className="mt-10 flex items-center gap-x-6">
-                  <Button size="lg">{t("hero.cta")}</Button>
-                  <a href="#about" className="text-sm leading-6 text-gray-900">
-                    {t("navigation.about")} <span aria-hidden="true">→</span>
+                  <Button size="lg">{dict.hero.cta}</Button>
+                  <a href="#" className="text-sm leading-6 text-gray-900">
+                    {dict.navigation.about} <span aria-hidden="true">→</span>
                   </a>
                 </div>
               </div>
