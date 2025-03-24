@@ -120,3 +120,37 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .debug {
+    @apply border border-red-500;
+  }
+}
+
+@layer components {
+  .flex.left {
+    @apply justify-start;
+  }
+  .flex.center {
+    @apply justify-center;
+  }
+  .flex.right {
+    @apply justify-end;
+  }
+  .flex.between {
+    @apply justify-between;
+  }
+  .flex.around {
+    @apply justify-around;
+  }
+
+  .flex.top {
+    @apply items-start;
+  }
+  .flex.middle {
+    @apply items-center;
+  }
+  .flex.bottom {
+    @apply items-end;
+  }
+}
