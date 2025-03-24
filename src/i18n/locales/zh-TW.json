@@ -12,9 +12,62 @@
   },
   "navigation": {
     "home": "首頁",
-    "about": "關於",
+    "about": "關於我們",
+    "services": "服務項目",
     "contact": "聯絡我們",
-    "settings": "設定"
+    "blog": "部落格"
+  },
+  "hero": {
+    "title": "諾啟新程，澄清雲端",
+    "subtitle": "您的雲端技術夥伴",
+    "description": "諾澄有限科技公司專注於雲端技術創新，致力於為企業提供高效軟體解決方案、外包服務及專業教學分享。",
+    "cta": "了解更多"
+  },
+  "about": {
+    "title": "關於諾澄",
+    "description": "諾澄有限科技公司（Arcstratus Co., Ltd.）是一家專注於雲端技術創新的企業，以「諾守承諾，澄見未來」為核心理念。「諾澄」寓意我們對客戶的堅定承諾與提供清晰解決方案的追求，而「Arcstratus」則融合「Arc」（連結與創新的弧線）與「Stratus」（穩定層雲），象徵我們將先進技術與可靠雲端服務相連，助力企業與個人在數位時代實現卓越發展。",
+    "mission": {
+      "title": "我們的使命",
+      "description": "成為您值得信賴的雲端技術夥伴，為企業提供創新且可靠的解決方案。"
+    },
+    "vision": {
+      "title": "我們的願景",
+      "description": "引領雲端技術創新，推動企業數位轉型，創造更美好的未來。"
+    }
+  },
+  "services": {
+    "title": "服務項目",
+    "items": {
+      "cloud": {
+        "title": "雲端解決方案",
+        "description": "提供全方位的雲端服務，包括基礎設施建置、應用程式開發及系統整合。"
+      },
+      "outsourcing": {
+        "title": "技術外包服務",
+        "description": "專業的技術團隊，為您的專案提供完整的開發與維護服務。"
+      },
+      "education": {
+        "title": "專業教學分享",
+        "description": "提供雲端技術相關的培訓課程與技術分享，協助團隊提升技術能力。"
+      }
+    }
+  },
+  "contact": {
+    "title": "聯絡我們",
+    "description": "讓我們一起討論您的需求，為您提供最適合的解決方案。",
+    "form": {
+      "name": "姓名",
+      "email": "電子郵件",
+      "message": "訊息內容",
+      "submit": "送出"
+    }
+  },
+  "footer": {
+    "company": "諾澄有限科技公司",
+    "address": "地址",
+    "phone": "電話",
+    "email": "電子郵件",
+    "copyright": "版權所有"
   },
   "auth": {
     "login": "登入",
