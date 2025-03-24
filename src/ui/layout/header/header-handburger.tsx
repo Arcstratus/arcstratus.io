@@ -10,9 +10,5 @@ interface HeaderHandburgerProps {
 }
 
 export function HeaderHandburger(props: HeaderHandburgerProps) {
-  return (
-    <>
-      <Menu />
-    </>
-  );
+  return props.items.length === 0 ? null : <Menu />;
 }

@@ -19,7 +19,7 @@ const features = [
   },
 ];
 
-export default function Services() {
+export function Services() {
   const { t } = useTranslation();
 
   return (

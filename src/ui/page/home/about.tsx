@@ -1,10 +1,10 @@
 import { useTranslation } from "@/i18n/hooks";
 
-export default function About() {
+export function About() {
   const { t } = useTranslation();
 
   return (
-    <div id="about" className="bg-white py-24 sm:py-32">
+    <section id="about" className="bg-background py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-indigo-600">
@@ -38,6 +38,6 @@ export default function About() {
           </dl>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
