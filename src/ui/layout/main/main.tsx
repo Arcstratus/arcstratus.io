@@ -6,7 +6,7 @@ interface MainProps extends React.ComponentProps<"main"> {
   breadcrumb?: boolean;
 }
 
-const mainClassName = "container mx-auto px-4 pt-20 pb-8 overflow-y-auto";
+const mainClassName = "pt-16 pb-8 overflow-y-auto";
 
 export const Main = (props: MainProps) => {
   return (

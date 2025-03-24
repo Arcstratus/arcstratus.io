@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { I18nType } from "@/i18n/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
@@ -7,13 +8,19 @@ export const metadata: Metadata = {
   description: "Arcstratus - Cloud Infrastructure Management",
 };
 
-export default function RootLayout({
+export async function generateStaticParams() {
+  return [{ lang: "en" }, { lang: "tw" }];
+}
+
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: I18nType;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={(await params).lang} suppressHydrationWarning>
       <body className="min-h-screen">
         <ThemeProvider
           attribute="class"

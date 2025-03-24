@@ -1,4 +1,4 @@
-import { Menu } from "lucide-react";
+import { IconMenu2 } from "@tabler/icons-react";
 
 export interface HeaderHandburgerItems {
   label: string;
@@ -10,9 +10,5 @@ interface HeaderHandburgerProps {
 }
 
 export function HeaderHandburger(props: HeaderHandburgerProps) {
-  return (
-    <>
-      <Menu />
-    </>
-  );
+  return props.items.length === 0 ? null : <IconMenu2 />;
 }

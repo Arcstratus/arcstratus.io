@@ -1,0 +1,73 @@
+{
+  "header": {
+    "title": "Arcstratus"
+  },
+  "common": {},
+  "navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "contact": "Contact",
+    "blog": "Blog"
+  },
+  "hero": {
+    "title": "Commit to New Beginnings, Clarify the Cloud",
+    "subtitle": "Your Cloud Technology Partner",
+    "description": "Arcstratus Co., Ltd. is dedicated to cloud technology innovation, providing efficient software solutions, outsourcing services, and professional educational content.",
+    "cta": "Learn More"
+  },
+  "about": {
+    "title": "About Arcstratus",
+    "description": "Arcstratus Co., Ltd. (諾澄有限科技公司) is a company dedicated to cloud technology innovation, guided by the principle of \"Committed to Clarity, Building the Future.\" The name \"諾澄\" reflects our unwavering commitment to clients and pursuit of clear solutions, while \"Arcstratus\" merges \"Arc\" (an arc of connection and innovation) with \"Stratus\" (stable cloud layers), symbolizing our mission to bridge cutting-edge technology with dependable cloud services.",
+    "mission": {
+      "title": "Our Mission",
+      "description": "To be your trusted cloud technology partner, providing innovative and reliable solutions for businesses."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "Leading cloud technology innovation, driving digital transformation, and creating a better future."
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "items": {
+      "cloud": {
+        "title": "Cloud Solutions",
+        "description": "Comprehensive cloud services including infrastructure setup, application development, and system integration."
+      },
+      "outsourcing": {
+        "title": "Technical Outsourcing",
+        "description": "Professional technical team providing complete development and maintenance services for your projects."
+      },
+      "education": {
+        "title": "Professional Training",
+        "description": "Cloud technology training courses and technical sharing to help teams enhance their capabilities."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Let's discuss your needs and provide the most suitable solutions for you.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Submit"
+    }
+  },
+  "footer": {
+    "company": "Arcstratus Co., Ltd.",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "copyright": "Copyright"
+  },
+  "auth": {
+    "login": "Login",
+    "logout": "Logout",
+    "register": "Register",
+    "email": "Email",
+    "password": "Password",
+    "forgotPassword": "Forgot Password?"
+  }
+}
