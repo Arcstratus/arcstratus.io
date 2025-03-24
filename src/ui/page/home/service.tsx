@@ -1,5 +1,5 @@
 import { getDictionary } from "@/i18n/utils";
-import { Cloud, Code2, GraduationCap } from "lucide-react";
+import { IconCloud, IconCode, IconSchool } from "@tabler/icons-react";
 
 type ServiceKey = "cloud" | "outsourcing" | "education";
 
@@ -13,17 +13,17 @@ const features: Array<Feature> = [
   {
     name: "cloud",
     description: "cloud.description",
-    icon: Cloud,
+    icon: IconCloud,
   },
   {
     name: "outsourcing",
     description: "outsourcing.description",
-    icon: Code2,
+    icon: IconCode,
   },
   {
     name: "education",
     description: "education.description",
-    icon: GraduationCap,
+    icon: IconSchool,
   },
 ];
 
