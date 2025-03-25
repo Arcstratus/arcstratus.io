@@ -9,8 +9,16 @@ const locales = ["en", "tw"];
 
 const defaultLocale = "tw";
 
+const publicFiles = ["robots.txt", "sitemap.xml", "favicon.ico"];
+
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
+
+  // Check if the request is for a public file that should bypass localization
+  const isPublicFile = publicFiles.some((file) => pathname === `/${file}`);
+  if (isPublicFile) {
+    return NextResponse.next();
+  }
 
   // Check if there is any supported locale in the pathname
   const pathnameHasLocale = locales.some(
