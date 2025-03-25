@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { I18nType } from "@/i18n/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   title: "Arcstratus",
@@ -31,6 +32,7 @@ export default async function RootLayout({
           {children}
         </ThemeProvider>
       </body>
+      <GoogleAnalytics gaId="G-7JFKLK1FF6" />
     </html>
   );
 }
