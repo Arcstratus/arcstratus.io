@@ -1,11 +1,18 @@
 import { match } from "@formatjs/intl-localematcher";
 import Negotiator from "negotiator";
 import { NextRequest, NextResponse } from "next/server";
-import { locales, defaultLocale } from "@/i18n/utils";
+import { locales, defaultLocale, type Locale } from "@/i18n/utils";
+import { cookies } from "next/headers";
 
 const publicFiles = ["robots.txt", "sitemap.xml", "favicon.ico"];
 
-const getPreferredLocale = (request: NextRequest) => {
+const getPreferredLocale = async (request: NextRequest) => {
+  const cookieStore = await cookies();
+  const locale = cookieStore.get("locale")?.value;
+  if (locale && locales.includes(locale as Locale)) {
+    return locale;
+  }
+
   const acceptLanguage = request.headers.get("accept-language") || "";
   const negotiator = new Negotiator({
     headers: { "accept-language": acceptLanguage },
@@ -14,7 +21,7 @@ const getPreferredLocale = (request: NextRequest) => {
   return match(languages, locales, defaultLocale);
 };
 
-export function middleware(request: NextRequest) {
+export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Check if the request is for a public file that should bypass localization
@@ -33,7 +40,7 @@ export function middleware(request: NextRequest) {
   }
 
   // Retrieve the preferred locale from the request headers
-  const preferredLocale = getPreferredLocale(request);
+  const preferredLocale = await getPreferredLocale(request);
   const url = new URL(`/${preferredLocale}${pathname}`, request.url);
   return NextResponse.redirect(url);
 }
