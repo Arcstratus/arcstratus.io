@@ -1,5 +1,9 @@
 import "server-only";
 
+export const locales = ["en", "tw"];
+
+export const defaultLocale = "tw";
+
 const dictionaries = {
   en: () => import("./dictionaries/en.json").then((module) => module.default),
   tw: () => import("./dictionaries/tw.json").then((module) => module.default),

@@ -1,15 +1,18 @@
 import { match } from "@formatjs/intl-localematcher";
 import Negotiator from "negotiator";
 import { NextRequest, NextResponse } from "next/server";
-
-const headers = { "accept-language": "en-US,en;q=0.5" };
-const languages = new Negotiator({ headers }).languages();
-
-const locales = ["en", "tw"];
-
-const defaultLocale = "tw";
+import { locales, defaultLocale } from "@/i18n/utils";
 
 const publicFiles = ["robots.txt", "sitemap.xml", "favicon.ico"];
+
+const getPreferredLocale = (request: NextRequest) => {
+  const acceptLanguage = request.headers.get("accept-language") || "";
+  const negotiator = new Negotiator({
+    headers: { "accept-language": acceptLanguage },
+  });
+  const languages = negotiator.languages();
+  return match(languages, locales, defaultLocale);
+};
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -21,26 +24,18 @@ export function middleware(request: NextRequest) {
   }
 
   // Check if there is any supported locale in the pathname
-  const pathnameHasLocale = locales.some(
+  const hasLocale = locales.some(
     (locale: string) =>
       pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   );
-
-  // If there is no supported locale in the pathname, redirect to the default locale
-  // e.g. incoming request is /products, the new URL is now /tw/products
-  if (!pathnameHasLocale) {
-    console.log(
-      "no locale",
-      languages,
-      locales,
-      defaultLocale,
-      match(languages, locales, defaultLocale)
-    );
-
-    const locale = match(languages, locales, defaultLocale);
-    request.nextUrl.pathname = `/${locale}${pathname}`;
-    return NextResponse.redirect(request.nextUrl);
+  if (hasLocale) {
+    return NextResponse.next();
   }
+
+  // Retrieve the preferred locale from the request headers
+  const preferredLocale = getPreferredLocale(request);
+  const url = new URL(`/${preferredLocale}${pathname}`, request.url);
+  return NextResponse.redirect(url);
 }
 
 export const config = {
