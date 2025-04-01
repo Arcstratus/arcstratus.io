@@ -1,16 +1,32 @@
 import { ThemeProvider } from "@/components/theme-provider";
-import type { I18nType } from "@/i18n/utils";
+import { getDictionary, type I18nType } from "@/i18n/utils";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import "./globals.css";
 
-export const metadata: Metadata = {
-  title: "Arcstratus",
-  description: "Arcstratus - Cloud Infrastructure Management",
-};
-
 export async function generateStaticParams() {
   return [{ lang: "en" }, { lang: "tw" }];
+}
+
+type GenerateMetadataParams = Readonly<{ params: I18nType }>;
+
+export async function generateMetadata({
+  params,
+}: GenerateMetadataParams): Promise<Metadata> {
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
+
+  return {
+    ...dict.head,
+    metadataBase: new URL("https://arcstratus.io"),
+    alternates: {
+      canonical: "/",
+      languages: {
+        "zh-TW": "/tw",
+        "en-US": "/en",
+      },
+    },
+  };
 }
 
 export default async function RootLayout({
