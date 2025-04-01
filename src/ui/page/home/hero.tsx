@@ -36,7 +36,7 @@ export async function Hero(props: HeroProps) {
                 </p>
                 <button
                   type="button"
-                  className="px-4 py-2 border-2 hover:border-foreground border-border rounded-full block min-w-xl max-w-4xl"
+                  className="px-4 py-2 border-2 hover:border-foreground border-border rounded-full block w-full md:w-xl"
                 >
                   <div className="flex between gap-2">
                     <span>Ask Arcstratus</span>
