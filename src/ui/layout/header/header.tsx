@@ -36,12 +36,12 @@ export function Header({ children }: { children: React.ReactNode }) {
       className={cn(
         "fixed inset-x-0 top-0 z-50 w-full backdrop-blur",
         // Animation
-        "duration-200",
-        isMobile && !visible ? "-translate-y-20" : "translate-y-0"
+        isMobile && !visible ? "-translate-y-20" : "translate-y-0",
+        "duration-200"
       )}
     >
       <div className="mx-auto w-full px-4 xl:max-w-7xl relative">
-        <nav className="flex center py-4 h-16 between gap-4">{children}</nav>
+        <nav className="flex middle py-4 h-16 between gap-4">{children}</nav>
       </div>
     </header>
   );

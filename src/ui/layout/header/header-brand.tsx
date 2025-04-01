@@ -1,18 +1,13 @@
-import { cn } from "@/lib/utils";
+import logo from "@/public/logo.png";
+import Image from "next/image";
 import Link from "next/link";
 
-interface HeaderBrandProps {
-  title: string;
-  href: string;
-  className?: string;
-}
-
-const linkClassName = "hover:underline";
-
-export function HeaderBrand(props: HeaderBrandProps) {
+export function HeaderBrand() {
   return (
-    <Link href={props.href} className={cn(linkClassName, props.className)}>
-      {props.title}
+    <Link href="/" className="rounded" aria-label="Arcstratus Homepage">
+      <div className="w-10 h-10 overflow-hidden rounded-md relative">
+        <Image src={logo} alt="logo" fill className="object-cover" priority />
+      </div>
     </Link>
   );
 }

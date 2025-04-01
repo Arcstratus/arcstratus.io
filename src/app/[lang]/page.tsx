@@ -1,11 +1,14 @@
-import { Header, HeaderBrand, HeaderHandburger } from "@/ui/layout/header";
-import { Main } from "@/ui/layout/main";
-import { Footer, FooterCopyright, FooterIcon } from "@/ui/layout/footer";
-import { IconBrandGithub } from "@tabler/icons-react";
-import { ThemeToggle } from "@/components/theme-toggle";
-import { LocaleToggle } from "@/components/locale-toggle";
 import { type I18nType, getDictionary } from "@/i18n/utils";
+import { Footer, FooterCopyright, FooterIcon } from "@/ui/layout/footer";
+import {
+  Header,
+  HeaderBrand,
+  HeaderHandburger,
+  HeaderMenu,
+} from "@/ui/layout/header";
+import { Main } from "@/ui/layout/main";
 import { About, Hero, Service } from "@/ui/page/home";
+import { IconBrandGithub } from "@tabler/icons-react";
 
 export default async function Home({ params }: { params: I18nType }) {
   const { lang } = await params;
@@ -14,11 +17,9 @@ export default async function Home({ params }: { params: I18nType }) {
   return (
     <>
       <Header>
-        <HeaderBrand title={dict.header.title} href="/" />
-        <div className="grow-1"></div>
-        <LocaleToggle />
-        <ThemeToggle />
-        <HeaderHandburger items={[]} />
+        <HeaderBrand />
+        <HeaderMenu />
+        <HeaderHandburger />
       </Header>
       <Main>
         <Hero lang={lang} />
