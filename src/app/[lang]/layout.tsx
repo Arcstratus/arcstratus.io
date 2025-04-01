@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
-import type { I18nType } from "@/i18n/utils";
 import { ThemeProvider } from "@/components/theme-provider";
-import "./globals.css";
+import type { I18nType } from "@/i18n/utils";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Arcstratus",
@@ -22,7 +22,7 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang={(await params).lang} suppressHydrationWarning>
-      <body className="min-h-screen">
+      <body className="min-h-screen overflow-x-hidden bg-background text-foreground font-sans antialiased">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
