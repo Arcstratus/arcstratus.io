@@ -11,6 +11,24 @@
       "title": "Arcstratus",
       "slogan": "We are passionate about crafting customized solutions, collaborating hand-in-hand with various industries to realize dreams through innovative ideas!",
       "cta": "Learn More"
+    },
+    "service": [
+      {
+        "title": "Custom Software Development",
+        "description": "Tired of off-the-shelf systems that don’t quite fit? We’ll build a tailor-made solution from scratch, perfectly suited to your unique needs. Your challenges are what drive us!"
+      },
+      {
+        "title": "Cloud Solutions",
+        "description": "Data at your fingertips, anytime, anywhere! Move to the cloud effortlessly, save on hardware costs, and scale resources as you please. Unleashing tech potential has never been this easy."
+      },
+      {
+        "title": "Digital Transformation Consulting",
+        "description": "Done with outdated systems? We’ll guide you through a complete overhaul! Discover tech tools that’ll wow your team and step into the digital age with ease."
+      }
+    ],
+    "contact": {
+      "content": "Is your old system holding you back? Tired of making do with outdated systems? Don't worry, we'll accompany you through a major transformation. Click once, and let your team embrace a new digital future.",
+      "cta": "Contact Us"
     }
   },
   "TBD": "//////////////////////////////////////////////////////////////",

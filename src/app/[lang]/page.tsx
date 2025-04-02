@@ -8,7 +8,8 @@ import {
   HeaderMenu,
 } from "@/ui/layout/header";
 import { Main } from "@/ui/layout/main/main";
-import { Hero, Platform, ServiceAI } from "@/ui/page/home";
+import { Hero, Platform, Service, ServiceAI } from "@/ui/page/home";
+import { Contact } from "@/ui/page/home/contact";
 import { IconBrandGithub } from "@tabler/icons-react";
 
 export default async function Home({ params }: { params: I18nType }) {
@@ -26,6 +27,8 @@ export default async function Home({ params }: { params: I18nType }) {
         <Hero lang={lang} />
         <Platform />
         <ServiceAI />
+        <Service lang={lang} />
+        <Contact lang={lang} />
       </Main>
       <Footer className="border-t border-border">
         <FooterCopyright year={2025} href="/" by="Arcstratus" />

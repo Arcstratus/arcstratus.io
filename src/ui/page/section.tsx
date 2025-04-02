@@ -18,12 +18,18 @@ interface SectionProps {
   children: React.ReactNode;
   name: string;
   className?: string;
+  noLable?: boolean;
 }
 
-export const Section = ({ children, name, className }: SectionProps) => {
+export const Section = ({
+  children,
+  name,
+  className,
+  noLable,
+}: SectionProps) => {
   return (
     <section id={name} className={cn("relative pb-8", className)}>
-      <SectionLabel name={name} />
+      {!noLable && <SectionLabel name={name} />}
       {children}
     </section>
   );
