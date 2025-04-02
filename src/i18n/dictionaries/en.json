@@ -6,6 +6,14 @@
   "header": {
     "title": "Arcstratus"
   },
+  "home": {
+    "hero": {
+      "title": "Arcstratus",
+      "slogan": "We are passionate about crafting customized solutions, collaborating hand-in-hand with various industries to realize dreams through innovative ideas!",
+      "cta": "Learn More"
+    }
+  },
+  "TBD": "//////////////////////////////////////////////////////////////",
   "common": {},
   "navigation": {
     "home": "Home",
