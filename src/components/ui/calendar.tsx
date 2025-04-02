@@ -60,16 +60,25 @@ function Calendar({
         ...classNames,
       }}
       components={{
-        IconLeft: ({ className, ...props }) => (
-          <IconChevronLeft className={cn("size-4", className)} {...props} />
-        ),
-        IconRight: ({ className, ...props }) => (
-          <IconChevronRight className={cn("size-4", className)} {...props} />
-        ),
+        Chevron: ({ ...props }) => <Chevron {...props} />,
       }}
       {...props}
     />
   );
+}
+function Chevron({ orientation = "left", ...props }) {
+  switch (orientation) {
+    case "left":
+      return <IconChevronLeft className="h-4 w-4" />;
+    case "right":
+      return <IconChevronRight className="h-4 w-4" />;
+    case "up":
+      return <IconChevronLeft className="h-4 w-4" />;
+    case "down":
+      return <IconChevronRight className="h-4 w-4" />;
+    default:
+      return null;
+  }
 }
 
 export { Calendar };
