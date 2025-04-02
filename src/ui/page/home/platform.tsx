@@ -8,7 +8,7 @@ import {
 
 export function Platform() {
   return (
-    <div className="w-full py-20 lg:py-40">
+    <section id="platform" className="relative">
       <div className="container mx-auto">
         <div className="flex flex-col gap-10">
           <div className="flex gap-4 flex-col items-start">
@@ -77,6 +77,6 @@ export function Platform() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
