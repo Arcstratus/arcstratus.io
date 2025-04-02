@@ -1,7 +1,6 @@
 "use client";
 
-import * as React from "react";
-import { IconLanguage } from "@tabler/icons-react";
+import { changeLocale } from "@/components/locale-actions";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -9,7 +8,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { changeLocale } from "@/components/locale-actions";
+import { IconLanguage } from "@tabler/icons-react";
 
 export function LocaleToggle() {
   return (
@@ -21,7 +20,7 @@ export function LocaleToggle() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => changeLocale("tw")}>
+        <DropdownMenuItem onClick={() => changeLocale("zh")}>
           繁體中文
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => changeLocale("en")}>
