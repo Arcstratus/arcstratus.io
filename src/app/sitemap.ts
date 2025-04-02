@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: {
         languages: {
           en: "https://arcstratus.io/en",
-          tw: "https://arcstratus.io/tw",
+          tw: "https://arcstratus.io/zh",
         },
       },
     },

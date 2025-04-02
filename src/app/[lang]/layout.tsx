@@ -5,14 +5,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export async function generateStaticParams() {
-  return [{ lang: "en" }, { lang: "tw" }];
+  return [{ lang: "en" }, { lang: "zh" }];
 }
-
-type GenerateMetadataParams = Readonly<{ params: I18nType }>;
 
 export async function generateMetadata({
   params,
-}: GenerateMetadataParams): Promise<Metadata> {
+}: Readonly<{ params: I18nType }>): Promise<Metadata> {
   const { lang } = await params;
   const dict = await getDictionary(lang);
 
@@ -22,7 +20,7 @@ export async function generateMetadata({
     alternates: {
       canonical: "/",
       languages: {
-        "zh-TW": "/tw",
+        "zh-TW": "/zh",
         "en-US": "/en",
       },
     },

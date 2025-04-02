@@ -1,8 +1,8 @@
+import { defaultLocale, locales, type Locale } from "@/i18n/utils";
 import { match } from "@formatjs/intl-localematcher";
 import Negotiator from "negotiator";
-import { NextRequest, NextResponse } from "next/server";
-import { locales, defaultLocale, type Locale } from "@/i18n/utils";
 import { cookies } from "next/headers";
+import { NextRequest, NextResponse } from "next/server";
 
 const publicFiles = ["robots.txt", "sitemap.xml", "favicon.ico"];
 
