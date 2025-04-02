@@ -12,6 +12,7 @@ import {
   IconShare,
 } from "@tabler/icons-react";
 import React, { forwardRef, useRef } from "react";
+import { Section } from "../section";
 
 interface Item {
   name: string;
@@ -719,12 +720,12 @@ const features = [
 
 export function ServiceAI() {
   return (
-    <section id="service-ai" className="relative">
-      <BentoGrid>
+    <Section name="Service AI">
+      <BentoGrid className="gap-8">
         {features.map((feature, idx) => (
           <BentoCard key={idx} {...feature} />
         ))}
       </BentoGrid>
-    </section>
+    </Section>
   );
 }
