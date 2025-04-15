@@ -1,28 +1,28 @@
-import { cn } from "@/lib/utils";
-
 interface FooterCopyrightProps {
-  className?: string;
   year: number;
   href: string;
   by: string;
   message?: React.ReactNode;
 }
 
-const divClassName = "block flex gap-2";
-
-export function FooterCopyright(props: FooterCopyrightProps) {
+export function FooterCopyright({
+  year,
+  href,
+  by,
+  message = "All rights reserved.",
+}: FooterCopyrightProps) {
   return (
-    <div className={cn(divClassName, props.className)}>
-      &copy; {props.year}
+    <div className="block flex gap-2">
+      &copy; {year}
       <a
-        href={props.href}
+        href={href}
         className="hover:underline"
         target="_blank"
         rel="noopener noreferrer"
       >
-        {props.by}
+        {by}
       </a>
-      {props.message}
+      {message}
     </div>
   );
 }
