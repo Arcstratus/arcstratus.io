@@ -21,7 +21,7 @@ export const HeaderDesktop = ({
 }: HeaderDesktopProps) => {
   return (
     <NavBody>
-      <NavbarLogo src={logo.src} title={title} />
+      <NavbarLogo src={logo.src} title={title} link="/" />
       <NavItems items={items} />
       {children}
     </NavBody>

@@ -231,10 +231,18 @@ export const MobileNavToggle = ({
   );
 };
 
-export const NavbarLogo = ({ src, title }: { src: string; title: string }) => {
+export const NavbarLogo = ({
+  src,
+  title,
+  link = "/",
+}: {
+  src: string;
+  title: string;
+  link: string;
+}) => {
   return (
     <Link
-      href="#"
+      href={link}
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
     >
       <Image src={src} alt="logo" width={30} height={30} />

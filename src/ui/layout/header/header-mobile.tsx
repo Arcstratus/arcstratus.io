@@ -29,7 +29,7 @@ export const HeaderMobile = ({
   return (
     <MobileNav>
       <MobileNavHeader>
-        <NavbarLogo src={logo.src} title={title} />
+        <NavbarLogo src={logo.src} title={title} link="/" />
         <MobileNavToggle
           isOpen={isMenuOpen}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
