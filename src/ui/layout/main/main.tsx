@@ -7,9 +7,9 @@ interface MainProps {
 
 export const Main = ({ children, fluid }: MainProps) => {
   return (
-    <main className="relative mt-4">
+    <main className="relative">
       <div
-        className={cn("space-y-4 p-4", fluid ? "w-full" : "container mx-auto")}
+        className={cn("space-y-4 p-8", fluid ? "w-full" : "container mx-auto")}
       >
         {children}
       </div>
