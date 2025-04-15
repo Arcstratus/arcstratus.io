@@ -1,7 +1,17 @@
 "use client";
 
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
-import { IconMenu2, IconX } from "@tabler/icons-react";
+import { IconChevronDown, IconMenu2, IconX } from "@tabler/icons-react";
 import {
   AnimatePresence,
   motion,
@@ -23,11 +33,15 @@ interface NavBodyProps {
   visible?: boolean;
 }
 
+export interface NavItem {
+  name: string;
+  link?: string;
+  submenu?: NavItem[];
+  onClick?: () => void;
+}
+
 export interface NavItemsProps {
-  items: {
-    name: string;
-    link: string;
-  }[];
+  items: NavItem[];
   className?: string;
   onItemClick?: () => void;
 }
@@ -125,23 +139,108 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
         className
       )}
     >
-      {items.map((item, idx) => (
-        <Link
-          onMouseEnter={() => setHovered(idx)}
-          onClick={onItemClick}
-          className="relative px-4 py-2 text-neutral-600 dark:text-neutral-300"
-          key={`link-${idx}`}
-          href={item.link}
-        >
-          {hovered === idx && (
-            <motion.div
-              layoutId="hovered"
-              className="absolute inset-0 h-full w-full rounded-full bg-gray-100 dark:bg-neutral-800"
-            />
-          )}
-          <span className="relative z-20">{item.name}</span>
-        </Link>
-      ))}
+      {items.map((item, idx) => {
+        // If the item has a submenu, render it as a dropdown
+        if (item.submenu) {
+          return (
+            <DropdownMenu key={`dropdown-${idx}`}>
+              <DropdownMenuTrigger asChild>
+                <button
+                  onMouseEnter={() => setHovered(idx)}
+                  onClick={onItemClick}
+                  className="relative flex items-center px-4 py-2 text-neutral-600 dark:text-neutral-300 focus:outline-none"
+                >
+                  {hovered === idx && (
+                    <motion.div
+                      layoutId="hovered"
+                      className="absolute inset-0 h-full w-full rounded-full bg-gray-100 dark:bg-neutral-800"
+                    />
+                  )}
+                  <span className="relative z-20">{item.name}</span>
+                  <IconChevronDown className="relative z-20 ml-1 h-4 w-4" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="min-w-40 bg-white dark:bg-neutral-900">
+                <DropdownMenuGroup>
+                  {item.submenu.map((subItem, subIdx) => {
+                    // Handle nested submenus
+                    if (subItem.submenu) {
+                      return (
+                        <DropdownMenuSub key={`submenu-${idx}-${subIdx}`}>
+                          <DropdownMenuSubTrigger>
+                            {subItem.name}
+                          </DropdownMenuSubTrigger>
+                          <DropdownMenuSubContent className="min-w-40 bg-white dark:bg-neutral-900">
+                            {subItem.submenu.map((nestedItem, nestedIdx) => (
+                              <DropdownMenuItem
+                                key={`nested-${idx}-${subIdx}-${nestedIdx}`}
+                                asChild
+                              >
+                                {nestedItem.link ? (
+                                  <Link
+                                    href={nestedItem.link}
+                                    onClick={nestedItem.onClick || onItemClick}
+                                  >
+                                    {nestedItem.name}
+                                  </Link>
+                                ) : (
+                                  <button onClick={nestedItem.onClick}>
+                                    {nestedItem.name}
+                                  </button>
+                                )}
+                              </DropdownMenuItem>
+                            ))}
+                          </DropdownMenuSubContent>
+                        </DropdownMenuSub>
+                      );
+                    }
+
+                    // Regular dropdown items
+                    return (
+                      <DropdownMenuItem
+                        key={`submenu-item-${idx}-${subIdx}`}
+                        asChild
+                      >
+                        {subItem.link ? (
+                          <Link
+                            href={subItem.link}
+                            onClick={subItem.onClick || onItemClick}
+                          >
+                            {subItem.name}
+                          </Link>
+                        ) : (
+                          <button onClick={subItem.onClick}>
+                            {subItem.name}
+                          </button>
+                        )}
+                      </DropdownMenuItem>
+                    );
+                  })}
+                </DropdownMenuGroup>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          );
+        }
+
+        // Regular nav item with link
+        return (
+          <Link
+            onMouseEnter={() => setHovered(idx)}
+            onClick={item.onClick || onItemClick}
+            className="relative px-4 py-2 text-neutral-600 dark:text-neutral-300"
+            key={`link-${idx}`}
+            href={item.link || "#"}
+          >
+            {hovered === idx && (
+              <motion.div
+                layoutId="hovered"
+                className="absolute inset-0 h-full w-full rounded-full bg-gray-100 dark:bg-neutral-800"
+              />
+            )}
+            <span className="relative z-20">{item.name}</span>
+          </Link>
+        );
+      })}
     </motion.div>
   );
 };
@@ -231,6 +330,122 @@ export const MobileNavToggle = ({
   );
 };
 
+export const MobileNavItems = ({ items, onItemClick }: NavItemsProps) => {
+  const [expandedItems, setExpandedItems] = useState<Record<number, boolean>>(
+    {}
+  );
+
+  const toggleExpand = (idx: number) => {
+    setExpandedItems((prev) => ({
+      ...prev,
+      [idx]: !prev[idx],
+    }));
+  };
+
+  return (
+    <div className="flex w-full flex-col gap-2">
+      {items.map((item, idx) => {
+        // If the item has a submenu, render expandable section
+        if (item.submenu) {
+          return (
+            <div key={`mobile-menu-${idx}`} className="w-full">
+              <button
+                onClick={() => toggleExpand(idx)}
+                className="flex w-full items-center justify-between rounded-md px-3 py-2 text-left text-sm hover:bg-gray-100 dark:hover:bg-neutral-800"
+              >
+                <span>{item.name}</span>
+                <IconChevronDown
+                  className={`h-4 w-4 transition-transform ${
+                    expandedItems[idx] ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+
+              {/* Expandable submenu */}
+              {expandedItems[idx] && (
+                <div className="ml-4 mt-1 flex flex-col gap-1 border-l border-gray-200 pl-2 dark:border-neutral-700">
+                  {item.submenu.map((subItem, subIdx) => {
+                    // Handle nested submenus with further recursion
+                    if (subItem.submenu) {
+                      return (
+                        <div
+                          key={`mobile-submenu-${idx}-${subIdx}`}
+                          className="w-full"
+                        >
+                          <button
+                            onClick={() =>
+                              toggleExpand(
+                                `${idx}-${subIdx}` as unknown as number
+                              )
+                            }
+                            className="flex w-full items-center justify-between rounded-md px-3 py-2 text-left text-sm hover:bg-gray-100 dark:hover:bg-neutral-800"
+                          >
+                            <span>{subItem.name}</span>
+                            <IconChevronDown
+                              className={`h-4 w-4 transition-transform ${
+                                expandedItems[
+                                  `${idx}-${subIdx}` as unknown as number
+                                ]
+                                  ? "rotate-180"
+                                  : ""
+                              }`}
+                            />
+                          </button>
+
+                          {/* Nested submenu items */}
+                          {expandedItems[
+                            `${idx}-${subIdx}` as unknown as number
+                          ] && (
+                            <div className="ml-4 mt-1 flex flex-col gap-1 border-l border-gray-200 pl-2 dark:border-neutral-700">
+                              {subItem.submenu.map((nestedItem, nestedIdx) => (
+                                <Link
+                                  key={`mobile-nested-${idx}-${subIdx}-${nestedIdx}`}
+                                  href={nestedItem.link || "#"}
+                                  onClick={nestedItem.onClick || onItemClick}
+                                  className="w-full rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-neutral-800"
+                                >
+                                  {nestedItem.name}
+                                </Link>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    }
+
+                    // Regular submenu items
+                    return (
+                      <Link
+                        key={`mobile-submenu-item-${idx}-${subIdx}`}
+                        href={subItem.link || "#"}
+                        onClick={subItem.onClick || onItemClick}
+                        className="w-full rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-neutral-800"
+                      >
+                        {subItem.name}
+                      </Link>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+          );
+        }
+
+        // Regular mobile nav item
+        return (
+          <Link
+            key={`mobile-link-${idx}`}
+            href={item.link || "#"}
+            onClick={item.onClick || onItemClick}
+            className="w-full rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-neutral-800"
+          >
+            {item.name}
+          </Link>
+        );
+      })}
+    </div>
+  );
+};
 export const NavbarLogo = ({
   src,
   title,

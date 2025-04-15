@@ -3,6 +3,7 @@
 import {
   MobileNav,
   MobileNavHeader,
+  MobileNavItems,
   MobileNavMenu,
   MobileNavToggle,
   NavbarLogo,
@@ -15,15 +16,9 @@ interface HeaderMobileProps {
   logo: StaticImageData;
   title: string;
   items: NavItemsProps["items"];
-  children?: React.ReactNode;
 }
 
-export const HeaderMobile = ({
-  logo,
-  title,
-  items,
-  children,
-}: HeaderMobileProps) => {
+export const HeaderMobile = ({ logo, title, items }: HeaderMobileProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -37,17 +32,10 @@ export const HeaderMobile = ({
       </MobileNavHeader>
 
       <MobileNavMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)}>
-        {items.map((item, idx) => (
-          <a
-            key={`mobile-link-${idx}`}
-            href={item.link}
-            onClick={() => setIsMenuOpen(false)}
-            className="relative text-neutral-600 dark:text-neutral-300"
-          >
-            <span className="block">{item.name}</span>
-          </a>
-        ))}
-        {children}
+        <MobileNavItems
+          items={items}
+          onItemClick={() => setIsMenuOpen(false)}
+        />
       </MobileNavMenu>
     </MobileNav>
   );

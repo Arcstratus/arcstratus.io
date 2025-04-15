@@ -7,7 +7,12 @@ import { HeaderMobile } from "./header-mobile";
 const navItems = [
   {
     name: "Products",
-    link: "/products",
+    submenu: [
+      {
+        name: "UniToBuy",
+        link: "/products/unitobuy",
+      },
+    ],
   },
   {
     name: "API",
