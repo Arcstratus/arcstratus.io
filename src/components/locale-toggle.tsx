@@ -1,7 +1,6 @@
 "use client";
 
 import { changeLocale } from "@/components/locale-actions";
-import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -9,15 +8,20 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { IconLanguage } from "@tabler/icons-react";
+import { NavbarButton } from "./aceternity/resizable-navbar";
 
 export function LocaleToggle() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="icon">
+        <NavbarButton
+          as="button"
+          variant="secondary"
+          className="flex middle center"
+        >
           <IconLanguage className="h-[1.2rem] w-[1.2rem]" />
           <span className="sr-only">Toggle language</span>
-        </Button>
+        </NavbarButton>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => changeLocale("zh")}>

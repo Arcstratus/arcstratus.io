@@ -9,8 +9,10 @@ import {
   NavbarLogo,
   type NavItemsProps,
 } from "@/components/aceternity/resizable-navbar";
+import { Separator } from "@/components/ui/separator";
 import { type StaticImageData } from "next/image";
 import { useState } from "react";
+import { HeaderActions } from "./header-actions";
 
 interface HeaderMobileProps {
   logo: StaticImageData;
@@ -36,6 +38,8 @@ export const HeaderMobile = ({ logo, title, items }: HeaderMobileProps) => {
           items={items}
           onItemClick={() => setIsMenuOpen(false)}
         />
+        <Separator />
+        <HeaderActions />
       </MobileNavMenu>
     </MobileNav>
   );
