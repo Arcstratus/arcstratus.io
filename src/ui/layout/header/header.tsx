@@ -10,13 +10,15 @@ const navItems = [
     submenu: [
       {
         name: "UniToBuy",
-        link: "/products/unitobuy",
+        link: "#",
+        // link: "/products/unitobuy",
       },
     ],
   },
   {
     name: "API",
-    link: "/api",
+    link: "#",
+    // link: "/api",
   },
   {
     name: "News",
@@ -24,7 +26,8 @@ const navItems = [
   },
   {
     name: "Careers",
-    link: "/careers",
+    link: "#",
+    // link: "/careers",
   },
 ];
 

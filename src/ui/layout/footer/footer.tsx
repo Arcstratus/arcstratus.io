@@ -21,37 +21,37 @@ export function Footer() {
             title="Products"
             items={[
               { label: "Overview", link: "/products" },
-              { label: "Service Status", link: "/service-status" },
-              { label: "Release", link: "/release" },
-              { label: "FAQ", link: "/faq" },
+              { label: "Service Status", link: "#" },
+              { label: "Release", link: "#" },
+              { label: "FAQ", link: "#" },
             ]}
           />
 
           <FooterSection
             title="Company"
             items={[
-              { label: "About", link: "/about" },
-              { label: "Blog", link: "/blog" },
-              { label: "Careers", link: "/careers" },
-              { label: "Contact", link: "/contact" },
+              { label: "About", link: "#" },
+              { label: "Blog", link: "#" },
+              { label: "Careers", link: "#" },
+              { label: "Contact", link: "#" },
             ]}
           />
 
           <FooterSection
             title="Resources"
             items={[
-              { label: "Community", link: "/community" },
-              { label: "Help Center", link: "/help-center" },
-              { label: "Support", link: "/support" },
+              { label: "Community", link: "#" },
+              { label: "Help Center", link: "#" },
+              { label: "Support", link: "#" },
             ]}
           />
 
           <FooterSection
             title="Developers"
             items={[
-              { label: "API", link: "/api" },
-              { label: "Documentation", link: "/documentation" },
-              { label: "Guides", link: "/guides" },
+              { label: "API", link: "#" },
+              { label: "Documentation", link: "#" },
+              { label: "Guides", link: "#" },
             ]}
           />
         </div>
