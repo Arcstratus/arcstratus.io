@@ -12,7 +12,7 @@ export function FooterCopyright({
   message = "All rights reserved.",
 }: FooterCopyrightProps) {
   return (
-    <div className="block flex gap-2">
+    <div className="flex gap-2 center">
       &copy; {year}
       <a
         href={href}
