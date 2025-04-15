@@ -1,9 +1,10 @@
 import { ThemeProvider } from "@/components/theme-provider";
 import { getDictionary, type I18nType } from "@/i18n/utils";
+import Footer from "@/ui/layout/footer";
+import Header from "@/ui/layout/header";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import "./globals.css";
-
 export async function generateStaticParams() {
   return [{ lang: "en" }, { lang: "zh" }];
 }
@@ -43,7 +44,11 @@ export default async function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <div className="relative w-full">
+            <Header />
+            {children}
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
       <GoogleAnalytics gaId="G-7JFKLK1FF6" />

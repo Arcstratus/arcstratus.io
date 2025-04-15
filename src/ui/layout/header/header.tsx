@@ -1,48 +1,44 @@
-"use client";
+import { Navbar } from "@/components/aceternity/resizable-navbar";
+import logo from "@/public/logo.png";
+import { HeaderActions } from "./header-actions";
+import { HeaderDesktop } from "./header-desktop";
+import { HeaderMobile } from "./header-mobile";
 
-import { cn } from "@/lib/utils";
-import { useEffect, useState } from "react";
+const navItems = [
+  {
+    name: "Products",
+    submenu: [
+      {
+        name: "UniToBuy",
+        link: "/products/unitobuy",
+      },
+    ],
+  },
+  {
+    name: "API",
+    link: "/api",
+  },
+  {
+    name: "News",
+    link: "/news",
+  },
+  {
+    name: "Careers",
+    link: "/careers",
+  },
+];
 
-export function Header({ children }: { children: React.ReactNode }) {
-  const [visible, setVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
-
-  const handleScroll = () => {
-    const currentScrollY = window.scrollY;
-    setVisible(currentScrollY <= lastScrollY);
-    setLastScrollY(currentScrollY);
-  };
-
-  const checkIsMobile = () => {
-    setIsMobile(window.innerWidth < 768);
-  };
-
-  useEffect(() => {
-    checkIsMobile();
-
-    window.addEventListener("resize", checkIsMobile);
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", checkIsMobile);
-    };
-  }, [lastScrollY]);
+export const Header = () => {
+  const title = "Arcstratus";
 
   return (
-    <header
-      className={cn(
-        "fixed inset-x-0 top-0 z-50 w-full backdrop-blur",
-        // Animation
-        isMobile && !visible ? "-translate-y-20" : "translate-y-0",
-        "duration-200"
-      )}
-    >
-      <div className="mx-auto w-full px-4 xl:max-w-7xl relative">
-        <nav className="flex middle py-4 h-16 between gap-4">{children}</nav>
-      </div>
-    </header>
+    <Navbar className="container mx-auto">
+      <HeaderDesktop logo={logo} items={navItems} title={title}>
+        <HeaderActions />
+      </HeaderDesktop>
+      <HeaderMobile logo={logo} items={navItems} title={title}>
+        <HeaderActions />
+      </HeaderMobile>
+    </Navbar>
   );
-}
+};
