@@ -31,6 +31,20 @@
       "cta": "Contact Us"
     }
   },
+  "news": {
+    "title": "Latest News",
+    "description": "Read about our latest product and announcements.",
+    "timeline": {
+      "title": "Arcstratus Milestones",
+      "description": "A timeline of our journey.",
+      "data": [
+        {
+          "title": "Company Launched",
+          "description": "With big dreams and bold ambitions, we officially kicked off the company! This was the start of our journey to chase greatness!"
+        }
+      ]
+    }
+  },
   "TBD": "//////////////////////////////////////////////////////////////",
   "common": {},
   "navigation": {
