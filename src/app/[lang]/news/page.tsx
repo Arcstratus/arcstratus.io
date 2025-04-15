@@ -1,7 +1,7 @@
 import { Timeline } from "@/components/animation/timeline";
 import { getDictionary, type I18nType } from "@/i18n/utils";
 import Main from "@/ui/layout/main";
-import { LatestNews, Milestone, Products } from "@/ui/page/news";
+import { LatestNews, Milestone } from "@/ui/page/news";
 import { events } from "./timeline-data";
 
 export default async function NewsPage({ params }: { params: I18nType }) {
@@ -11,7 +11,6 @@ export default async function NewsPage({ params }: { params: I18nType }) {
   return (
     <Main>
       <LatestNews />
-      <Products />
       <Milestone />
       <Timeline
         title="Project Timeline"

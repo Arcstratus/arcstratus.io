@@ -18,9 +18,9 @@ export function Footer() {
           </section>
 
           <FooterSection
-            title="Product"
+            title="Products"
             items={[
-              { label: "Overview", link: "/overview" },
+              { label: "Overview", link: "/products" },
               { label: "Service Status", link: "/service-status" },
               { label: "Release", link: "/release" },
               { label: "FAQ", link: "/faq" },
