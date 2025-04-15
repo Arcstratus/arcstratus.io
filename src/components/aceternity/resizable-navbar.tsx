@@ -23,7 +23,7 @@ interface NavBodyProps {
   visible?: boolean;
 }
 
-interface NavItemsProps {
+export interface NavItemsProps {
   items: {
     name: string;
     link: string;
@@ -67,7 +67,7 @@ export const Navbar = ({ children, className }: NavbarProps) => {
   });
 
   return (
-    <motion.div
+    <motion.header
       ref={ref}
       // IMPORTANT: Change this to class of `fixed` if you want the navbar to be fixed
       className={cn("sticky inset-x-0 top-4 z-40 w-full", className)}
@@ -80,7 +80,7 @@ export const Navbar = ({ children, className }: NavbarProps) => {
             )
           : child
       )}
-    </motion.div>
+    </motion.header>
   );
 };
 
@@ -231,14 +231,14 @@ export const MobileNavToggle = ({
   );
 };
 
-export const NavbarLogo = ({ src }: { src: string }) => {
+export const NavbarLogo = ({ src, title }: { src: string; title: string }) => {
   return (
     <Link
       href="#"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
     >
       <Image src={src} alt="logo" width={30} height={30} />
-      <span className="font-medium text-black dark:text-white">Startup</span>
+      <span className="font-medium text-black dark:text-white">{title}</span>
     </Link>
   );
 };

@@ -1,12 +1,5 @@
-import { ThemeToggle } from "@/components/theme-toggle";
 import { type I18nType } from "@/i18n/utils";
 import { Footer, FooterCopyright, FooterIcon } from "@/ui/layout/footer";
-import {
-  Header,
-  HeaderBrand,
-  HeaderHandburger,
-  HeaderMenu,
-} from "@/ui/layout/header";
 import { Main } from "@/ui/layout/main/main";
 import { Hero, Platform, Service, ServiceAI } from "@/ui/page/home";
 import { Contact } from "@/ui/page/home/contact";
@@ -17,12 +10,6 @@ export default async function Home({ params }: { params: I18nType }) {
 
   return (
     <>
-      <Header>
-        <HeaderBrand />
-        <HeaderMenu />
-        <ThemeToggle />
-        <HeaderHandburger />
-      </Header>
       <Main>
         <Hero lang={lang} />
         <Platform />
