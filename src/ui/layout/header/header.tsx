@@ -36,9 +36,8 @@ export const Header = () => {
       <HeaderDesktop logo={logo} items={navItems} title={title}>
         <HeaderActions />
       </HeaderDesktop>
-      <HeaderMobile logo={logo} items={navItems} title={title}>
-        <HeaderActions />
-      </HeaderMobile>
+      <HeaderMobile logo={logo} items={navItems} title={title} />
+      {/* fixme: add children prop to HeaderMobile for <HeaderActions /> */}
     </Navbar>
   );
 };
