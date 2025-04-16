@@ -11,8 +11,8 @@ export function Footer() {
   return (
     <footer className="w-full relative py-8">
       <div className="container mx-auto space-y-8">
-        <div className="grid grid-cols-1 lg:grid-cols-5 place-items-center gap-8">
-          <section className="h-full space-y-4">
+        <div className="grid grid-cols-2 lg:grid-cols-5 place-items-center gap-8">
+          <section className="h-full space-y-4 col-span-2 lg:col-span-1">
             <NavbarLogo src={logo.src} title={title} link="/" />
             <FooterSocialMedia />
           </section>
