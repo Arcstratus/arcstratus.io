@@ -15,7 +15,7 @@
     "service": [
       {
         "title": "Custom Software Development",
-        "description": "Tired of off-the-shelf systems that don’t quite fit? We’ll build a tailor-made solution from scratch, perfectly suited to your unique needs. Your challenges are what drive us!"
+        "description": "Tired of off-the-shelf systems that don't quite fit? We'll build a tailor-made solution from scratch, perfectly suited to your unique needs. Your challenges are what drive us!"
       },
       {
         "title": "Cloud Solutions",
@@ -23,7 +23,7 @@
       },
       {
         "title": "Digital Transformation Consulting",
-        "description": "Done with outdated systems? We’ll guide you through a complete overhaul! Discover tech tools that’ll wow your team and step into the digital age with ease."
+        "description": "Done with outdated systems? We'll guide you through a complete overhaul! Discover tech tools that'll wow your team and step into the digital age with ease."
       }
     ],
     "contact": {
@@ -62,15 +62,38 @@
   },
   "about": {
     "title": "About Arcstratus",
-    "description": "Arcstratus Co., Ltd. (諾澄有限科技公司) is a company dedicated to cloud technology innovation, guided by the principle of \"Committed to Clarity, Building the Future.\" The name \"諾澄\" reflects our unwavering commitment to clients and pursuit of clear solutions, while \"Arcstratus\" merges \"Arc\" (an arc of connection and innovation) with \"Stratus\" (stable cloud layers), symbolizing our mission to bridge cutting-edge technology with dependable cloud services.",
-    "mission": {
-      "title": "Our Mission",
-      "description": "To be your trusted cloud technology partner, providing innovative and reliable solutions for businesses."
-    },
-    "vision": {
-      "title": "Our Vision",
-      "description": "Leading cloud technology innovation, driving digital transformation, and creating a better future."
-    }
+    "description": "Learn about our company's story, mission, values, and team.",
+    "ourStory": "Our Story",
+    "storyContent": "Founded with a vision to transform the digital landscape, Arcstratus has been at the forefront of technological innovation. Our journey began with a simple yet powerful mission: to help businesses thrive in the digital age through cutting-edge solutions and expert guidance.",
+    "ourMission": "Our Mission",
+    "missionContent": "We are committed to empowering businesses with innovative technology solutions that drive growth, efficiency, and competitive advantage. Our mission is to be your trusted partner in digital transformation, helping you navigate the complex world of technology with confidence.",
+    "ourValues": "Our Values",
+    "values": [
+      {
+        "title": "Integrity",
+        "description": "We maintain the highest standards of honesty and transparency in all our business dealings."
+      },
+      {
+        "title": "Collaboration",
+        "description": "We believe in the power of teamwork and work closely with our clients to achieve shared success."
+      },
+      {
+        "title": "Excellence",
+        "description": "We strive for perfection in everything we do, ensuring the highest quality in our services."
+      },
+      {
+        "title": "Innovation",
+        "description": "We constantly push boundaries and explore new possibilities to deliver cutting-edge solutions."
+      }
+    ],
+    "ourTeam": "Our Team",
+    "teamContent": "Our team consists of passionate professionals with diverse expertise in software development, cloud computing, data analytics, and cybersecurity. Together, we bring years of experience and a shared commitment to excellence.",
+    "teamMembers": [
+      {
+        "name": "Wenke Lai",
+        "role": "CEO & Founder"
+      }
+    ]
   },
   "services": {
     "title": "Our Services",

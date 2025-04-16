@@ -30,7 +30,7 @@ export function Footer() {
           <FooterSection
             title="Company"
             items={[
-              { label: "About", link: "#" },
+              { label: "About", link: "/about" },
               { label: "Blog", link: "/blog" },
               { label: "Careers", link: "#" },
               { label: "Contact", link: "#" },
