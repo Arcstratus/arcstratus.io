@@ -32,7 +32,7 @@ export function Footer() {
             items={[
               { label: "About", link: "/about" },
               { label: "Blog", link: "/blog" },
-              { label: "Careers", link: "#" },
+              { label: "Careers", link: "/careers" },
               { label: "Contact", link: "#" },
             ]}
           />

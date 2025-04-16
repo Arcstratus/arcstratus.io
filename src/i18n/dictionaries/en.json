@@ -136,5 +136,66 @@
     "email": "Email",
     "password": "Password",
     "forgotPassword": "Forgot Password?"
+  },
+  "careers": {
+    "title": "Join Our Team",
+    "description": "Explore career opportunities at Arcstratus and be part of our innovative team.",
+    "whyJoin": "Why Join Arcstratus?",
+    "whyJoinContent": "At Arcstratus, we believe in creating an environment where innovation thrives and talent grows. Join us to be part of a team that's shaping the future of technology.",
+    "benefits": [
+      {
+        "title": "Competitive Compensation",
+        "description": "We offer competitive salaries and comprehensive benefits packages to ensure our team members are well taken care of."
+      },
+      {
+        "title": "Work-Life Balance",
+        "description": "We understand the importance of maintaining a healthy balance between work and personal life."
+      },
+      {
+        "title": "Professional Growth",
+        "description": "Continuous learning and development opportunities to help you grow in your career."
+      },
+      {
+        "title": "Innovative Environment",
+        "description": "Work with cutting-edge technologies and be part of exciting projects that make a difference."
+      }
+    ],
+    "ourCulture": "Our Culture",
+    "cultureContent": "Our culture is built on collaboration, innovation, and a shared passion for technology. We value diversity, creativity, and the unique perspectives each team member brings.",
+    "culturePillars": [
+      {
+        "icon": "🤝",
+        "title": "Collaboration",
+        "description": "We believe in working together to achieve common goals and create innovative solutions."
+      },
+      {
+        "icon": "💡",
+        "title": "Innovation",
+        "description": "We encourage creative thinking and new ideas to drive technological advancement."
+      },
+      {
+        "icon": "🌱",
+        "title": "Growth",
+        "description": "We support continuous learning and personal development for all team members."
+      }
+    ],
+    "growth": "Growth Opportunities",
+    "growthContent": "At Arcstratus, we're committed to helping our team members grow both professionally and personally. We provide various opportunities for skill development and career advancement.",
+    "growthOpportunities": [
+      {
+        "title": "Technical Training",
+        "description": "Regular workshops and training sessions to keep your skills up-to-date with the latest technologies."
+      },
+      {
+        "title": "Career Development",
+        "description": "Clear career paths and mentorship programs to help you achieve your professional goals."
+      }
+    ],
+    "cta": {
+      "title": "Ready to Join Us?",
+      "content": "We're always looking for talented individuals to join our team. Send us your resume and let's explore opportunities together.",
+      "button": "Send Your Resume",
+      "email": "careers@arcstratus.io"
+    }
   }
 }
