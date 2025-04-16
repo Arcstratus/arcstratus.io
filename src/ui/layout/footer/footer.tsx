@@ -31,7 +31,7 @@ export function Footer() {
             title="Company"
             items={[
               { label: "About", link: "#" },
-              { label: "Blog", link: "#" },
+              { label: "Blog", link: "/blog" },
               { label: "Careers", link: "#" },
               { label: "Contact", link: "#" },
             ]}
