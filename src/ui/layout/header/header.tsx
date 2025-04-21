@@ -1,37 +1,43 @@
 import { Navbar } from "@/components/aceternity/resizable-navbar";
+import { getDictionary } from "@/i18n/utils";
 import logo from "@/public/logo.png";
+import { cookies } from "next/headers";
 import { HeaderActions } from "./header-actions";
 import { HeaderDesktop } from "./header-desktop";
 import { HeaderMobile } from "./header-mobile";
 
-const navItems = [
-  {
-    name: "Products",
-    submenu: [
-      {
-        name: "UniToBuy",
-        link: "#",
-        // link: "/products/unitobuy",
-      },
-    ],
-  },
-  {
-    name: "API",
-    link: "#",
-    // link: "/api",
-  },
-  {
-    name: "News",
-    link: "/news",
-  },
-  {
-    name: "Careers",
-    link: "/careers",
-  },
-];
+export const Header = async () => {
+  const cookieStore = await cookies();
+  const locale = (cookieStore.get("locale")?.value as "en" | "zh") || "zh";
+  const dict = await getDictionary(locale);
 
-export const Header = () => {
-  const title = "Arcstratus";
+  const navItems = [
+    {
+      name: dict.navigation.services,
+      submenu: [
+        {
+          name: "UniToBuy",
+          link: "#",
+          // link: "/products/unitobuy",
+        },
+      ],
+    },
+    {
+      name: "API",
+      link: "#",
+      // link: "/api",
+    },
+    {
+      name: dict.navigation.blog,
+      link: "/news",
+    },
+    {
+      name: dict.careers.title,
+      link: "/careers",
+    },
+  ];
+
+  const title = dict.header.title;
 
   return (
     <Navbar className="container mx-auto">

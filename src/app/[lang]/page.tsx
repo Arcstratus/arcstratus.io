@@ -9,8 +9,8 @@ export default async function Home({ params }: { params: I18nType }) {
   return (
     <Main>
       <Hero lang={lang} />
-      <Platform />
-      <ServiceAI />
+      <Platform lang={lang} />
+      <ServiceAI lang={lang} />
       <Service lang={lang} />
       <Contact lang={lang} />
     </Main>

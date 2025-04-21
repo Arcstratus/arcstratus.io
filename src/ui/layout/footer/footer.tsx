@@ -1,12 +1,18 @@
 import { NavbarLogo } from "@/components/aceternity/resizable-navbar";
 import { Separator } from "@/components/ui/separator";
+import { getDictionary } from "@/i18n/utils";
 import logo from "@/public/logo.png";
+import { cookies } from "next/headers";
 import { FooterCopyright } from "./footer-copyright";
 import { FooterSection } from "./footer-section";
 import { FooterSocialMedia } from "./footer-social-media";
 
-export function Footer() {
-  const title = "Arcstratus";
+export async function Footer() {
+  const cookieStore = await cookies();
+  const locale = (cookieStore.get("locale")?.value as "en" | "zh") || "zh";
+  const dict = await getDictionary(locale);
+
+  const title = dict.header.title;
 
   return (
     <footer className="w-full relative py-8">
@@ -18,9 +24,9 @@ export function Footer() {
           </section>
 
           <FooterSection
-            title="Products"
+            title={dict.navigation.services}
             items={[
-              { label: "Overview", link: "/products" },
+              { label: dict.services.title, link: "/products" },
               { label: "Service Status", link: "#" },
               { label: "Release", link: "#" },
               { label: "FAQ", link: "#" },
@@ -28,12 +34,12 @@ export function Footer() {
           />
 
           <FooterSection
-            title="Company"
+            title={dict.navigation.about}
             items={[
-              { label: "About", link: "/about" },
-              { label: "Blog", link: "/blog" },
-              { label: "Careers", link: "/careers" },
-              { label: "Contact", link: "#" },
+              { label: dict.about.title, link: "/about" },
+              { label: dict.navigation.blog, link: "/blog" },
+              { label: dict.careers.title, link: "/careers" },
+              { label: dict.navigation.contact, link: "#" },
             ]}
           />
 
@@ -57,7 +63,7 @@ export function Footer() {
         </div>
 
         <Separator />
-        <FooterCopyright year={2025} href="/" by="Arcstratus Co., Ltd." />
+        <FooterCopyright year={2025} href="/" by={dict.footer.company} />
       </div>
     </footer>
   );

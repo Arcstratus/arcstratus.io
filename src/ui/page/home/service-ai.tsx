@@ -4,6 +4,7 @@ import { AnimatedList } from "@/components/magicui/animated-list";
 import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
 import { Marquee } from "@/components/magicui/marquee";
 import { Calendar } from "@/components/ui/calendar";
+import { getDictionary, type Locale } from "@/i18n/utils";
 import { cn } from "@/lib/utils";
 import {
   IconBell,
@@ -718,9 +719,14 @@ const features = [
   },
 ];
 
-export function ServiceAI() {
+interface ServiceAIProps {
+  lang: Locale;
+}
+
+export async function ServiceAI({ lang }: ServiceAIProps) {
+  const dict = await getDictionary(lang);
   return (
-    <Section name="Service AI">
+    <Section name={dict.services.title}>
       <BentoGrid className="gap-8">
         {features.map((feature, idx) => (
           <BentoCard key={idx} {...feature} />
