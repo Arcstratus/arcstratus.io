@@ -1,44 +1,33 @@
 import { ThemeProvider } from "@/components/theme-provider";
-import { getDictionary, type I18nType } from "@/i18n/utils";
-import Footer from "@/ui/layout/footer";
-import Header from "@/ui/layout/header";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import type { Metadata } from "next";
+
 import "./globals.css";
-export async function generateStaticParams() {
-  return [{ lang: "en" }, { lang: "tw" }];
-}
 
-export async function generateMetadata({
-  params,
-}: Readonly<{ params: I18nType }>): Promise<Metadata> {
-  const { lang } = await params;
-  const dict = await getDictionary(lang);
+export const generateStaticParams = async () => [
+  { lang: "en" },
+  { lang: "tw" },
+];
 
-  return {
-    ...dict.head,
-    metadataBase: new URL("https://arcstratus.io"),
-    alternates: {
-      canonical: "/",
-      languages: {
-        "zh-TW": "/tw",
-        "en-US": "/en",
-      },
+export const generateMetadata = async () => ({
+  title: "",
+  description: "",
+  metadataBase: new URL("https://arcstratus.io"),
+  alternates: {
+    canonical: "/",
+    languages: {
+      "zh-TW": "/tw",
+      "en-US": "/en",
     },
-  };
-}
+  },
+});
 
-export default async function RootLayout({
+export default function Layout({
   children,
-  params,
 }: Readonly<{
   children: React.ReactNode;
-  params: I18nType;
 }>) {
-  const { lang } = await params;
-
   return (
-    <html lang={lang} suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body className="min-h-screen overflow-x-hidden bg-background text-foreground font-sans antialiased">
         <ThemeProvider
           attribute="class"
@@ -46,11 +35,7 @@ export default async function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="relative w-full">
-            <Header lang={lang} />
-            {children}
-            <Footer lang={lang} />
-          </div>
+          <div className="relative w-full">{children}</div>
         </ThemeProvider>
       </body>
       <GoogleAnalytics gaId="G-7JFKLK1FF6" />
