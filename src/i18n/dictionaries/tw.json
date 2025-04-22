@@ -1,0 +1,15 @@
+{
+  "common": {
+    "title": "雲層科技",
+    "description": "為現代企業提供雲端解決方案",
+    "navigation": {
+      "home": "首頁",
+      "about": "關於我們",
+      "services": "服務",
+      "contact": "聯絡我們"
+    },
+    "footer": {
+      "copyright": "© 2025 雲層科技。保留所有權利。"
+    }
+  }
+}

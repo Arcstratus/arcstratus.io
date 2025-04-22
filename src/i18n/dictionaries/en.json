@@ -1,0 +1,15 @@
+{
+  "common": {
+    "title": "Arcstratus",
+    "description": "Cloud solutions for modern businesses",
+    "navigation": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "contact": "Contact"
+    },
+    "footer": {
+      "copyright": "© 2025 Arcstratus. All rights reserved."
+    }
+  }
+}
