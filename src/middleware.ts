@@ -1,7 +1,7 @@
 import { defaultLocale, locales } from "@/i18n/utils";
 import { match } from "@formatjs/intl-localematcher";
 import Negotiator from "negotiator";
-import { NextRequest } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 function getLocale(request: NextRequest): string {
   // Negotiator expects request headers to be plain objects
@@ -20,6 +20,12 @@ function getLocale(request: NextRequest): string {
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
+  // Special case for root path: rewrite to English version without redirect
+  if (pathname === "/") {
+    request.nextUrl.pathname = "/en";
+    return NextResponse.rewrite(request.nextUrl);
+  }
+
   // Check if the pathname already has a locale
   const pathnameHasLocale = locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
@@ -27,7 +33,7 @@ export function middleware(request: NextRequest) {
 
   if (pathnameHasLocale) return;
 
-  // Redirect if there is no locale
+  // For other paths without locale, use negotiator to determine locale
   const locale = getLocale(request);
   request.nextUrl.pathname = `/${locale}${pathname}`;
 
