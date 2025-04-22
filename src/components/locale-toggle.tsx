@@ -24,7 +24,7 @@ export function LocaleToggle() {
         </NavbarButton>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => changeLocale("zh")}>
+        <DropdownMenuItem onClick={() => changeLocale("tw")}>
           繁體中文
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => changeLocale("en")}>

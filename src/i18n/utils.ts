@@ -1,12 +1,12 @@
-export type Locale = "en" | "zh";
+export type Locale = "en" | "tw";
 
-export const locales: Locale[] = ["en", "zh"];
+export const locales: Locale[] = ["en", "tw"];
 
-export const defaultLocale: Locale = "zh";
+export const defaultLocale: Locale = "tw";
 
 const dictionaries = {
   en: () => import("./dictionaries/en.json").then((module) => module.default),
-  zh: () => import("./dictionaries/zh.json").then((module) => module.default),
+  tw: () => import("./dictionaries/zh.json").then((module) => module.default),
 };
 
 export const getDictionary = async (locale: Locale) => {

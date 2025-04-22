@@ -6,7 +6,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import "./globals.css";
 export async function generateStaticParams() {
-  return [{ lang: "en" }, { lang: "zh" }];
+  return [{ lang: "en" }, { lang: "tw" }];
 }
 
 export async function generateMetadata({
@@ -21,7 +21,7 @@ export async function generateMetadata({
     alternates: {
       canonical: "/",
       languages: {
-        "zh-TW": "/zh",
+        "zh-TW": "/tw",
         "en-US": "/en",
       },
     },
