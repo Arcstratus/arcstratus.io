@@ -8,7 +8,7 @@ import { HeaderMobile } from "./header-mobile";
 
 export const Header = async () => {
   const cookieStore = await cookies();
-  const locale = (cookieStore.get("locale")?.value as "en" | "zh") || "zh";
+  const locale = (cookieStore.get("locale")?.value as "en" | "tw") || "tw";
   const dict = await getDictionary(locale);
 
   const navItems = [
@@ -44,8 +44,9 @@ export const Header = async () => {
       <HeaderDesktop logo={logo} items={navItems} title={title}>
         <HeaderActions />
       </HeaderDesktop>
-      <HeaderMobile logo={logo} items={navItems} title={title} />
-      {/* fixme: add children prop to HeaderMobile for <HeaderActions /> */}
+      <HeaderMobile logo={logo} items={navItems} title={title}>
+        <HeaderActions />
+      </HeaderMobile>
     </Navbar>
   );
 };

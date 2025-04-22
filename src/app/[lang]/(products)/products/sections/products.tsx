@@ -5,7 +5,7 @@ interface ProductsProps {
   lang?: Locale;
 }
 
-export const Products = async ({ lang = "zh" }: ProductsProps = {}) => {
+export const Products = async ({ lang = "tw" }: ProductsProps = {}) => {
   const dict = await getDictionary(lang);
 
   return (
@@ -26,7 +26,7 @@ export const Products = async ({ lang = "zh" }: ProductsProps = {}) => {
             link="#"
             title="Coming soon"
             description={
-              lang === "zh"
+              lang === "tw"
                 ? "我們正在跟下一個合作夥伴談論新的產品專案"
                 : "We are discussing new product projects with our next partner"
             }

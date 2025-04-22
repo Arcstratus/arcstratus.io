@@ -14,7 +14,7 @@ export default async function Blog({ params }: { params: I18nType }) {
       <div className="text-center">
         <h2 className="text-4xl font-bold pb-4">{dict.navigation.blog}</h2>
         <p className="text-gray-500">
-          {lang === "zh" ? "樂於分享" : "Happy to share"}
+          {lang === "tw" ? "樂於分享" : "Happy to share"}
         </p>
       </div>
 
