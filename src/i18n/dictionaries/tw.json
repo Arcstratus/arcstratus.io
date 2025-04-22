@@ -4,12 +4,146 @@
     "description": "為現代企業提供雲端解決方案",
     "navigation": {
       "home": "首頁",
-      "about": "關於我們",
+      "products": "產品",
       "services": "服務",
+      "news": "新聞",
+      "about": "關於我們",
       "contact": "聯絡我們"
     },
     "footer": {
-      "copyright": "© 2025 雲層科技。保留所有權利。"
+      "copyright": "© 2025 雲層科技。保留所有權利。",
+      "privacyPolicy": "隱私政策",
+      "termsOfService": "服務條款"
+    },
+    "buttons": {
+      "learnMore": "了解更多",
+      "getStarted": "立即開始",
+      "contactUs": "聯絡我們",
+      "readMore": "閱讀更多"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "為現代企業提供雲端解決方案",
+      "subtitle": "透過我們尖端的雲端服務優化您的基礎設施",
+      "cta": "立即開始"
+    },
+    "features": {
+      "title": "我們的服務",
+      "subtitle": "我們提供的服務",
+      "feature1": {
+        "title": "產品設計",
+        "description": "以用戶為中心的設計解決方案，提升用戶體驗並推動業務增長"
+      },
+      "feature2": {
+        "title": "軟體開發",
+        "description": "根據您的特定業務需求量身定制的軟體解決方案"
+      },
+      "feature3": {
+        "title": "雲端架構",
+        "description": "為最佳性能設計的可擴展和安全的雲端基礎設施"
+      },
+      "feature4": {
+        "title": "DevOps 與維護",
+        "description": "持續整合、交付和維護服務，確保您的系統順暢運行"
+      }
+    },
+    "clients": {
+      "title": "受到行業領導者信賴",
+      "subtitle": "依賴我們專業知識的公司"
+    },
+    "cta": {
+      "title": "準備好轉變您的業務了嗎？",
+      "subtitle": "讓我們討論如何幫助您實現目標",
+      "button": "立即聯絡我們"
+    }
+  },
+  "products": {
+    "title": "我們的產品",
+    "description": "為滿足您的業務需求而設計的創新解決方案",
+    "cloudSolutions": "雲端解決方案",
+    "cloudSolutionsDesc": "為您的業務提供可擴展和安全的雲端基礎設施",
+    "softwareDevelopment": "軟體開發",
+    "softwareDevelopmentDesc": "根據您的特定需求量身定制的軟體解決方案",
+    "devOps": "DevOps 服務",
+    "devOpsDesc": "簡化您的開發和運營流程"
+  },
+  "services": {
+    "title": "我們的服務",
+    "subtitle": "為您的業務提供全面解決方案",
+    "service1": {
+      "title": "產品設計",
+      "description": "從概念到原型，我們設計用戶喜愛的產品"
+    },
+    "service2": {
+      "title": "軟體外包",
+      "description": "專業開發團隊，將您的想法變為現實"
+    },
+    "service3": {
+      "title": "雲端架構",
+      "description": "可擴展雲端基礎設施的設計和實施"
+    },
+    "service4": {
+      "title": "DevOps 與維護",
+      "description": "持續支持和維護，確保您的系統順暢運行"
+    }
+  },
+  "about": {
+    "title": "關於我們",
+    "subtitle": "我們的故事和使命",
+    "mission": {
+      "title": "我們的使命",
+      "description": "為企業提供可靠、可擴展和安全的技術解決方案，推動創新和增長。"
+    },
+    "vision": {
+      "title": "我們的願景",
+      "description": "成為雲端和軟體解決方案的領先提供商，以我們的專業知識、可靠性和以客戶為中心的方法而聞名。"
+    },
+    "values": {
+      "title": "我們的價值觀",
+      "value1": {
+        "title": "創新",
+        "description": "我們不斷探索新技術和方法，提供尖端解決方案。"
+      },
+      "value2": {
+        "title": "卓越",
+        "description": "我們在所有工作中追求卓越，從代碼質量到客戶服務。"
+      },
+      "value3": {
+        "title": "協作",
+        "description": "我們相信團隊合作和與客戶夥伴關係的力量。"
+      },
+      "value4": {
+        "title": "誠信",
+        "description": "我們在所有互動中以透明、誠實和道德標準運營。"
+      }
+    },
+    "team": {
+      "title": "我們的團隊",
+      "subtitle": "認識雲層科技背後的專家"
+    }
+  },
+  "news": {
+    "title": "最新消息",
+    "subtitle": "了解我們最新的發展和行業見解",
+    "readMore": "閱讀更多",
+    "viewAll": "查看所有新聞"
+  },
+  "contact": {
+    "title": "聯絡我們",
+    "subtitle": "與我們的團隊取得聯繫",
+    "form": {
+      "name": "姓名",
+      "email": "電子郵件",
+      "subject": "主題",
+      "message": "訊息",
+      "submit": "發送訊息"
+    },
+    "info": {
+      "title": "聯絡資訊",
+      "address": "科技街123號，創新城，12345",
+      "email": "info@arcstratus.io",
+      "phone": "+1 (555) 123-4567"
     }
   }
 }

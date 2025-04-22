@@ -1,4 +1,5 @@
-import { LocaleToggle } from "@/components/locale-toggle";
+import { I18nProvider } from "@/components/i18n-provider";
+import { MainNav } from "@/components/main-nav";
 import { ThemeProvider } from "@/components/theme-provider";
 import { getDictionary } from "@/i18n/dictionaries";
 import { Locale } from "@/i18n/utils";
@@ -39,6 +40,7 @@ export default function Layout({
   children: React.ReactNode;
   params: { lang: Locale };
 }>) {
+  const dictionary = getDictionary(params.lang);
   return (
     <html lang={params.lang} suppressHydrationWarning>
       <body className="min-h-screen overflow-x-hidden bg-background text-foreground font-sans antialiased">
@@ -48,54 +50,45 @@ export default function Layout({
           enableSystem
           disableTransitionOnChange
         >
-          <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur">
-            <div className="container flex h-14 items-center">
-              <div className="mr-4 flex">
-                <a className="mr-6 flex items-center space-x-2" href="/">
-                  <span className="font-bold">
-                    {getDictionary(params.lang).common.title}
-                  </span>
+          <I18nProvider locale={params.lang} dictionary={dictionary}>
+            <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur">
+              <div className="container mx-auto flex h-14 items-center">
+                <a
+                  className="mr-6 flex items-center space-x-2"
+                  href={`/${params.lang}`}
+                >
+                  <span className="font-bold">{dictionary.common.title}</span>
                 </a>
-                <nav className="flex items-center space-x-6 text-sm font-medium">
-                  <a
-                    className="transition-colors hover:text-foreground/80"
-                    href="/"
-                  >
-                    {getDictionary(params.lang).common.navigation.home}
-                  </a>
-                  <a
-                    className="transition-colors hover:text-foreground/80"
-                    href="/about"
-                  >
-                    {getDictionary(params.lang).common.navigation.about}
-                  </a>
-                  <a
-                    className="transition-colors hover:text-foreground/80"
-                    href="/services"
-                  >
-                    {getDictionary(params.lang).common.navigation.services}
-                  </a>
-                  <a
-                    className="transition-colors hover:text-foreground/80"
-                    href="/contact"
-                  >
-                    {getDictionary(params.lang).common.navigation.contact}
-                  </a>
-                </nav>
+                <MainNav />
               </div>
-              <div className="ml-auto flex items-center space-x-4">
-                <LocaleToggle />
+            </header>
+            <main className="flex-1">
+              <div className="relative w-full container mx-auto">
+                {children}
               </div>
-            </div>
-          </header>
-          <div className="relative w-full">{children}</div>
-          <footer className="border-t py-6 md:py-0">
-            <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
-              <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-                {getDictionary(params.lang).common.footer.copyright}
-              </p>
-            </div>
-          </footer>
+            </main>
+            <footer className="border-t py-6 md:py-0">
+              <div className="container mx-auto flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
+                <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
+                  {dictionary.common.footer.copyright}
+                </p>
+                <div className="flex items-center space-x-4">
+                  <a
+                    className="text-sm text-muted-foreground underline underline-offset-4"
+                    href={`/${params.lang}/privacy`}
+                  >
+                    {dictionary.common.footer.privacyPolicy}
+                  </a>
+                  <a
+                    className="text-sm text-muted-foreground underline underline-offset-4"
+                    href={`/${params.lang}/terms`}
+                  >
+                    {dictionary.common.footer.termsOfService}
+                  </a>
+                </div>
+              </div>
+            </footer>
+          </I18nProvider>
         </ThemeProvider>
       </body>
       <GoogleAnalytics gaId="G-7JFKLK1FF6" />
