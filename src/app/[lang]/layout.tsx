@@ -1,6 +1,6 @@
 import { I18nProvider } from "@/components/i18n-provider";
-import { MainNav } from "@/components/ui/main-nav";
 import { ThemeProvider } from "@/components/theme-provider";
+import { MainNav } from "@/components/ui/main-nav";
 import { getDictionary } from "@/i18n/dictionaries";
 import { Locale } from "@/i18n/utils";
 import { GoogleAnalytics } from "@next/third-parties/google";
@@ -52,12 +52,14 @@ export default function Layout({
         >
           <I18nProvider locale={params.lang} dictionary={dictionary}>
             <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur">
-              <div className="container mx-auto flex h-14 items-center">
+              <div className="container mx-auto flex h-16 md:h-14 items-center">
                 <a
-                  className="mr-6 flex items-center space-x-2"
+                  className="mr-2 md:mr-6 flex items-center space-x-2 whitespace-nowrap"
                   href={`/${params.lang}`}
                 >
-                  <span className="font-bold">{dictionary.common.title}</span>
+                  <span className="font-bold whitespace-nowrap">
+                    {dictionary.common.title}
+                  </span>
                 </a>
                 <MainNav />
               </div>

@@ -12,7 +12,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/shadcn/navigation-menu";
-import { IconBrandGithub } from "@tabler/icons-react";
+import { IconBrandGithub, IconMenu2 } from "@tabler/icons-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -29,17 +29,9 @@ export function MainNav() {
   };
 
   return (
-    <div className="flex items-center space-x-4 lg:space-x-6">
-      <NavigationMenu>
+    <div className="flex items-center justify-between w-full ml-2 md:ml-4">
+      <NavigationMenu className="hidden sm:flex">
         <NavigationMenuList>
-          <NavigationMenuItem>
-            <Link href={getLocalizedHref("/")} legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                {dictionary.common.navigation.home}
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
-
           <NavigationMenuItem>
             <NavigationMenuTrigger>
               {dictionary.common.navigation.products}
@@ -133,18 +125,15 @@ export function MainNav() {
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
-
-          <NavigationMenuItem>
-            <Link href={getLocalizedHref("/contact")} legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                {dictionary.common.navigation.contact}
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
 
-      <div className="ml-auto flex items-center space-x-4">
+      <Button variant="ghost" size="icon" className="sm:hidden mr-2">
+        <IconMenu2 className="h-5 w-5" />
+        <span className="sr-only">Menu</span>
+      </Button>
+
+      <div className="flex items-center space-x-4 ml-auto">
         <LocaleToggle />
         <Button variant="outline" size="icon" asChild>
           <a

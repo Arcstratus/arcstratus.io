@@ -1,6 +1,6 @@
 {
   "common": {
-    "title": "雲層科技",
+    "title": "諾澄科技",
     "description": "為現代企業提供雲端解決方案",
     "navigation": {
       "home": "首頁",
@@ -11,7 +11,7 @@
       "contact": "聯絡我們"
     },
     "footer": {
-      "copyright": "© 2025 雲層科技。保留所有權利。",
+      "copyright": "© 2025 諾澄科技。保留所有權利。",
       "privacyPolicy": "隱私政策",
       "termsOfService": "服務條款"
     },
@@ -120,7 +120,7 @@
     },
     "team": {
       "title": "我們的團隊",
-      "subtitle": "認識雲層科技背後的專家"
+      "subtitle": "認識諾澄科技背後的專家"
     }
   },
   "news": {
