@@ -1,6 +1,6 @@
 import { NavbarLogo } from "@/components/aceternity/resizable-navbar";
 import { Separator } from "@/components/ui/separator";
-import { getDictionary } from "@/i18n/utils";
+import { getDictionary, type Locale } from "@/i18n/utils";
 import logo from "@/public/logo.png";
 import { cookies } from "next/headers";
 import { FooterCopyright } from "./footer-copyright";
@@ -9,7 +9,7 @@ import { FooterSocialMedia } from "./footer-social-media";
 
 export async function Footer() {
   const cookieStore = await cookies();
-  const locale = (cookieStore.get("locale")?.value as "en" | "zh") || "zh";
+  const locale = (cookieStore.get("locale")?.value as Locale) || "tw";
   const dict = await getDictionary(locale);
 
   const title = dict.header.title;

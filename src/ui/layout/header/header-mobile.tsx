@@ -12,15 +12,20 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { type StaticImageData } from "next/image";
 import { useState } from "react";
-import { HeaderActions } from "./header-actions";
 
 interface HeaderMobileProps {
   logo: StaticImageData;
   title: string;
   items: NavItemsProps["items"];
+  children?: React.ReactNode;
 }
 
-export const HeaderMobile = ({ logo, title, items }: HeaderMobileProps) => {
+export const HeaderMobile = ({
+  logo,
+  title,
+  items,
+  children,
+}: HeaderMobileProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -39,7 +44,7 @@ export const HeaderMobile = ({ logo, title, items }: HeaderMobileProps) => {
           onItemClick={() => setIsMenuOpen(false)}
         />
         <Separator />
-        <HeaderActions />
+        {children}
       </MobileNavMenu>
     </MobileNav>
   );
