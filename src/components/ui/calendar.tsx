@@ -1,11 +1,11 @@
-"use client";
+"use client"
 
-import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
-import * as React from "react";
-import { DayPicker } from "react-day-picker";
+import * as React from "react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
+import { DayPicker } from "react-day-picker"
 
-import { buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
+import { buttonVariants } from "@/components/ui/button"
 
 function Calendar({
   className,
@@ -60,25 +60,16 @@ function Calendar({
         ...classNames,
       }}
       components={{
-        Chevron: ({ ...props }) => <Chevron {...props} />,
+        IconLeft: ({ className, ...props }) => (
+          <ChevronLeft className={cn("size-4", className)} {...props} />
+        ),
+        IconRight: ({ className, ...props }) => (
+          <ChevronRight className={cn("size-4", className)} {...props} />
+        ),
       }}
       {...props}
     />
-  );
-}
-function Chevron({ orientation = "left", ...props }) {
-  switch (orientation) {
-    case "left":
-      return <IconChevronLeft className="h-4 w-4" />;
-    case "right":
-      return <IconChevronRight className="h-4 w-4" />;
-    case "up":
-      return <IconChevronLeft className="h-4 w-4" />;
-    case "down":
-      return <IconChevronRight className="h-4 w-4" />;
-    default:
-      return null;
-  }
+  )
 }
 
-export { Calendar };
+export { Calendar }
