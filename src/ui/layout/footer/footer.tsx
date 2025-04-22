@@ -7,11 +7,21 @@ import { FooterCopyright } from "./footer-copyright";
 import { FooterSection } from "./footer-section";
 import { FooterSocialMedia } from "./footer-social-media";
 
-export async function Footer() {
-  const cookieStore = await cookies();
-  const locale = (cookieStore.get("locale")?.value as Locale) || "tw";
-  const dict = await getDictionary(locale);
+interface FooterProps {
+  lang?: Locale;
+}
 
+export async function Footer({ lang }: FooterProps = {}) {
+  // Get locale from props if provided, otherwise from cookies with fallback to default
+  let locale: Locale;
+  if (lang) {
+    locale = lang;
+  } else {
+    const cookieStore = await cookies();
+    locale = (cookieStore.get("locale")?.value as Locale) || "tw";
+  }
+
+  const dict = await getDictionary(locale);
   const title = dict.header.title;
 
   return (
@@ -27,9 +37,9 @@ export async function Footer() {
             title={dict.navigation.services}
             items={[
               { label: dict.services.title, link: "/products" },
-              { label: "Service Status", link: "#" },
-              { label: "Release", link: "#" },
-              { label: "FAQ", link: "#" },
+              { label: dict.common.serviceStatus, link: "#" },
+              { label: dict.common.release, link: "#" },
+              { label: dict.common.faq, link: "#" },
             ]}
           />
 
@@ -44,20 +54,20 @@ export async function Footer() {
           />
 
           <FooterSection
-            title="Resources"
+            title={dict.common.resources}
             items={[
-              { label: "Community", link: "#" },
-              { label: "Help Center", link: "#" },
-              { label: "Support", link: "#" },
+              { label: dict.common.community, link: "#" },
+              { label: dict.common.helpCenter, link: "#" },
+              { label: dict.common.support, link: "#" },
             ]}
           />
 
           <FooterSection
-            title="Developers"
+            title={dict.common.developers}
             items={[
-              { label: "API", link: "#" },
-              { label: "Documentation", link: "#" },
-              { label: "Guides", link: "#" },
+              { label: dict.common.api, link: "#" },
+              { label: dict.common.documentation, link: "#" },
+              { label: dict.common.guides, link: "#" },
             ]}
           />
         </div>

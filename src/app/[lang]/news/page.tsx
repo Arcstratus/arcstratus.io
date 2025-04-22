@@ -10,11 +10,11 @@ export default async function NewsPage({ params }: { params: I18nType }) {
 
   return (
     <Main>
-      <LatestNews />
-      <Milestone />
+      <LatestNews lang={lang} />
+      <Milestone lang={lang} />
       <Timeline
-        title="Project Timeline"
-        description="Our development journey and milestones"
+        title={dict.common.projectTimeline}
+        description={dict.common.developmentJourney}
         events={events}
       />
     </Main>

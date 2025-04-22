@@ -35,8 +35,10 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: I18nType;
 }>) {
+  const { lang } = await params;
+
   return (
-    <html lang={(await params).lang} suppressHydrationWarning>
+    <html lang={lang} suppressHydrationWarning>
       <body className="min-h-screen overflow-x-hidden bg-background text-foreground font-sans antialiased">
         <ThemeProvider
           attribute="class"
@@ -45,9 +47,9 @@ export default async function RootLayout({
           disableTransitionOnChange
         >
           <div className="relative w-full">
-            <Header />
+            <Header lang={lang} />
             {children}
-            <Footer />
+            <Footer lang={lang} />
           </div>
         </ThemeProvider>
       </body>

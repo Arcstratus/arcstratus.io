@@ -45,7 +45,58 @@
       ]
     }
   },
-  "common": {},
+  "common": {
+    "resources": "資源",
+    "community": "社群",
+    "helpCenter": "幫助中心",
+    "support": "支援",
+    "developers": "開發者",
+    "api": "API",
+    "documentation": "文件",
+    "guides": "指南",
+    "comingSoon": "即將推出",
+    "latestArticle": "最新文章",
+    "featuredArticle": "精選文章",
+    "popularArticle": "熱門文章",
+    "projectTimeline": "專案時間軸",
+    "developmentJourney": "我們的開發旅程和里程碑",
+    "happyToShare": "樂於分享",
+    "serviceStatus": "服務狀態",
+    "release": "版本發布",
+    "faq": "常見問題"
+  },
+  "products": {
+    "unitobuy": {
+      "title": "UniToBuy",
+      "label": "unitobuy.com",
+      "description": "\"BuyForYou\" - 你家庭的購物助手。上傳照片，同步清單，讓任何慌張的父母立即變身為購物冠軍。"
+    },
+    "comingSoon": {
+      "description": "我們正在跟下一個合作夥伴談論新的產品專案"
+    }
+  },
+  "features": {
+    "saveFiles": {
+      "name": "儲存您的檔案",
+      "description": "我們會在您輸入時自動儲存您的檔案。",
+      "cta": "了解更多"
+    },
+    "calendar": {
+      "name": "日曆",
+      "description": "使用日曆按日期篩選您的檔案。",
+      "cta": "了解更多"
+    },
+    "notifications": {
+      "name": "通知",
+      "description": "當有事情發生時收到通知。",
+      "cta": "了解更多"
+    },
+    "integrations": {
+      "name": "整合",
+      "description": "支援100+整合且持續增加中。",
+      "cta": "了解更多"
+    }
+  },
   "navigation": {
     "home": "首頁",
     "about": "關於我們",

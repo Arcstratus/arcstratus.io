@@ -45,7 +45,58 @@
       ]
     }
   },
-  "common": {},
+  "common": {
+    "resources": "Resources",
+    "community": "Community",
+    "helpCenter": "Help Center",
+    "support": "Support",
+    "developers": "Developers",
+    "api": "API",
+    "documentation": "Documentation",
+    "guides": "Guides",
+    "comingSoon": "Coming Soon",
+    "latestArticle": "Latest Article",
+    "featuredArticle": "Featured Article",
+    "popularArticle": "Popular Article",
+    "projectTimeline": "Project Timeline",
+    "developmentJourney": "Our development journey and milestones",
+    "happyToShare": "Happy to share",
+    "serviceStatus": "Service Status",
+    "release": "Release",
+    "faq": "FAQ"
+  },
+  "products": {
+    "unitobuy": {
+      "title": "UniToBuy",
+      "label": "unitobuy.com",
+      "description": "\"BuyForYou\" - your family's shopping assistant. Upload photos, sync lists, and turn any panicked parent into a shopping champion instantly."
+    },
+    "comingSoon": {
+      "description": "We are discussing new product projects with our next partner"
+    }
+  },
+  "features": {
+    "saveFiles": {
+      "name": "Save your files",
+      "description": "We automatically save your files as you type.",
+      "cta": "Learn more"
+    },
+    "calendar": {
+      "name": "Calendar",
+      "description": "Use the calendar to filter your files by date.",
+      "cta": "Learn more"
+    },
+    "notifications": {
+      "name": "Notifications",
+      "description": "Get notified when something happens.",
+      "cta": "Learn more"
+    },
+    "integrations": {
+      "name": "Integrations",
+      "description": "Supports 100+ integrations and counting.",
+      "cta": "Learn more"
+    }
+  },
   "navigation": {
     "home": "Home",
     "about": "About Us",

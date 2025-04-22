@@ -16,20 +16,16 @@ export const Products = async ({ lang = "tw" }: ProductsProps = {}) => {
         </hgroup>
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 xl:grid-cols-3 place-content-center">
           <ProductCard
-            label="unitobuy.com"
+            label={dict.products.unitobuy.label}
             link="https://unitobuy.com"
-            title="UniToBuy"
-            description={`"BuyForYou" - your family's shopping assistant. Upload photos, sync lists, and turn any panicked parent into a shopping champion instantly.`}
+            title={dict.products.unitobuy.title}
+            description={dict.products.unitobuy.description}
           />
           <ProductCard
-            label="Coming soon"
+            label={dict.common.comingSoon}
             link="#"
-            title="Coming soon"
-            description={
-              lang === "tw"
-                ? "我們正在跟下一個合作夥伴談論新的產品專案"
-                : "We are discussing new product projects with our next partner"
-            }
+            title={dict.common.comingSoon}
+            description={dict.products.comingSoon.description}
           />
         </div>
       </div>

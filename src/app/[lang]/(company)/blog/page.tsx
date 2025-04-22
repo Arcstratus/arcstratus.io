@@ -13,14 +13,12 @@ export default async function Blog({ params }: { params: I18nType }) {
     <Main>
       <div className="text-center">
         <h2 className="text-4xl font-bold pb-4">{dict.navigation.blog}</h2>
-        <p className="text-gray-500">
-          {lang === "tw" ? "樂於分享" : "Happy to share"}
-        </p>
+        <p className="text-gray-500">{dict.common.happyToShare}</p>
       </div>
 
-      <FeaturedArticle />
-      <PopularArticle />
-      <LatestArticle />
+      <FeaturedArticle lang={lang} />
+      <PopularArticle lang={lang} />
+      <LatestArticle lang={lang} />
 
       <Separator />
     </Main>

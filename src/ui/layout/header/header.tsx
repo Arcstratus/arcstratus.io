@@ -1,14 +1,25 @@
 import { Navbar } from "@/components/aceternity/resizable-navbar";
-import { getDictionary } from "@/i18n/utils";
+import { getDictionary, type Locale } from "@/i18n/utils";
 import logo from "@/public/logo.png";
 import { cookies } from "next/headers";
 import { HeaderActions } from "./header-actions";
 import { HeaderDesktop } from "./header-desktop";
 import { HeaderMobile } from "./header-mobile";
 
-export const Header = async () => {
-  const cookieStore = await cookies();
-  const locale = (cookieStore.get("locale")?.value as "en" | "tw") || "tw";
+interface HeaderProps {
+  lang?: Locale;
+}
+
+export const Header = async ({ lang }: HeaderProps = {}) => {
+  // Get locale from props if provided, otherwise from cookies with fallback to default
+  let locale: Locale;
+  if (lang) {
+    locale = lang;
+  } else {
+    const cookieStore = await cookies();
+    locale = (cookieStore.get("locale")?.value as Locale) || "tw";
+  }
+
   const dict = await getDictionary(locale);
 
   const navItems = [

@@ -644,13 +644,13 @@ const files = [
   },
 ];
 
-const features = [
+const getFeatures = (dict: any) => [
   {
     Icon: IconFileText,
-    name: "Save your files",
-    description: "We automatically save your files as you type.",
+    name: dict.features.saveFiles.name,
+    description: dict.features.saveFiles.description,
     href: "#",
-    cta: "Learn more",
+    cta: dict.features.saveFiles.cta,
     className: "col-span-3 lg:col-span-1",
     background: (
       <Marquee
@@ -682,10 +682,10 @@ const features = [
   },
   {
     Icon: IconBell,
-    name: "Notifications",
-    description: "Get notified when something happens.",
+    name: dict.features.notifications.name,
+    description: dict.features.notifications.description,
     href: "#",
-    cta: "Learn more",
+    cta: dict.features.notifications.cta,
     className: "col-span-3 lg:col-span-2",
     background: (
       <AnimatedListDemo className="absolute right-2 top-4 h-[300px] w-full scale-75 border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-90" />
@@ -693,10 +693,10 @@ const features = [
   },
   {
     Icon: IconShare,
-    name: "Integrations",
-    description: "Supports 100+ integrations and counting.",
+    name: dict.features.integrations.name,
+    description: dict.features.integrations.description,
     href: "#",
-    cta: "Learn more",
+    cta: dict.features.integrations.cta,
     className: "col-span-3 lg:col-span-2",
     background: (
       <AnimatedBeamMultipleOutputDemo className="absolute right-2 top-4 h-[300px] border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-105" />
@@ -704,11 +704,11 @@ const features = [
   },
   {
     Icon: IconCalendarWeek,
-    name: "Calendar",
-    description: "Use the calendar to filter your files by date.",
+    name: dict.features.calendar.name,
+    description: dict.features.calendar.description,
     className: "col-span-3 lg:col-span-1",
     href: "#",
-    cta: "Learn more",
+    cta: dict.features.calendar.cta,
     background: (
       <Calendar
         mode="single"
@@ -725,6 +725,7 @@ interface ServiceAIProps {
 
 export async function ServiceAI({ lang }: ServiceAIProps) {
   const dict = await getDictionary(lang);
+  const features = getFeatures(dict);
   return (
     <Section name={dict.services.title}>
       <BentoGrid className="gap-8">
