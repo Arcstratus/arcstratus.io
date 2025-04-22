@@ -128,14 +128,6 @@
     "email": "Email",
     "copyright": "Copyright"
   },
-  "auth": {
-    "login": "Login",
-    "logout": "Logout",
-    "register": "Register",
-    "email": "Email",
-    "password": "Password",
-    "forgotPassword": "Forgot Password?"
-  },
   "careers": {
     "title": "Join Our Team",
     "description": "Explore career opportunities at Arcstratus and be part of our innovative team.",
