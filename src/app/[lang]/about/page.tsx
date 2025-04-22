@@ -5,7 +5,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "@/components/shadcn/card";
 import { getDictionary } from "@/i18n/dictionaries";
 import { Locale } from "@/i18n/utils";
 import {

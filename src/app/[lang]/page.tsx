@@ -1,7 +1,7 @@
-import { ClientsSection } from "@/components/clients-section";
-import { CTASection } from "@/components/cta-section";
-import { FeaturesSection } from "@/components/features-section";
-import { HeroSection } from "@/components/hero-section";
+import { ClientsSection } from "@/components/ui/clients-section";
+import { CTASection } from "@/components/ui/cta-section";
+import { FeaturesSection } from "@/components/ui/features-section";
+import { HeroSection } from "@/components/ui/hero-section";
 import { I18nProvider } from "@/components/i18n-provider";
 import { getDictionary } from "@/i18n/dictionaries";
 import { Locale } from "@/i18n/utils";

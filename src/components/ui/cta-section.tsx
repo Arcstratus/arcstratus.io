@@ -1,7 +1,7 @@
 "use client";
 
 import { useI18n } from "@/components/i18n-provider";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/shadcn/button";
 import Link from "next/link";
 
 export function CTASection() {

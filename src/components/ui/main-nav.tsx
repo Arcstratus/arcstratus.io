@@ -1,8 +1,8 @@
 "use client";
 
-import { cn } from "@/lib/utils";
 import { useI18n } from "@/components/i18n-provider";
-import { Button } from "@/components/ui/button";
+import { LocaleToggle } from "@/components/locale-toggle";
+import { Button } from "@/components/shadcn/button";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -11,17 +11,15 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
-import { LocaleToggle } from "@/components/locale-toggle";
+} from "@/components/shadcn/navigation-menu";
 import { IconBrandGithub } from "@tabler/icons-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
 
 export function MainNav() {
   const { dictionary, locale } = useI18n();
   const pathname = usePathname();
-  
+
   const getLocalizedHref = (path: string) => {
     return `/${locale}${path}`;
   };
@@ -41,7 +39,7 @@ export function MainNav() {
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
-          
+
           <NavigationMenuItem>
             <NavigationMenuTrigger>
               {dictionary.common.navigation.products}
@@ -111,7 +109,7 @@ export function MainNav() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
-          
+
           <NavigationMenuItem>
             <Link href={getLocalizedHref("/services")} legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
@@ -119,7 +117,7 @@ export function MainNav() {
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
-          
+
           <NavigationMenuItem>
             <Link href={getLocalizedHref("/news")} legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
@@ -127,7 +125,7 @@ export function MainNav() {
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
-          
+
           <NavigationMenuItem>
             <Link href={getLocalizedHref("/about")} legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
@@ -135,7 +133,7 @@ export function MainNav() {
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
-          
+
           <NavigationMenuItem>
             <Link href={getLocalizedHref("/contact")} legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
@@ -145,11 +143,15 @@ export function MainNav() {
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
-      
+
       <div className="ml-auto flex items-center space-x-4">
         <LocaleToggle />
         <Button variant="outline" size="icon" asChild>
-          <a href="https://github.com/arcstratus" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://github.com/arcstratus"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <IconBrandGithub className="h-[1.2rem] w-[1.2rem]" />
             <span className="sr-only">GitHub</span>
           </a>

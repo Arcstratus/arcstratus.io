@@ -1,5 +1,5 @@
 import { I18nProvider } from "@/components/i18n-provider";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/shadcn/button";
 import {
   Card,
   CardContent,
@@ -7,7 +7,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "@/components/shadcn/card";
 import { getDictionary } from "@/i18n/dictionaries";
 import { Locale } from "@/i18n/utils";
 import {

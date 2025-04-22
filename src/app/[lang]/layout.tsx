@@ -1,5 +1,5 @@
 import { I18nProvider } from "@/components/i18n-provider";
-import { MainNav } from "@/components/main-nav";
+import { MainNav } from "@/components/ui/main-nav";
 import { ThemeProvider } from "@/components/theme-provider";
 import { getDictionary } from "@/i18n/dictionaries";
 import { Locale } from "@/i18n/utils";

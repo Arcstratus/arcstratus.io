@@ -1,15 +1,15 @@
 import { I18nProvider } from "@/components/i18n-provider";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/shadcn/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
+} from "@/components/shadcn/card";
+import { Input } from "@/components/shadcn/input";
+import { Label } from "@/components/shadcn/label";
+import { Textarea } from "@/components/shadcn/textarea";
 import { getDictionary } from "@/i18n/dictionaries";
 import { Locale } from "@/i18n/utils";
 import { IconMail, IconMapPin, IconPhone } from "@tabler/icons-react";
