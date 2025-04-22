@@ -39,17 +39,24 @@ export async function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // Retrieve the preferred locale from the request headers
+  // For the root path (/), serve the default language content directly without redirect
+  if (pathname === "/") {
+    // Rewrite the request to the default locale path internally without redirecting
+    const url = new URL(`/${defaultLocale}${pathname}`, request.url);
+    return NextResponse.rewrite(url);
+  }
+
+  // For other paths, rewrite to the preferred locale
   const preferredLocale = await getPreferredLocale(request);
   const url = new URL(`/${preferredLocale}${pathname}`, request.url);
-  return NextResponse.redirect(url);
+  return NextResponse.rewrite(url);
 }
 
 export const config = {
   matcher: [
-    // Skip all internal paths (_next)
-    "/((?!_next).*)",
-    // Optional: only run on root (/) URL
+    // Skip all internal paths (_next), api routes, and static files
+    "/((?!_next|api|static|.*\\.).*)(.+)",
+    // Run on root (/) URL
     "/",
   ],
 };
