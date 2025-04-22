@@ -1,4 +1,5 @@
 import { I18nProvider } from "@/components/i18n-provider";
+import { MicrosoftClarity } from "@/components/microsoft-clarity";
 import { ThemeProvider } from "@/components/theme-provider";
 import { MainNav } from "@/components/ui/main-nav";
 import { getDictionary } from "@/i18n/dictionaries";
@@ -93,7 +94,10 @@ export default function Layout({
           </I18nProvider>
         </ThemeProvider>
       </body>
-      <GoogleAnalytics gaId="G-7JFKLK1FF6" />
+      <GoogleAnalytics
+        gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_PROJECT_ID!}
+      />
+      <MicrosoftClarity />
     </html>
   );
 }
