@@ -23,9 +23,9 @@ export async function Hero(props: HeroProps) {
               </p>
             </div>
             <div className="flex gap-4">
-              <Button size="lg">w</Button>
+              <Button size="lg">{dict.home.hero.buttons.primary}</Button>
               <Button variant="outline" size="lg">
-                w
+                {dict.home.hero.buttons.secondary}
               </Button>
             </div>
           </div>

@@ -30,7 +30,7 @@ export async function Footer({ lang }: FooterProps = {}) {
         <div className="grid grid-cols-2 lg:grid-cols-5 place-items-center gap-8">
           <section className="h-full space-y-4 col-span-2 lg:col-span-1">
             <NavbarLogo src={logo.src} title={title} link="/" />
-            <FooterSocialMedia />
+            <FooterSocialMedia locale={locale} />
           </section>
 
           <FooterSection
@@ -73,7 +73,12 @@ export async function Footer({ lang }: FooterProps = {}) {
         </div>
 
         <Separator />
-        <FooterCopyright year={2025} href="/" by={dict.footer.company} />
+        <FooterCopyright
+          year={2025}
+          href="/"
+          by={dict.footer.company}
+          locale={locale}
+        />
       </div>
     </footer>
   );

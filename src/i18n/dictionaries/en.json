@@ -10,7 +10,11 @@
     "hero": {
       "title": "Arcstratus",
       "slogan": "We are passionate about crafting customized solutions, collaborating hand-in-hand with various industries to realize dreams through innovative ideas!",
-      "cta": "Learn More"
+      "cta": "Learn More",
+      "buttons": {
+        "primary": "Get Started",
+        "secondary": "Learn More"
+      }
     },
     "service": [
       {
@@ -40,9 +44,17 @@
       "data": [
         {
           "title": "Company Launched",
-          "description": "With big dreams and bold ambitions, we officially kicked off the company! This was the start of our journey to chase greatness!"
+          "description": "With big dreams and bold ambitions, we officially kicked off the company! This was the start of our journey to chase greatness!",
+          "teamDescription": "We are a team of developers who are passionate about creating products that help people live better lives."
         }
       ]
+    },
+    "upcoming": {
+      "date": "April 2025",
+      "product": {
+        "title": "BuyForYou",
+        "description": "We're about to launch our first product, BuyForYou, a shopping assistant for every family that makes purchasing easier and more accurate. Upload photos, record voice notes, and sync shopping lists effortlessly. Even \"Panic Dad\" can instantly transform into a shopping pro and team MVP."
+      }
     }
   },
   "common": {
@@ -177,7 +189,12 @@
     "address": "Address",
     "phone": "Phone",
     "email": "Email",
-    "copyright": "Copyright"
+    "copyright": "All rights reserved.",
+    "social": {
+      "instagram": "Instagram",
+      "threads": "Threads",
+      "x": "X"
+    }
   },
   "careers": {
     "title": "Join Our Team",

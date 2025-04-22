@@ -10,7 +10,11 @@
     "hero": {
       "title": "諾澄科技",
       "slogan": "我們熱衷打造專屬的解決方案，與各產業攜手合作，用創新點子實現夢想！",
-      "cta": "了解更多"
+      "cta": "了解更多",
+      "buttons": {
+        "primary": "立即開始",
+        "secondary": "了解更多"
+      }
     },
     "service": [
       {
@@ -40,9 +44,17 @@
       "data": [
         {
           "title": "公司成立",
-          "description": "抱著大幹一場的夢想，正式把公司開起來！這就是我們追夢的起點！"
+          "description": "抱著大幹一場的夢想，正式把公司開起來！這就是我們追夢的起點！",
+          "teamDescription": "我們是一個熱衷於創造能幫助人們過上更好生活的產品的開發者團隊。"
         }
       ]
+    },
+    "upcoming": {
+      "date": "2025年4月",
+      "product": {
+        "title": "BuyForYou",
+        "description": "我們即將推出第一個產品 BuyForYou，這是一款為每個家庭設計的購物助手，讓購物變得更簡單、更精準。上傳照片、錄製語音備忘錄，輕鬆同步購物清單。即使是「慌張爸爸」也能立即變身為購物高手和團隊MVP。"
+      }
     }
   },
   "common": {
@@ -177,7 +189,12 @@
     "address": "地址",
     "phone": "電話",
     "email": "電子郵件",
-    "copyright": "版權所有"
+    "copyright": "版權所有",
+    "social": {
+      "instagram": "Instagram",
+      "threads": "Threads",
+      "x": "X"
+    }
   },
   "careers": {
     "title": "加入我們",

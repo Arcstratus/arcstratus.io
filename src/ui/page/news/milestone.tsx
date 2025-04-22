@@ -23,11 +23,7 @@ export const Milestone = async ({ lang }: MilestoneProps = {}) => {
 
       <div>
         <h2>{dict.news.timeline.data[0].title}</h2>
-        <p>
-          {locale === "tw"
-            ? "我們是一個熱衷於創造能幫助人們過上更好生活的產品的開發者團隊。"
-            : "We are a team of developers who are passionate about creating products that help people live better lives."}
-        </p>
+        <p>{dict.news.timeline.data[0].teamDescription}</p>
       </div>
     </section>
   );
