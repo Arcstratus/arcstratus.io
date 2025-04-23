@@ -34,16 +34,18 @@ export const generateMetadata = async ({
   };
 };
 
-export default function Layout({
+export default async function Layout({
   children,
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: { lang: Locale };
+  params: Promise<{ lang: Locale }>;
 }>) {
-  const dictionary = getDictionary(params.lang);
+  const { lang } = await params;
+  const dictionary = getDictionary(lang);
+
   return (
-    <html lang={params.lang} suppressHydrationWarning>
+    <html lang={lang} suppressHydrationWarning>
       <body className="min-h-screen overflow-x-hidden bg-background text-foreground font-sans antialiased">
         <ThemeProvider
           attribute="class"
@@ -51,12 +53,12 @@ export default function Layout({
           enableSystem
           disableTransitionOnChange
         >
-          <I18nProvider locale={params.lang} dictionary={dictionary}>
+          <I18nProvider locale={lang} dictionary={dictionary}>
             <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur">
               <div className="container mx-auto flex h-16 md:h-14 items-center">
                 <a
                   className="mr-2 md:mr-6 flex items-center space-x-2 whitespace-nowrap"
-                  href={`/${params.lang}`}
+                  href={`/${lang}`}
                 >
                   <span className="font-bold whitespace-nowrap">
                     {dictionary.common.title}
@@ -78,13 +80,13 @@ export default function Layout({
                 <div className="flex items-center space-x-4">
                   <a
                     className="text-sm text-muted-foreground underline underline-offset-4"
-                    href={`/${params.lang}/privacy`}
+                    href={`/${lang}/privacy`}
                   >
                     {dictionary.common.footer.privacyPolicy}
                   </a>
                   <a
                     className="text-sm text-muted-foreground underline underline-offset-4"
-                    href={`/${params.lang}/terms`}
+                    href={`/${lang}/terms`}
                   >
                     {dictionary.common.footer.termsOfService}
                   </a>
