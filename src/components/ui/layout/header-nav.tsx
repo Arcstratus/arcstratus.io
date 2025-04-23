@@ -12,7 +12,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/shadcn/navigation-menu";
-import { IconBrandGithub, IconMenu2 } from "@tabler/icons-react";
+import { IconMenu2 } from "@tabler/icons-react";
 import Link from "next/link";
 
 export function HeaderNav() {
@@ -129,16 +129,6 @@ export function HeaderNav() {
 
       <div className="flex items-center space-x-4 ml-auto">
         <LocaleToggle />
-        <Button variant="outline" size="icon" asChild>
-          <a
-            href="https://github.com/arcstratus"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <IconBrandGithub className="h-[1.2rem] w-[1.2rem]" />
-            <span className="sr-only">GitHub</span>
-          </a>
-        </Button>
       </div>
     </div>
   );
