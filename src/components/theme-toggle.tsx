@@ -1,12 +1,12 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/shadcn/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "@/components/shadcn/dropdown-menu";
 import { IconMoon, IconSun } from "@tabler/icons-react";
 import { useTheme } from "next-themes";
 

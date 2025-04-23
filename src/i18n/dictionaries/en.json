@@ -1,0 +1,149 @@
+{
+  "common": {
+    "title": "Arcstratus",
+    "description": "Cloud solutions for modern businesses",
+    "navigation": {
+      "home": "Home",
+      "products": "Products",
+      "services": "Services",
+      "news": "News",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "footer": {
+      "copyright": "© 2025 Arcstratus. All rights reserved.",
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service"
+    },
+    "buttons": {
+      "learnMore": "Learn More",
+      "getStarted": "Get Started",
+      "contactUs": "Contact Us",
+      "readMore": "Read More"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Cloud Solutions for Modern Businesses",
+      "subtitle": "Optimize your infrastructure with our cutting-edge cloud services",
+      "cta": "Get Started Today"
+    },
+    "features": {
+      "title": "Our Services",
+      "subtitle": "What we offer",
+      "feature1": {
+        "title": "Product Design",
+        "description": "User-centered design solutions that enhance user experience and drive business growth"
+      },
+      "feature2": {
+        "title": "Software Development",
+        "description": "Custom software solutions tailored to your specific business needs"
+      },
+      "feature3": {
+        "title": "Cloud Architecture",
+        "description": "Scalable and secure cloud infrastructure designed for optimal performance"
+      },
+      "feature4": {
+        "title": "DevOps & Maintenance",
+        "description": "Continuous integration, delivery, and maintenance services to keep your systems running smoothly"
+      }
+    },
+    "clients": {
+      "title": "Trusted by Industry Leaders",
+      "subtitle": "Companies that rely on our expertise"
+    },
+    "cta": {
+      "title": "Ready to Transform Your Business?",
+      "subtitle": "Let's discuss how we can help you achieve your goals",
+      "button": "Contact Us Today"
+    }
+  },
+  "products": {
+    "title": "Our Products",
+    "description": "Innovative solutions designed to meet your business needs",
+    "cloudSolutions": "Cloud Solutions",
+    "cloudSolutionsDesc": "Scalable and secure cloud infrastructure for your business",
+    "softwareDevelopment": "Software Development",
+    "softwareDevelopmentDesc": "Custom software solutions tailored to your specific requirements",
+    "devOps": "DevOps Services",
+    "devOpsDesc": "Streamline your development and operations processes"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive solutions for your business",
+    "service1": {
+      "title": "Product Design",
+      "description": "From concept to prototype, we design products that users love"
+    },
+    "service2": {
+      "title": "Software Outsourcing",
+      "description": "Dedicated development teams to bring your ideas to life"
+    },
+    "service3": {
+      "title": "Cloud Architecture",
+      "description": "Design and implementation of scalable cloud infrastructure"
+    },
+    "service4": {
+      "title": "DevOps & Maintenance",
+      "description": "Ongoing support and maintenance to ensure your systems run smoothly"
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Our story and mission",
+    "mission": {
+      "title": "Our Mission",
+      "description": "To empower businesses with reliable, scalable, and secure technology solutions that drive innovation and growth."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To be the leading provider of cloud and software solutions, recognized for our expertise, reliability, and customer-centric approach."
+    },
+    "values": {
+      "title": "Our Values",
+      "value1": {
+        "title": "Innovation",
+        "description": "We constantly explore new technologies and approaches to deliver cutting-edge solutions."
+      },
+      "value2": {
+        "title": "Excellence",
+        "description": "We strive for excellence in everything we do, from code quality to customer service."
+      },
+      "value3": {
+        "title": "Collaboration",
+        "description": "We believe in the power of teamwork and partnership with our clients."
+      },
+      "value4": {
+        "title": "Integrity",
+        "description": "We operate with transparency, honesty, and ethical standards in all our interactions."
+      }
+    },
+    "team": {
+      "title": "Our Team",
+      "subtitle": "Meet the experts behind Arcstratus"
+    }
+  },
+  "news": {
+    "title": "Latest News",
+    "subtitle": "Stay updated with our latest developments and industry insights",
+    "readMore": "Read More",
+    "viewAll": "View All News"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our team",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message"
+    },
+    "info": {
+      "title": "Contact Information",
+      "address": "123 Tech Street, Innovation City, 12345",
+      "email": "info@arcstratus.io",
+      "phone": "+1 (555) 123-4567"
+    }
+  }
+}
