@@ -13,7 +13,31 @@
     "footer": {
       "copyright": "© 2025 Arcstratus. All rights reserved.",
       "privacyPolicy": "Privacy Policy",
-      "termsOfService": "Terms of Service"
+      "termsOfService": "Terms of Service",
+      "products": {
+        "title": "Products",
+        "unitobuy": "Unitobuy",
+        "islandVoice": "Island Voice"
+      },
+      "resources": {
+        "title": "Resources",
+        "support": "Support",
+        "serviceStatus": "Service Status",
+        "security": "Security",
+        "legal": "Legal"
+      },
+      "developers": {
+        "title": "Developers",
+        "partners": "Partners",
+        "becomePartner": "Join Us"
+      },
+      "company": {
+        "title": "Company",
+        "about": "About",
+        "press": "Press",
+        "careers": "Careers",
+        "contactUs": "Contact Us"
+      }
     },
     "buttons": {
       "learnMore": "Learn More",
@@ -159,5 +183,12 @@
       "email": "info@arcstratus.io",
       "phone": "+1 (555) 123-4567"
     }
+  },
+  "careers": {
+    "title": "職缺",
+    "description": "加入我們的團隊，一起改變未來",
+    "currentOpenings": "目前開放職缺",
+    "applyNow": "立即申請",
+    "whyJoinUs": "為什麼要加入我們"
   }
 }
