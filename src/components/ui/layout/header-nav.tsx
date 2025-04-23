@@ -14,18 +14,12 @@ import {
 } from "@/components/shadcn/navigation-menu";
 import { IconBrandGithub, IconMenu2 } from "@tabler/icons-react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
-export function MainNav() {
+export function HeaderNav() {
   const { dictionary, locale } = useI18n();
-  const pathname = usePathname();
 
   const getLocalizedHref = (path: string) => {
     return `/${locale}${path}`;
-  };
-
-  const isActive = (path: string) => {
-    return pathname === getLocalizedHref(path);
   };
 
   return (
