@@ -47,17 +47,18 @@ export function HeaderNav() {
                     </a>
                   </NavigationMenuLink>
                 </li>
+                <li className="min-h-24"></li>
                 <li>
                   <NavigationMenuLink asChild>
                     <a
-                      href={getLocalizedHref("/products/cloud-solutions")}
+                      href={getLocalizedHref("/products/unitobuy")}
                       className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                     >
                       <div className="text-sm font-medium leading-none">
-                        {dictionary.products.cloudSolutions}
+                        {dictionary.products.unitobuy.title}
                       </div>
                       <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                        {dictionary.products.cloudSolutionsDesc}
+                        {dictionary.products.unitobuy.description}
                       </p>
                     </a>
                   </NavigationMenuLink>
@@ -65,29 +66,14 @@ export function HeaderNav() {
                 <li>
                   <NavigationMenuLink asChild>
                     <a
-                      href={getLocalizedHref("/products/software-development")}
+                      href={getLocalizedHref("/products/island-voice")}
                       className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                     >
                       <div className="text-sm font-medium leading-none">
-                        {dictionary.products.softwareDevelopment}
+                        {dictionary.products.islandVoice.title}
                       </div>
                       <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                        {dictionary.products.softwareDevelopmentDesc}
-                      </p>
-                    </a>
-                  </NavigationMenuLink>
-                </li>
-                <li>
-                  <NavigationMenuLink asChild>
-                    <a
-                      href={getLocalizedHref("/products/devops")}
-                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                    >
-                      <div className="text-sm font-medium leading-none">
-                        {dictionary.products.devOps}
-                      </div>
-                      <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                        {dictionary.products.devOpsDesc}
+                        {dictionary.products.islandVoice.description}
                       </p>
                     </a>
                   </NavigationMenuLink>

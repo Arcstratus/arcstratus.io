@@ -72,10 +72,6 @@
         "description": "持續整合、交付和維護服務，確保您的系統順暢運行"
       }
     },
-    "clients": {
-      "title": "受到行業領導者信賴",
-      "subtitle": "依賴我們專業知識的公司"
-    },
     "cta": {
       "title": "準備好轉變您的業務了嗎？",
       "subtitle": "讓我們討論如何幫助您實現目標",
@@ -85,25 +81,21 @@
   "products": {
     "title": "我們的產品",
     "description": "為滿足您的業務需求而設計的創新解決方案",
-    "cloudSolutions": "雲端解決方案",
-    "cloudSolutionsDesc": "為您的業務提供可擴展和安全的雲端基礎設施",
-    "softwareDevelopment": "軟體開發",
-    "softwareDevelopmentDesc": "根據您的特定需求量身定制的軟體解決方案",
-    "devOps": "DevOps 服務",
-    "devOpsDesc": "簡化您的開發和運營流程",
-    "commercial": {
-      "title": "商業產品",
-      "unitobuy": {
-        "title": "家裡缺啥？由你買",
-        "description": "「由你買」是每個家庭的採購小幫手，讓採購變得輕鬆又準確。照片上傳、語音記錄，輕鬆同步清單。讓「慌張爸爸」也能秒變採購達人、神隊友。"
-      }
+
+    "unitobuy": {
+      "title": "家裡缺啥？由你買",
+      "description": "「由你買」是每個家庭的採購小幫手，讓採購變得輕鬆又準確。照片上傳、語音記錄，輕鬆同步清單。讓「慌張爸爸」也能秒變採購達人、神隊友。",
+      "href": "/products/unitobuy"
     },
-    "nonprofit": {
-      "title": "公益專案",
-      "islandVoice": {
-        "title": "島語存真",
-        "description": "島語存真致力於記錄台灣公眾人物的言行、截圖和影片，打造一個透明、可信的存檔平台。"
-      }
+    "islandVoice": {
+      "title": "島語存真",
+      "description": "島語存真致力於記錄台灣公眾人物的言行、截圖和影片，打造一個透明、可信的存檔平台。",
+      "href": "/products/island-voice"
+    },
+    "ongoing": {
+      "title": "籌備中",
+      "description": "",
+      "href": ""
     }
   },
   "services": {

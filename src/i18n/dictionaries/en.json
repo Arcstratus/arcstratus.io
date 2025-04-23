@@ -72,10 +72,6 @@
         "description": "Continuous integration, delivery, and maintenance services to keep your systems running smoothly"
       }
     },
-    "clients": {
-      "title": "Trusted by Industry Leaders",
-      "subtitle": "Companies that rely on our expertise"
-    },
     "cta": {
       "title": "Ready to Transform Your Business?",
       "subtitle": "Let's discuss how we can help you achieve your goals",
@@ -85,25 +81,20 @@
   "products": {
     "title": "Our Products",
     "description": "Innovative solutions designed to meet your business needs",
-    "cloudSolutions": "Cloud Solutions",
-    "cloudSolutionsDesc": "Scalable and secure cloud infrastructure for your business",
-    "softwareDevelopment": "Software Development",
-    "softwareDevelopmentDesc": "Custom software solutions tailored to your specific requirements",
-    "devOps": "DevOps Services",
-    "devOpsDesc": "Streamline your development and operations processes",
-    "commercial": {
-      "title": "Commercial Products",
-      "unitobuy": {
-        "title": "What's Missing? You Buy",
-        "description": "\"You Buy\" is every family's shopping assistant, making shopping easy and accurate. Upload photos, record voice notes, and sync lists effortlessly. Turn \"panicked dads\" into shopping experts and reliable partners."
-      }
+    "unitobuy": {
+      "title": "What's Missing? You Buy",
+      "description": "\"You Buy\" is every family's shopping assistant, making shopping easy and accurate. Upload photos, record voice notes, and sync lists effortlessly. Turn \"panicked dads\" into shopping experts and reliable partners.",
+      "href": "https://www.unitobuy.com"
     },
-    "nonprofit": {
-      "title": "Non-profit Projects",
-      "islandVoice": {
-        "title": "Island Voice",
-        "description": "Island Voice is dedicated to documenting the words, screenshots, and videos of Taiwanese public figures, creating a transparent and trustworthy archival platform."
-      }
+    "islandVoice": {
+      "title": "Island Voice",
+      "description": "Island Voice is dedicated to documenting the words, screenshots, and videos of Taiwanese public figures, creating a transparent and trustworthy archival platform.",
+      "href": "https://www.island-voice.com"
+    },
+    "ongoing": {
+      "title": "TBD",
+      "description": "",
+      "href": ""
     }
   },
   "services": {
