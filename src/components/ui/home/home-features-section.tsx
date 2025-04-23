@@ -15,7 +15,7 @@ import {
   IconSettings,
 } from "@tabler/icons-react";
 
-export function FeaturesSection() {
+export function HomeFeaturesSection() {
   const { dictionary } = useI18n();
 
   const features = [

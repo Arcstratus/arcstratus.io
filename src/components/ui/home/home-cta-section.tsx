@@ -4,7 +4,7 @@ import { useI18n } from "@/components/i18n-provider";
 import { Button } from "@/components/shadcn/button";
 import Link from "next/link";
 
-export function CTASection() {
+export function HomeCtaSection() {
   const { dictionary, locale } = useI18n();
 
   return (
