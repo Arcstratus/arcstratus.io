@@ -66,7 +66,21 @@
     "softwareDevelopment": "軟體開發",
     "softwareDevelopmentDesc": "根據您的特定需求量身定制的軟體解決方案",
     "devOps": "DevOps 服務",
-    "devOpsDesc": "簡化您的開發和運營流程"
+    "devOpsDesc": "簡化您的開發和運營流程",
+    "commercial": {
+      "title": "商業產品",
+      "unitobuy": {
+        "title": "家裡缺啥？由你買",
+        "description": "「由你買」是每個家庭的採購小幫手，讓採購變得輕鬆又準確。照片上傳、語音記錄，輕鬆同步清單。讓「慌張爸爸」也能秒變採購達人、神隊友。"
+      }
+    },
+    "nonprofit": {
+      "title": "公益專案",
+      "islandVoice": {
+        "title": "島語存真",
+        "description": "島語存真致力於記錄台灣公眾人物的言行、截圖和影片，打造一個透明、可信的存檔平台。"
+      }
+    }
   },
   "services": {
     "title": "我們的服務",

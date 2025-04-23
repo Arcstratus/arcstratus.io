@@ -8,10 +8,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/shadcn/card";
+import { Separator } from "@/components/shadcn/separator";
 import { getDictionary } from "@/i18n/dictionaries";
 import { Locale } from "@/i18n/utils";
-import { IconCloud, IconCode, IconSettings } from "@tabler/icons-react";
+import { IconBuilding, IconHeart } from "@tabler/icons-react";
 import Link from "next/link";
+import { ReactNode } from "react";
 
 interface PageProps {
   params: Promise<{
@@ -19,34 +21,56 @@ interface PageProps {
   }>;
 }
 
+interface ProductItem {
+  icon: ReactNode;
+  title: string;
+  description: string;
+  link: string;
+  isExternal?: boolean;
+}
+
+interface ProductCategory {
+  category: string;
+  title?: string;
+  items: ProductItem[];
+}
+
 export default async function ProductsPage({ params }: PageProps) {
   const resolvedParams = await params;
   const dictionary = getDictionary(resolvedParams.lang);
 
-  const products = [
+  const products: ProductCategory[] = [
     {
-      icon: <IconCloud className="h-10 w-10 text-primary" />,
-      title: dictionary.products.cloudSolutions,
-      description: dictionary.products.cloudSolutionsDesc,
-      link: "/products/cloud-solutions",
+      category: "commercial",
+      title: dictionary.products.commercial.title,
+      items: [
+        {
+          icon: <IconBuilding className="h-10 w-10 text-primary" />,
+          title: dictionary.products.commercial.unitobuy.title,
+          description: dictionary.products.commercial.unitobuy.description,
+          link: "https://www.unitobuy.com",
+          isExternal: true,
+        },
+      ],
     },
     {
-      icon: <IconCode className="h-10 w-10 text-primary" />,
-      title: dictionary.products.softwareDevelopment,
-      description: dictionary.products.softwareDevelopmentDesc,
-      link: "/products/software-development",
-    },
-    {
-      icon: <IconSettings className="h-10 w-10 text-primary" />,
-      title: dictionary.products.devOps,
-      description: dictionary.products.devOpsDesc,
-      link: "/products/devops",
+      category: "nonprofit",
+      title: dictionary.products.nonprofit.title,
+      items: [
+        {
+          icon: <IconHeart className="h-10 w-10 text-primary" />,
+          title: dictionary.products.nonprofit.islandVoice.title,
+          description: dictionary.products.nonprofit.islandVoice.description,
+          link: "https://www.island-voice.com",
+          isExternal: true,
+        },
+      ],
     },
   ];
 
   return (
     <I18nProvider locale={resolvedParams.lang} dictionary={dictionary}>
-      <section className="w-full py-12 md:py-24 lg:py-32">
+      <section className="w-full py-12 lg:py-18">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
@@ -61,34 +85,55 @@ export default async function ProductsPage({ params }: PageProps) {
         </div>
       </section>
 
-      <section className="w-full py-12 md:py-24">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-            {products.map((product, index) => (
-              <Card key={index} className="flex flex-col h-full">
-                <CardHeader>
-                  <div className="p-2 w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                    {product.icon}
-                  </div>
-                  <CardTitle className="text-xl">{product.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="flex-1">
-                  <CardDescription className="text-base">
-                    {product.description}
-                  </CardDescription>
-                </CardContent>
-                <CardFooter>
-                  <Link href={`/${resolvedParams.lang}${product.link}`}>
-                    <Button variant="outline">
-                      {dictionary.common.buttons.learnMore}
-                    </Button>
-                  </Link>
-                </CardFooter>
-              </Card>
-            ))}
+      <Separator />
+
+      {products.map((category, categoryIndex) => (
+        <section key={categoryIndex} className="w-full py-12">
+          <div className="container mx-auto px-4 md:px-6">
+            {category.title && (
+              <h2 className="text-2xl font-bold mb-8 text-center">
+                {category.title}
+              </h2>
+            )}
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+              {category.items.map((product, index) => (
+                <Card key={index} className="flex flex-col h-full">
+                  <CardHeader>
+                    <div className="p-2 w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                      {product.icon}
+                    </div>
+                    <CardTitle className="text-xl">{product.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-1">
+                    <CardDescription className="text-base">
+                      {product.description}
+                    </CardDescription>
+                  </CardContent>
+                  <CardFooter>
+                    {product.isExternal ? (
+                      <a
+                        href={product.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Button variant="outline">
+                          {dictionary.common.buttons.learnMore}
+                        </Button>
+                      </a>
+                    ) : (
+                      <Link href={`/${resolvedParams.lang}${product.link}`}>
+                        <Button variant="outline">
+                          {dictionary.common.buttons.learnMore}
+                        </Button>
+                      </Link>
+                    )}
+                  </CardFooter>
+                </Card>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      ))}
     </I18nProvider>
   );
 }

@@ -66,7 +66,21 @@
     "softwareDevelopment": "Software Development",
     "softwareDevelopmentDesc": "Custom software solutions tailored to your specific requirements",
     "devOps": "DevOps Services",
-    "devOpsDesc": "Streamline your development and operations processes"
+    "devOpsDesc": "Streamline your development and operations processes",
+    "commercial": {
+      "title": "Commercial Products",
+      "unitobuy": {
+        "title": "What's Missing? You Buy",
+        "description": "\"You Buy\" is every family's shopping assistant, making shopping easy and accurate. Upload photos, record voice notes, and sync lists effortlessly. Turn \"panicked dads\" into shopping experts and reliable partners."
+      }
+    },
+    "nonprofit": {
+      "title": "Non-profit Projects",
+      "islandVoice": {
+        "title": "Island Voice",
+        "description": "Island Voice is dedicated to documenting the words, screenshots, and videos of Taiwanese public figures, creating a transparent and trustworthy archival platform."
+      }
+    }
   },
   "services": {
     "title": "Our Services",
