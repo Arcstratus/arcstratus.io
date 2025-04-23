@@ -3,16 +3,17 @@ import TermsOfServicePageEN from "./page.en";
 import TermsOfServicePageTW from "./page.tw";
 
 interface PageProps {
-  params: {
+  params: Promise<{
     lang: Locale;
-  };
+  }>;
 }
 
 export default async function TermsOfServicePage({ params }: PageProps) {
   // Return the appropriate component based on the language
-  if (params.lang === "tw") {
-    return <TermsOfServicePageTW params={params} />;
+  const resolvedParams = await params;
+  if (resolvedParams.lang === "tw") {
+    return <TermsOfServicePageTW params={resolvedParams} />;
   } else {
-    return <TermsOfServicePageEN params={params} />;
+    return <TermsOfServicePageEN params={resolvedParams} />;
   }
 }

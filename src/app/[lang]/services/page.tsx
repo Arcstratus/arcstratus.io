@@ -19,13 +19,14 @@ import {
 import Link from "next/link";
 
 interface PageProps {
-  params: {
+  params: Promise<{
     lang: Locale;
-  };
+  }>;
 }
 
 export default async function ServicesPage({ params }: PageProps) {
-  const dictionary = getDictionary(params.lang);
+  const resolvedParams = await params;
+  const dictionary = getDictionary(resolvedParams.lang);
 
   const services = [
     {
@@ -51,7 +52,7 @@ export default async function ServicesPage({ params }: PageProps) {
   ];
 
   return (
-    <I18nProvider locale={params.lang} dictionary={dictionary}>
+    <I18nProvider locale={resolvedParams.lang} dictionary={dictionary}>
       <section className="w-full py-12 md:py-24 lg:py-32">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -70,7 +71,7 @@ export default async function ServicesPage({ params }: PageProps) {
       <section className="w-full py-12 md:py-24">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2">
-            {services.map((service, index) => (
+            {services.map(async (service, index) => (
               <Card key={index} className="flex flex-col h-full">
                 <CardHeader>
                   <div className="p-2 w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
@@ -84,7 +85,7 @@ export default async function ServicesPage({ params }: PageProps) {
                   </CardDescription>
                 </CardContent>
                 <CardFooter>
-                  <Link href={`/${params.lang}/contact`}>
+                  <Link href={`/${resolvedParams.lang}/about#contact`}>
                     <Button variant="outline">
                       {dictionary.common.buttons.contactUs}
                     </Button>
@@ -109,7 +110,7 @@ export default async function ServicesPage({ params }: PageProps) {
                 </p>
               </div>
               <div>
-                <Link href={`/${params.lang}/contact`}>
+                <Link href={`/${resolvedParams.lang}/about#contact`}>
                   <Button size="lg" className="px-8">
                     {dictionary.home.cta.button}
                   </Button>

@@ -1,18 +1,23 @@
+import { I18nProvider } from "@/components/i18n-provider";
 import { getDictionary } from "@/i18n/dictionaries";
 import { Locale } from "@/i18n/utils";
-import { I18nProvider } from "@/components/i18n-provider";
 
 interface PageProps {
-  params: {
-    lang: Locale;
-  };
+  params:
+    | Promise<{
+        lang: Locale;
+      }>
+    | {
+        lang: Locale;
+      };
 }
 
 export default async function TermsOfServicePageTW({ params }: PageProps) {
-  const dictionary = getDictionary(params.lang);
+  const resolvedParams = params instanceof Promise ? await params : params;
+  const dictionary = getDictionary(resolvedParams.lang);
 
   return (
-    <I18nProvider locale={params.lang} dictionary={dictionary}>
+    <I18nProvider locale={resolvedParams.lang} dictionary={dictionary}>
       <div className="container mx-auto py-12 md:py-24 px-4 md:px-6">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl mb-8">
@@ -20,9 +25,7 @@ export default async function TermsOfServicePageTW({ params }: PageProps) {
           </h1>
 
           <div className="prose prose-gray dark:prose-invert max-w-none">
-            <p className="text-lg mb-6">
-              最後更新日期：2025年1月1日
-            </p>
+            <p className="text-lg mb-6">最後更新日期：2025年1月1日</p>
 
             <h2 className="text-2xl font-semibold mt-8 mb-4">1. 接受條款</h2>
             <p>
@@ -34,7 +37,8 @@ export default async function TermsOfServicePageTW({ params }: PageProps) {
 
             <h2 className="text-2xl font-semibold mt-8 mb-4">2. 服務描述</h2>
             <p>
-              Arcstratus 提供雲端解決方案、軟體開發和 DevOps 服務，幫助企業優化其技術基礎設施和業務流程。我們的具體服務包括但不限於：
+              Arcstratus 提供雲端解決方案、軟體開發和 DevOps
+              服務，幫助企業優化其技術基礎設施和業務流程。我們的具體服務包括但不限於：
             </p>
             <ul className="list-disc pl-6 mb-6">
               <li>雲端架構設計和實施</li>
@@ -56,11 +60,11 @@ export default async function TermsOfServicePageTW({ params }: PageProps) {
 
             <h2 className="text-2xl font-semibold mt-8 mb-4">4. 知識產權</h2>
             <p>
-              我們的網站、產品和服務，包括所有相關的內容、功能和設計元素，均為 Arcstratus 或其許可方的財產，受著作權、商標和其他知識產權法律的保護。
+              我們的網站、產品和服務，包括所有相關的內容、功能和設計元素，均為
+              Arcstratus
+              或其許可方的財產，受著作權、商標和其他知識產權法律的保護。
             </p>
-            <p>
-              未經我們明確許可，您不得：
-            </p>
+            <p>未經我們明確許可，您不得：</p>
             <ul className="list-disc pl-6 mb-6">
               <li>複製、修改或創建我們內容的衍生作品</li>
               <li>使用我們的商標、標誌或其他專有資訊</li>
@@ -77,9 +81,7 @@ export default async function TermsOfServicePageTW({ params }: PageProps) {
             </p>
 
             <h2 className="text-2xl font-semibold mt-8 mb-4">6. 禁止行為</h2>
-            <p>
-              使用我們的服務時，您同意不會：
-            </p>
+            <p>使用我們的服務時，您同意不會：</p>
             <ul className="list-disc pl-6 mb-6">
               <li>違反任何適用的法律或法規</li>
               <li>侵犯他人的知識產權或其他權利</li>
@@ -90,7 +92,9 @@ export default async function TermsOfServicePageTW({ params }: PageProps) {
               <li>從事任何可能損害我們或其他用戶的活動</li>
             </ul>
 
-            <h2 className="text-2xl font-semibold mt-8 mb-4">7. 服務變更和終止</h2>
+            <h2 className="text-2xl font-semibold mt-8 mb-4">
+              7. 服務變更和終止
+            </h2>
             <p>
               我們保留隨時修改、暫停或終止我們服務的權利，恕不另行通知。我們也可能限制某些功能和服務的使用，或限制您對部分或全部服務的訪問。
             </p>
@@ -102,18 +106,18 @@ export default async function TermsOfServicePageTW({ params }: PageProps) {
             <p>
               我們的服務按「現狀」和「可用性」提供，不提供任何明示或暗示的保證。在法律允許的最大範圍內，我們否認所有保證，包括但不限於適銷性、特定用途適用性和非侵權的暗示保證。
             </p>
-            <p>
-              我們不保證服務將不間斷、安全或無錯誤，也不保證缺陷將被糾正。
-            </p>
+            <p>我們不保證服務將不間斷、安全或無錯誤，也不保證缺陷將被糾正。</p>
 
             <h2 className="text-2xl font-semibold mt-8 mb-4">9. 責任限制</h2>
             <p>
-              在法律允許的最大範圍內，Arcstratus 及其董事、員工、合作夥伴和代理人不對任何間接、附帶、特殊、後果性或懲罰性損害負責，包括但不限於利潤損失、數據損失、業務中斷或任何其他損害。
+              在法律允許的最大範圍內，Arcstratus
+              及其董事、員工、合作夥伴和代理人不對任何間接、附帶、特殊、後果性或懲罰性損害負責，包括但不限於利潤損失、數據損失、業務中斷或任何其他損害。
             </p>
 
             <h2 className="text-2xl font-semibold mt-8 mb-4">10. 賠償</h2>
             <p>
-              您同意賠償、辯護並使 Arcstratus 及其董事、員工、合作夥伴和代理人免受因您違反這些條款、您的用戶內容或您使用我們服務而產生的任何索賠、損害、損失、責任、成本和費用（包括合理的律師費）的影響。
+              您同意賠償、辯護並使 Arcstratus
+              及其董事、員工、合作夥伴和代理人免受因您違反這些條款、您的用戶內容或您使用我們服務而產生的任何索賠、損害、損失、責任、成本和費用（包括合理的律師費）的影響。
             </p>
 
             <h2 className="text-2xl font-semibold mt-8 mb-4">11. 適用法律</h2>
@@ -131,7 +135,8 @@ export default async function TermsOfServicePageTW({ params }: PageProps) {
               如果您對這些服務條款有任何問題或疑慮，請通過以下方式聯繫我們：
             </p>
             <p>
-              電子郵件：legal@arcstratus.io<br />
+              電子郵件：legal@arcstratus.io
+              <br />
               地址：台北市信義區松高路1號
             </p>
           </div>

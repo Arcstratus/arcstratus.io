@@ -18,13 +18,14 @@ import {
 import Link from "next/link";
 
 interface PageProps {
-  params: {
+  params: Promise<{
     lang: Locale;
-  };
+  }>;
 }
 
 export default async function SoftwareDevelopmentPage({ params }: PageProps) {
-  const dictionary = getDictionary(params.lang);
+  const resolvedParams = await params;
+  const dictionary = getDictionary(resolvedParams.lang);
 
   const services = [
     {
@@ -71,7 +72,7 @@ export default async function SoftwareDevelopmentPage({ params }: PageProps) {
   ];
 
   return (
-    <I18nProvider locale={params.lang} dictionary={dictionary}>
+    <I18nProvider locale={resolvedParams.lang} dictionary={dictionary}>
       <section className="w-full py-12 md:py-24 lg:py-32">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
@@ -85,7 +86,7 @@ export default async function SoftwareDevelopmentPage({ params }: PageProps) {
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                <Link href={`/${params.lang}/about#contact`}>
+                <Link href={`/${resolvedParams.lang}/about#contact`}>
                   <Button size="lg" className="px-8">
                     {dictionary.common.buttons.contactUs}
                   </Button>

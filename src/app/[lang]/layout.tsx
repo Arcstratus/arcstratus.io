@@ -16,9 +16,9 @@ export const generateStaticParams = async () => [
 export const generateMetadata = async ({
   params,
 }: {
-  params: { lang: Locale };
+  params: Promise<{ lang: Locale }>;
 }) => {
-  const dictionary = getDictionary(params.lang);
+  const dictionary = getDictionary((await params).lang);
 
   return {
     title: dictionary.common.title,

@@ -1,19 +1,27 @@
-import { getDictionary } from "@/i18n/dictionaries";
-import { Locale } from "@/i18n/utils";
 import { I18nProvider } from "@/components/i18n-provider";
 import { Button } from "@/components/shadcn/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/shadcn/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/shadcn/card";
+import { getDictionary } from "@/i18n/dictionaries";
+import { Locale } from "@/i18n/utils";
 import { IconCloud, IconCode, IconSettings } from "@tabler/icons-react";
 import Link from "next/link";
 
 interface PageProps {
-  params: {
+  params: Promise<{
     lang: Locale;
-  };
+  }>;
 }
 
 export default async function ProductsPage({ params }: PageProps) {
-  const dictionary = getDictionary(params.lang);
+  const resolvedParams = await params;
+  const dictionary = getDictionary(resolvedParams.lang);
 
   const products = [
     {
@@ -37,7 +45,7 @@ export default async function ProductsPage({ params }: PageProps) {
   ];
 
   return (
-    <I18nProvider locale={params.lang} dictionary={dictionary}>
+    <I18nProvider locale={resolvedParams.lang} dictionary={dictionary}>
       <section className="w-full py-12 md:py-24 lg:py-32">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -70,7 +78,7 @@ export default async function ProductsPage({ params }: PageProps) {
                   </CardDescription>
                 </CardContent>
                 <CardFooter>
-                  <Link href={`/${params.lang}${product.link}`}>
+                  <Link href={`/${resolvedParams.lang}${product.link}`}>
                     <Button variant="outline">
                       {dictionary.common.buttons.learnMore}
                     </Button>
