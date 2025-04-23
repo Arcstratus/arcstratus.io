@@ -1,62 +1,48 @@
-import { defaultLocale, locales, type Locale } from "@/i18n/utils";
+import { defaultLocale, locales } from "@/i18n/utils";
 import { match } from "@formatjs/intl-localematcher";
 import Negotiator from "negotiator";
-import { cookies } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
 
-const publicFiles = ["robots.txt", "sitemap.xml", "favicon.ico"];
-
-const getPreferredLocale = async (request: NextRequest) => {
-  const cookieStore = await cookies();
-  const locale = cookieStore.get("locale")?.value;
-  if (locale && locales.includes(locale as Locale)) {
-    return locale;
-  }
-
-  const acceptLanguage = request.headers.get("accept-language") || "";
-  const negotiator = new Negotiator({
-    headers: { "accept-language": acceptLanguage },
-  });
+function getLocale(request: NextRequest): string {
+  // Negotiator expects request headers to be plain objects
+  const headers = Object.fromEntries(request.headers.entries());
+  const negotiator = new Negotiator({ headers });
   const languages = negotiator.languages();
-  return match(languages, locales, defaultLocale);
-};
 
-export async function middleware(request: NextRequest) {
+  // Try to match the user's preferred language with our supported locales
+  try {
+    return match(languages, locales, defaultLocale);
+  } catch (error) {
+    return defaultLocale;
+  }
+}
+
+export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Check if the request is for a public file that should bypass localization
-  const isPublicFile = publicFiles.some((file) => pathname === `/${file}`);
-  if (isPublicFile) {
-    return NextResponse.next();
-  }
-
-  // Check if there is any supported locale in the pathname
-  const hasLocale = locales.some(
-    (locale: string) =>
-      pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
-  );
-  if (hasLocale) {
-    return NextResponse.next();
-  }
-
-  // For the root path (/), serve the default language content directly without redirect
+  // Special case for root path: rewrite to English version without redirect
   if (pathname === "/") {
-    // Rewrite the request to the default locale path internally without redirecting
-    const url = new URL(`/${defaultLocale}${pathname}`, request.url);
-    return NextResponse.rewrite(url);
+    request.nextUrl.pathname = "/en";
+    return NextResponse.rewrite(request.nextUrl);
   }
 
-  // For other paths, rewrite to the preferred locale
-  const preferredLocale = await getPreferredLocale(request);
-  const url = new URL(`/${preferredLocale}${pathname}`, request.url);
-  return NextResponse.rewrite(url);
+  // Check if the pathname already has a locale
+  const pathnameHasLocale = locales.some(
+    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+  );
+
+  if (pathnameHasLocale) return;
+
+  // For other paths without locale, use negotiator to determine locale
+  const locale = getLocale(request);
+  request.nextUrl.pathname = `/${locale}${pathname}`;
+
+  return Response.redirect(request.nextUrl);
 }
 
 export const config = {
   matcher: [
-    // Skip all internal paths (_next), api routes, and static files
-    "/((?!_next|api|static|.*\\.).*)(.+)",
-    // Run on root (/) URL
-    "/",
+    // Skip all internal paths (_next, api, etc) and specific files
+    "/((?!_next|api|favicon.ico|robots.txt|sitemap.xml).*)",
   ],
 };

@@ -1,18 +1,26 @@
-import { type I18nType } from "@/i18n/utils";
-import Main from "@/ui/layout/main";
-import { Hero, Platform, Service, ServiceAI } from "@/ui/page/home";
-import { Contact } from "@/ui/page/home/contact";
+import { I18nProvider } from "@/components/i18n-provider";
+import { ClientsSection } from "@/components/ui/clients-section";
+import { CTASection } from "@/components/ui/cta-section";
+import { FeaturesSection } from "@/components/ui/features-section";
+import { HeroSection } from "@/components/ui/hero-section";
+import { getDictionary } from "@/i18n/dictionaries";
+import { Locale } from "@/i18n/utils";
 
-export default async function Home({ params }: { params: I18nType }) {
-  const { lang } = await params;
+interface PageProps {
+  params: Promise<{
+    lang: Locale;
+  }>;
+}
+
+export default async function Page({ params }: PageProps) {
+  const dictionary = getDictionary((await params).lang);
 
   return (
-    <Main>
-      <Hero lang={lang} />
-      <Platform lang={lang} />
-      <ServiceAI lang={lang} />
-      <Service lang={lang} />
-      <Contact lang={lang} />
-    </Main>
+    <I18nProvider locale={(await params).lang} dictionary={dictionary}>
+      <HeroSection />
+      <FeaturesSection />
+      <ClientsSection />
+      <CTASection />
+    </I18nProvider>
   );
 }

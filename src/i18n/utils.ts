@@ -1,20 +1,3 @@
-export type Locale = "en" | "tw";
-
-export const locales: Locale[] = ["en", "tw"];
-
-export const defaultLocale: Locale = "tw";
-
-const dictionaries = {
-  en: () => import("./dictionaries/en.json").then((module) => module.default),
-  tw: () => import("./dictionaries/zh.json").then((module) => module.default),
-};
-
-export const getDictionary = async (locale: Locale) => {
-  try {
-    return dictionaries[locale]();
-  } catch {
-    return dictionaries[defaultLocale]();
-  }
-};
-
-export type I18nType = Promise<{ lang: Locale }>;
+export const locales = ["en", "tw"] as const;
+export type Locale = (typeof locales)[number];
+export const defaultLocale: Locale = "en";

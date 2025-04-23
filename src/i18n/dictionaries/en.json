@@ -1,260 +1,149 @@
 {
-  "head": {
+  "common": {
     "title": "Arcstratus",
-    "description": "Professional technology solution provider offering digital transformation consulting, custom software development, cloud solutions, intelligent analytics, and cybersecurity planning. We're passionate about creating tailored tech solutions, partnering with you to bring innovative ideas to life! From digital transformation to data analytics, we comprehensively meet enterprise technology needs to help your business grow."
-  },
-  "header": {
-    "title": "Arcstratus"
+    "description": "Cloud solutions for modern businesses",
+    "navigation": {
+      "home": "Home",
+      "products": "Products",
+      "services": "Services",
+      "news": "News",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "footer": {
+      "copyright": "© 2025 Arcstratus. All rights reserved.",
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service"
+    },
+    "buttons": {
+      "learnMore": "Learn More",
+      "getStarted": "Get Started",
+      "contactUs": "Contact Us",
+      "readMore": "Read More"
+    }
   },
   "home": {
     "hero": {
-      "title": "Arcstratus",
-      "slogan": "We are passionate about crafting customized solutions, collaborating hand-in-hand with various industries to realize dreams through innovative ideas!",
-      "cta": "Learn More",
-      "buttons": {
-        "primary": "Get Started",
-        "secondary": "Learn More"
+      "title": "Cloud Solutions for Modern Businesses",
+      "subtitle": "Optimize your infrastructure with our cutting-edge cloud services",
+      "cta": "Get Started Today"
+    },
+    "features": {
+      "title": "Our Services",
+      "subtitle": "What we offer",
+      "feature1": {
+        "title": "Product Design",
+        "description": "User-centered design solutions that enhance user experience and drive business growth"
+      },
+      "feature2": {
+        "title": "Software Development",
+        "description": "Custom software solutions tailored to your specific business needs"
+      },
+      "feature3": {
+        "title": "Cloud Architecture",
+        "description": "Scalable and secure cloud infrastructure designed for optimal performance"
+      },
+      "feature4": {
+        "title": "DevOps & Maintenance",
+        "description": "Continuous integration, delivery, and maintenance services to keep your systems running smoothly"
       }
     },
-    "service": [
-      {
-        "title": "Custom Software Development",
-        "description": "Tired of off-the-shelf systems that don't quite fit? We'll build a tailor-made solution from scratch, perfectly suited to your unique needs. Your challenges are what drive us!"
+    "clients": {
+      "title": "Trusted by Industry Leaders",
+      "subtitle": "Companies that rely on our expertise"
+    },
+    "cta": {
+      "title": "Ready to Transform Your Business?",
+      "subtitle": "Let's discuss how we can help you achieve your goals",
+      "button": "Contact Us Today"
+    }
+  },
+  "products": {
+    "title": "Our Products",
+    "description": "Innovative solutions designed to meet your business needs",
+    "cloudSolutions": "Cloud Solutions",
+    "cloudSolutionsDesc": "Scalable and secure cloud infrastructure for your business",
+    "softwareDevelopment": "Software Development",
+    "softwareDevelopmentDesc": "Custom software solutions tailored to your specific requirements",
+    "devOps": "DevOps Services",
+    "devOpsDesc": "Streamline your development and operations processes"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive solutions for your business",
+    "service1": {
+      "title": "Product Design",
+      "description": "From concept to prototype, we design products that users love"
+    },
+    "service2": {
+      "title": "Software Outsourcing",
+      "description": "Dedicated development teams to bring your ideas to life"
+    },
+    "service3": {
+      "title": "Cloud Architecture",
+      "description": "Design and implementation of scalable cloud infrastructure"
+    },
+    "service4": {
+      "title": "DevOps & Maintenance",
+      "description": "Ongoing support and maintenance to ensure your systems run smoothly"
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Our story and mission",
+    "mission": {
+      "title": "Our Mission",
+      "description": "To empower businesses with reliable, scalable, and secure technology solutions that drive innovation and growth."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To be the leading provider of cloud and software solutions, recognized for our expertise, reliability, and customer-centric approach."
+    },
+    "values": {
+      "title": "Our Values",
+      "value1": {
+        "title": "Innovation",
+        "description": "We constantly explore new technologies and approaches to deliver cutting-edge solutions."
       },
-      {
-        "title": "Cloud Solutions",
-        "description": "Data at your fingertips, anytime, anywhere! Move to the cloud effortlessly, save on hardware costs, and scale resources as you please. Unleashing tech potential has never been this easy."
+      "value2": {
+        "title": "Excellence",
+        "description": "We strive for excellence in everything we do, from code quality to customer service."
       },
-      {
-        "title": "Digital Transformation Consulting",
-        "description": "Done with outdated systems? We'll guide you through a complete overhaul! Discover tech tools that'll wow your team and step into the digital age with ease."
+      "value3": {
+        "title": "Collaboration",
+        "description": "We believe in the power of teamwork and partnership with our clients."
+      },
+      "value4": {
+        "title": "Integrity",
+        "description": "We operate with transparency, honesty, and ethical standards in all our interactions."
       }
-    ],
-    "contact": {
-      "content": "Is your old system holding you back? Tired of making do with outdated systems? Don't worry, we'll accompany you through a major transformation. Click once, and let your team embrace a new digital future.",
-      "cta": "Contact Us"
+    },
+    "team": {
+      "title": "Our Team",
+      "subtitle": "Meet the experts behind Arcstratus"
     }
   },
   "news": {
     "title": "Latest News",
-    "description": "Read about our latest product and announcements.",
-    "timeline": {
-      "title": "Arcstratus Milestones",
-      "description": "A timeline of our journey.",
-      "data": [
-        {
-          "title": "Company Launched",
-          "description": "With big dreams and bold ambitions, we officially kicked off the company! This was the start of our journey to chase greatness!",
-          "teamDescription": "We are a team of developers who are passionate about creating products that help people live better lives."
-        }
-      ]
-    },
-    "upcoming": {
-      "date": "April 2025",
-      "product": {
-        "title": "BuyForYou",
-        "description": "We're about to launch our first product, BuyForYou, a shopping assistant for every family that makes purchasing easier and more accurate. Upload photos, record voice notes, and sync shopping lists effortlessly. Even \"Panic Dad\" can instantly transform into a shopping pro and team MVP."
-      }
-    }
-  },
-  "common": {
-    "resources": "Resources",
-    "community": "Community",
-    "helpCenter": "Help Center",
-    "support": "Support",
-    "developers": "Developers",
-    "api": "API",
-    "documentation": "Documentation",
-    "guides": "Guides",
-    "comingSoon": "Coming Soon",
-    "latestArticle": "Latest Article",
-    "featuredArticle": "Featured Article",
-    "popularArticle": "Popular Article",
-    "projectTimeline": "Project Timeline",
-    "developmentJourney": "Our development journey and milestones",
-    "happyToShare": "Happy to share",
-    "serviceStatus": "Service Status",
-    "release": "Release",
-    "faq": "FAQ"
-  },
-  "products": {
-    "unitobuy": {
-      "title": "UniToBuy",
-      "label": "unitobuy.com",
-      "description": "\"BuyForYou\" - your family's shopping assistant. Upload photos, sync lists, and turn any panicked parent into a shopping champion instantly."
-    },
-    "comingSoon": {
-      "description": "We are discussing new product projects with our next partner"
-    }
-  },
-  "features": {
-    "saveFiles": {
-      "name": "Save your files",
-      "description": "We automatically save your files as you type.",
-      "cta": "Learn more"
-    },
-    "calendar": {
-      "name": "Calendar",
-      "description": "Use the calendar to filter your files by date.",
-      "cta": "Learn more"
-    },
-    "notifications": {
-      "name": "Notifications",
-      "description": "Get notified when something happens.",
-      "cta": "Learn more"
-    },
-    "integrations": {
-      "name": "Integrations",
-      "description": "Supports 100+ integrations and counting.",
-      "cta": "Learn more"
-    }
-  },
-  "navigation": {
-    "home": "Home",
-    "about": "About Us",
-    "services": "Services",
-    "contact": "Contact",
-    "blog": "Blog"
-  },
-  "hero": {
-    "title": "Commit to New Beginnings, Clarify the Cloud",
-    "subtitle": "Your Cloud Technology Partner",
-    "description": "Arcstratus Co., Ltd. is dedicated to cloud technology innovation, providing efficient software solutions, outsourcing services, and professional educational content.",
-    "cta": "Learn More"
-  },
-  "about": {
-    "title": "About Arcstratus",
-    "description": "Learn about our company's story, mission, values, and team.",
-    "ourStory": "Our Story",
-    "storyContent": "Founded with a vision to transform the digital landscape, Arcstratus has been at the forefront of technological innovation. Our journey began with a simple yet powerful mission: to help businesses thrive in the digital age through cutting-edge solutions and expert guidance.",
-    "ourMission": "Our Mission",
-    "missionContent": "We are committed to empowering businesses with innovative technology solutions that drive growth, efficiency, and competitive advantage. Our mission is to be your trusted partner in digital transformation, helping you navigate the complex world of technology with confidence.",
-    "ourValues": "Our Values",
-    "values": [
-      {
-        "title": "Integrity",
-        "description": "We maintain the highest standards of honesty and transparency in all our business dealings."
-      },
-      {
-        "title": "Collaboration",
-        "description": "We believe in the power of teamwork and work closely with our clients to achieve shared success."
-      },
-      {
-        "title": "Excellence",
-        "description": "We strive for perfection in everything we do, ensuring the highest quality in our services."
-      },
-      {
-        "title": "Innovation",
-        "description": "We constantly push boundaries and explore new possibilities to deliver cutting-edge solutions."
-      }
-    ],
-    "ourTeam": "Our Team",
-    "teamContent": "Our team consists of passionate professionals with diverse expertise in software development, cloud computing, data analytics, and cybersecurity. Together, we bring years of experience and a shared commitment to excellence.",
-    "teamMembers": [
-      {
-        "name": "Wenke Lai",
-        "role": "CEO & Founder"
-      }
-    ]
-  },
-  "services": {
-    "title": "Our Services",
-    "items": {
-      "cloud": {
-        "title": "Cloud Solutions",
-        "description": "Comprehensive cloud services including infrastructure setup, application development, and system integration."
-      },
-      "outsourcing": {
-        "title": "Technical Outsourcing",
-        "description": "Professional technical team providing complete development and maintenance services for your projects."
-      },
-      "education": {
-        "title": "Professional Training",
-        "description": "Cloud technology training courses and technical sharing to help teams enhance their capabilities."
-      }
-    }
+    "subtitle": "Stay updated with our latest developments and industry insights",
+    "readMore": "Read More",
+    "viewAll": "View All News"
   },
   "contact": {
     "title": "Contact Us",
-    "description": "Let's discuss your needs and provide the most suitable solutions for you.",
+    "subtitle": "Get in touch with our team",
     "form": {
       "name": "Name",
       "email": "Email",
+      "subject": "Subject",
       "message": "Message",
-      "submit": "Submit"
-    }
-  },
-  "footer": {
-    "company": "Arcstratus Co., Ltd.",
-    "address": "Address",
-    "phone": "Phone",
-    "email": "Email",
-    "copyright": "All rights reserved.",
-    "social": {
-      "instagram": "Instagram",
-      "threads": "Threads",
-      "x": "X"
-    }
-  },
-  "careers": {
-    "title": "Join Our Team",
-    "description": "Explore career opportunities at Arcstratus and be part of our innovative team.",
-    "whyJoin": "Why Join Arcstratus?",
-    "whyJoinContent": "At Arcstratus, we believe in creating an environment where innovation thrives and talent grows. Join us to be part of a team that's shaping the future of technology.",
-    "benefits": [
-      {
-        "title": "Competitive Compensation",
-        "description": "We offer competitive salaries and comprehensive benefits packages to ensure our team members are well taken care of."
-      },
-      {
-        "title": "Work-Life Balance",
-        "description": "We understand the importance of maintaining a healthy balance between work and personal life."
-      },
-      {
-        "title": "Professional Growth",
-        "description": "Continuous learning and development opportunities to help you grow in your career."
-      },
-      {
-        "title": "Innovative Environment",
-        "description": "Work with cutting-edge technologies and be part of exciting projects that make a difference."
-      }
-    ],
-    "ourCulture": "Our Culture",
-    "cultureContent": "Our culture is built on collaboration, innovation, and a shared passion for technology. We value diversity, creativity, and the unique perspectives each team member brings.",
-    "culturePillars": [
-      {
-        "icon": "🤝",
-        "title": "Collaboration",
-        "description": "We believe in working together to achieve common goals and create innovative solutions."
-      },
-      {
-        "icon": "💡",
-        "title": "Innovation",
-        "description": "We encourage creative thinking and new ideas to drive technological advancement."
-      },
-      {
-        "icon": "🌱",
-        "title": "Growth",
-        "description": "We support continuous learning and personal development for all team members."
-      }
-    ],
-    "growth": "Growth Opportunities",
-    "growthContent": "At Arcstratus, we're committed to helping our team members grow both professionally and personally. We provide various opportunities for skill development and career advancement.",
-    "growthOpportunities": [
-      {
-        "title": "Technical Training",
-        "description": "Regular workshops and training sessions to keep your skills up-to-date with the latest technologies."
-      },
-      {
-        "title": "Career Development",
-        "description": "Clear career paths and mentorship programs to help you achieve your professional goals."
-      }
-    ],
-    "cta": {
-      "title": "Ready to Join Us?",
-      "content": "We're always looking for talented individuals to join our team. Send us your resume and let's explore opportunities together.",
-      "button": "Send Your Resume",
-      "email": "careers@arcstratus.io"
+      "submit": "Send Message"
+    },
+    "info": {
+      "title": "Contact Information",
+      "address": "123 Tech Street, Innovation City, 12345",
+      "email": "info@arcstratus.io",
+      "phone": "+1 (555) 123-4567"
     }
   }
 }
