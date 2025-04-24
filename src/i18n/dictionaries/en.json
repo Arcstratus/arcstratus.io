@@ -48,34 +48,35 @@
   },
   "home": {
     "hero": {
-      "title": "Cloud Solutions for Modern Businesses",
-      "subtitle": "Optimize your infrastructure with our cutting-edge cloud services",
-      "cta": "Get Started Today"
-    },
-    "features": {
-      "title": "Our Services",
-      "subtitle": "What we offer",
-      "feature1": {
-        "title": "Product Design",
-        "description": "User-centered design solutions that enhance user experience and drive business growth"
-      },
-      "feature2": {
-        "title": "Software Development",
-        "description": "Custom software solutions tailored to your specific business needs"
-      },
-      "feature3": {
-        "title": "Cloud Architecture",
-        "description": "Scalable and secure cloud infrastructure designed for optimal performance"
-      },
-      "feature4": {
-        "title": "DevOps & Maintenance",
-        "description": "Continuous integration, delivery, and maintenance services to keep your systems running smoothly"
+      "title": "Welcome to Arcstratus",
+      "subtitle": "Hey there, I'm Wenke!",
+      "description": "A tech enthusiast and cloud architect who loves tackling challenges. Whether you’re dreaming of custom software, building your cloud empire, or diving into the wild world of AI, I’m your go-to partner!",
+      "button": {
+        "cta": "Get in Touch",
+        "more": "Learn More"
       }
     },
+    "features": {
+      "title": "What Can I Do for You?",
+      "items": [
+        {
+          "title": "Tailor-Made User Experiences",
+          "description": "Not every business fits off-the-shelf software! I’ll craft digital tools just for you, from sleek websites to complex management systems, designed to match your unique needs."
+        },
+        {
+          "title": "Future-Ready Cloud Solutions",
+          "description": "Cloud isn’t just a buzzword—it’s a game-changer for saving costs and boosting efficiency! I’ll design a cloud architecture that’s smooth, secure, and saves you big on hardware."
+        },
+        {
+          "title": "Adventure in AI",
+          "description": "Ready to give your business an AI edge? No need for a huge tech team—I’ll assess, design, and build AI solutions that put you ahead of the curve!"
+        }
+      ]
+    },
     "cta": {
-      "title": "Ready to Transform Your Business?",
-      "subtitle": "Let's discuss how we can help you achieve your goals",
-      "button": "Contact Us Today"
+      "title": "Got an Idea?",
+      "subtitle": "Ready to bring your vision to life or just have a few questions?",
+      "button": "Let’s Chat!"
     }
   },
   "products": {

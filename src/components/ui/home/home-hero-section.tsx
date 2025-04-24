@@ -6,29 +6,33 @@ import Link from "next/link";
 
 export function HomeHeroSection() {
   const { dictionary, locale } = useI18n();
+  const article = dictionary.home.hero;
 
   return (
     <section className="w-full py-12 md:py-16 lg:py-20 xl:py-24">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
           <div className="flex flex-col justify-center space-y-4">
-            <div className="space-y-2">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                {dictionary.home.hero.title}
+            <div className="space-y-2 pb-8">
+              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none pb-8">
+                {article.title}
               </h1>
               <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
-                {dictionary.home.hero.subtitle}
+                {article.subtitle}
+              </p>
+              <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
+                {article.description}
               </p>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
               <Link href={`/${locale}/contact`}>
                 <Button size="lg" className="px-8">
-                  {dictionary.home.hero.cta}
+                  {article.button.cta}
                 </Button>
               </Link>
               <Link href={`/${locale}/services`}>
                 <Button size="lg" variant="outline" className="px-8">
-                  {dictionary.common.buttons.learnMore}
+                  {article.button.more}
                 </Button>
               </Link>
             </div>

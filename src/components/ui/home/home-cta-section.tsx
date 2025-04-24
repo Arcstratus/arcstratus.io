@@ -8,7 +8,7 @@ export function HomeCtaSection() {
   const { dictionary, locale } = useI18n();
 
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-primary text-primary-foreground">
+    <section className="w-full py-12 md:py-24 lg:py-32 bg-primary/80 text-primary-foreground">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
