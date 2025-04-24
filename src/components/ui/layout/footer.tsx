@@ -116,10 +116,10 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href={`/${locale}/press`}
+                  href={`/${locale}/news`}
                   className="text-sm text-muted-foreground hover:text-foreground"
                 >
-                  {dictionary.common.footer.company.press}
+                  {dictionary.common.footer.company.news}
                 </a>
               </li>
               <li>
