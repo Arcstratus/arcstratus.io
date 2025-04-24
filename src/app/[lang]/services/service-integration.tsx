@@ -23,7 +23,7 @@ const Circle = forwardRef<
 
 Circle.displayName = "Circle";
 
-export function ServiceIntegrations({ className }: { className?: string }) {
+export function ServiceIntegration({ className }: { className?: string }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const div1Ref = useRef<HTMLDivElement>(null);
   const div2Ref = useRef<HTMLDivElement>(null);

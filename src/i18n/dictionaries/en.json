@@ -99,23 +99,27 @@
     }
   },
   "services": {
-    "title": "Our Services",
-    "subtitle": "Comprehensive solutions for your business",
-    "service1": {
-      "title": "Product Design",
-      "description": "From concept to prototype, we design products that users love"
-    },
-    "service2": {
-      "title": "Software Outsourcing",
-      "description": "Dedicated development teams to bring your ideas to life"
-    },
-    "service3": {
-      "title": "Cloud Architecture",
-      "description": "Design and implementation of scalable cloud infrastructure"
-    },
-    "service4": {
-      "title": "DevOps & Maintenance",
-      "description": "Ongoing support and maintenance to ensure your systems run smoothly"
+    "title": "What Can I Help You With?",
+    "description": "We’re just a bunch of tech-loving engineers, obsessed with blending human needs with cutting-edge technology.",
+    "items": [
+      {
+        "title": "Websites & Apps",
+        "description": "From sleek portfolio sites to fully-featured systems",
+        "cta": "Learn More"
+      },
+      {
+        "title": "Security Alerts",
+        "description": "Stay in the loop with real-time service status updates",
+        "cta": "Learn More"
+      },
+      {
+        "title": "System Integration",
+        "description": "Get your existing systems talking to each other seamlessly",
+        "cta": "Learn More"
+      }
+    ],
+    "button": {
+      "more": "Learn More"
     }
   },
   "about": {

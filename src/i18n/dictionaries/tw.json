@@ -100,23 +100,27 @@
     }
   },
   "services": {
-    "title": "我們的服務",
-    "subtitle": "為您的業務提供全面解決方案",
-    "service1": {
-      "title": "產品設計",
-      "description": "從概念到原型，我們設計用戶喜愛的產品"
-    },
-    "service2": {
-      "title": "軟體外包",
-      "description": "專業開發團隊，將您的想法變為現實"
-    },
-    "service3": {
-      "title": "雲端架構",
-      "description": "可擴展雲端基礎設施的設計和實施"
-    },
-    "service4": {
-      "title": "DevOps 與維護",
-      "description": "持續支持和維護，確保您的系統順暢運行"
+    "title": "我能幫你做什麼？",
+    "description": "我們只是一群熱愛技術的工程師，因此我們更加專注在人性與技術的結合。",
+    "items": [
+      {
+        "title": "網站和應用",
+        "description": "從簡單的形象網站到功能完整的系統",
+        "cta": "了解更多"
+      },
+      {
+        "title": "安全通知",
+        "description": "即時掌握服務狀態",
+        "cta": "了解更多"
+      },
+      {
+        "title": "系統整合",
+        "description": "讓你現有的各種系統能互相溝通",
+        "cta": "了解更多"
+      }
+    ],
+    "button": {
+      "more": "了解更多"
     }
   },
   "about": {
