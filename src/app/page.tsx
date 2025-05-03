@@ -1,6 +1,5 @@
 "use client";
 
-import { IconBrandInstagram, IconBrandTwitter } from "@tabler/icons-react";
 import Link from "next/link";
 
 // 成果卡片組件
@@ -72,51 +71,6 @@ const NewsCard = ({
       </div>
     </div>
   </div>
-);
-
-// 社群連結組件
-const SocialLinks = () => (
-  <div className="flex gap-6 mb-8">
-    <a
-      href="https://twitter.com/"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="X (Twitter)"
-      className="hover:text-primary transition"
-    >
-      <IconBrandTwitter size={32} />
-    </a>
-    <a
-      href="https://instagram.com/"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Instagram"
-      className="hover:text-primary transition"
-    >
-      <IconBrandInstagram size={32} />
-    </a>
-  </div>
-);
-
-// 導覽連結組件
-const NavigationLinks = () => (
-  <nav className="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
-    <Link href="/about" className="hover:text-primary transition">
-      關於我們
-    </Link>
-    <Link href="/showcase" className="hover:text-primary transition">
-      成果展示
-    </Link>
-    <Link href="/news" className="hover:text-primary transition">
-      新聞
-    </Link>
-    <Link href="/faq" className="hover:text-primary transition">
-      FAQ
-    </Link>
-    <Link href="/policy" className="hover:text-primary transition">
-      隱私政策
-    </Link>
-  </nav>
 );
 
 export default function Page() {
