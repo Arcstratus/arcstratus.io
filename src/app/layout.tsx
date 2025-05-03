@@ -8,7 +8,12 @@ import {
 import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import { Menu } from "lucide-react";
+import {
+  IconBrandInstagram,
+  IconBrandThreads,
+  IconBrandX,
+  IconMenu,
+} from "@tabler/icons-react";
 import Link from "next/link";
 
 import "./globals.css";
@@ -62,7 +67,7 @@ export default async function RootLayout({
                 <div className="md:hidden">
                   <DropdownMenu>
                     <DropdownMenuTrigger className="p-2">
-                      <Menu className="h-6 w-6" />
+                      <IconMenu className="h-6 w-6" />
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="end">
                       <DropdownMenuItem asChild>
@@ -93,28 +98,37 @@ export default async function RootLayout({
           <main className="min-h-[70vh] container mx-auto">{children}</main>
           <footer className="w-full border-t bg-card text-card-foreground mt-12">
             <div className="container mx-auto flex flex-col md:flex-row items-center justify-between py-6 gap-2">
+              <div className="text-sm text-gray-500">
+                &copy; 2025 諾澄科技 All rights reserved.
+              </div>
               <div className="flex gap-4">
                 <a
-                  href="https://twitter.com/"
+                  href="https://twitter.com/arcstratus"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="X (Twitter)"
                 >
-                  <span className="sr-only">X (Twitter)</span>X
+                  <span className="sr-only">X (Twitter)</span>
+                  <IconBrandX className="h-5 w-5" />
                 </a>
                 <a
-                  href="https://instagram.com/"
+                  href="https://instagram.com/arcstratus"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
                 >
                   <span className="sr-only">Instagram</span>
-                  IG
+                  <IconBrandInstagram className="h-5 w-5" />
                 </a>
-              </div>
-              <div className="text-sm text-gray-500">
-                &copy; {new Date().getFullYear()} 諾 🍊 科技 All rights
-                reserved.
+                <a
+                  href="https://threads.net/arcstratus"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Threads"
+                >
+                  <span className="sr-only">Threads</span>
+                  <IconBrandThreads className="h-5 w-5" />
+                </a>
               </div>
             </div>
           </footer>
