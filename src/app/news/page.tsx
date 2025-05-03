@@ -14,7 +14,7 @@ export default function NewsPage() {
             <div className="p-4">
               <img
                 src="/news/news1.png"
-                alt="新聞縮圖"
+                alt="諾澄科技與知名設計師合作推出新產品網站 - 2024年6月"
                 className="mb-2 rounded"
               />
               <h3 className="mb-1">合作新案上線</h3>

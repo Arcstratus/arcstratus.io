@@ -7,10 +7,20 @@ import Link from "next/link";
 import "./globals.css";
 
 export const generateMetadata = async ({}: {}) => {
+  const title = "諾澄科技 | 跨領域合作夥伴";
+  const description =
+    "諾澄科技專注於雲端架構、AI 產品化與軟體開發，尋求與 UI 設計師、AI 研究者、創意團隊的跨領域合作，共同打造創新產品。";
+  const metadataBase = new URL("https://arcstratus.io");
+  const keywords = ["雲端架構", "AI 產品", "跨領域合作"];
+
   return {
-    title: "title",
-    description: "description",
-    metadataBase: new URL("https://arcstratus.io"),
+    title,
+    description,
+    metadataBase,
+    keywords,
+    alternates: {
+      canonical: metadataBase.toString(),
+    },
   };
 };
 

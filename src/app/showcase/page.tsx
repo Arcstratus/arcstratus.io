@@ -12,7 +12,7 @@ export default function ShowcasePage() {
           <div className="p-4">
             <img
               src="/showcase/demo1.png"
-              alt="案例圖片"
+              alt="Next.js 網站案例展示 - 現代化響應式設計"
               className="mb-2 rounded"
             />
             <h2 className="mb-1">Next.js 網站</h2>

@@ -3,15 +3,21 @@ import type { MetadataRoute } from "next";
 const baseUrl = "https://arcstratus.io";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const sitemap: MetadataRoute.Sitemap = [];
+  const routes = [
+    "",
+    "/about",
+    "/how-to-cooperate",
+    "/showcase",
+    "/news",
+    "/faq",
+    "/contact",
+    "/policy",
+  ];
 
-  // Add the root URL which redirects to the default locale
-  sitemap.push({
-    url: baseUrl,
+  return routes.map((route) => ({
+    url: `${baseUrl}${route}`,
     lastModified: new Date(),
-    changeFrequency: "weekly",
-    priority: 1.0,
-  });
-
-  return sitemap;
+    changeFrequency: "weekly" as const,
+    priority: route === "" ? 1.0 : 0.8,
+  }));
 }
