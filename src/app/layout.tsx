@@ -12,7 +12,7 @@ import {
   IconBrandInstagram,
   IconBrandThreads,
   IconBrandX,
-  IconMenu,
+  IconMenu2,
 } from "@tabler/icons-react";
 import Link from "next/link";
 
@@ -51,7 +51,7 @@ export default async function RootLayout({
           disableTransitionOnChange
         >
           <header className="w-full border-b bg-card text-card-foreground">
-            <div className="container mx-auto flex items-center justify-between py-4">
+            <div className="container mx-auto flex items-center justify-between p-4">
               <Link href="/" className="text-2xl font-bold">
                 諾澄科技
               </Link>
@@ -64,10 +64,12 @@ export default async function RootLayout({
                   <Link href="/faq">FAQ</Link>
                   <Link href="/contact">聯繫</Link>
                 </nav>
+                <ThemeToggle />
+
                 <div className="md:hidden">
                   <DropdownMenu>
                     <DropdownMenuTrigger className="p-2">
-                      <IconMenu className="h-6 w-6" />
+                      <IconMenu2 className="h-6 w-6" />
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="end">
                       <DropdownMenuItem asChild>
@@ -91,11 +93,12 @@ export default async function RootLayout({
                     </DropdownMenuContent>
                   </DropdownMenu>
                 </div>
-                <ThemeToggle />
               </div>
             </div>
           </header>
-          <main className="min-h-[70vh] container mx-auto">{children}</main>
+          <main className="min-h-[70vh] container mx-auto px-4">
+            {children}
+          </main>
           <footer className="w-full border-t bg-card text-card-foreground mt-12">
             <div className="container mx-auto flex flex-col md:flex-row items-center justify-between py-6 gap-2">
               <div className="text-sm text-gray-500">
