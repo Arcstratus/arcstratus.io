@@ -237,12 +237,6 @@ export default function Page() {
           聯繫我們
         </Link>
       </div>
-
-      {/* 社群連結 */}
-      <SocialLinks />
-
-      {/* 內部連結導覽 */}
-      <NavigationLinks />
     </main>
   );
 }
