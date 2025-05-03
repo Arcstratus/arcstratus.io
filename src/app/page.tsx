@@ -9,9 +9,9 @@ export default function Page() {
       {/* Hero 區塊：品牌標題與簡介 */}
       <h1 className="mb-4">諾 🍊 科技</h1>
       <p className="text-lg md:text-xl mb-6 max-w-xl text-foreground">
-        專注雲端架構、AI、軟體產品與創意發展，尋求跨領域合作。
+        Hi, 我是文克,
         <br />
-        以專業技術與彈性合作，協助企業、初創、創作者實現創新。
+        一個熱愛科技、喜歡解決問題的雲端架構師。無論你是想打造專屬軟體、建構雲端天地，還是跨入AI的奇幻國度，我都能成為你的最佳拍檔！
       </p>
       {/* 品牌定位區塊 */}
       <section className="mb-10 max-w-2xl">
