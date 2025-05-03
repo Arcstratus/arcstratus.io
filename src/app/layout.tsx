@@ -27,8 +27,8 @@ export default async function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <header className="w-full border-b bg-white dark:bg-black">
-            <div className="container flex items-center justify-between py-4">
+          <header className="w-full border-b bg-card text-card-foreground">
+            <div className="container mx-auto flex items-center justify-between py-4">
               <Link href="/" className="text-2xl font-bold">
                 諾 🍊 科技
               </Link>
@@ -42,9 +42,9 @@ export default async function RootLayout({
               </nav>
             </div>
           </header>
-          <main className="min-h-[70vh]">{children}</main>
-          <footer className="w-full border-t bg-white dark:bg-black mt-12">
-            <div className="container flex flex-col md:flex-row items-center justify-between py-6 gap-2">
+          <main className="min-h-[70vh] container mx-auto">{children}</main>
+          <footer className="w-full border-t bg-card text-card-foreground mt-12">
+            <div className="container mx-auto flex flex-col md:flex-row items-center justify-between py-6 gap-2">
               <div className="flex gap-4">
                 <a
                   href="https://twitter.com/"
