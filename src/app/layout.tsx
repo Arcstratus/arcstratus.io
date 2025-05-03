@@ -1,7 +1,14 @@
 import { MicrosoftClarity } from "@/components/microsoft-clarity";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/shadcn/dropdown-menu";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { Menu } from "lucide-react";
 import Link from "next/link";
 
 import "./globals.css";
@@ -43,15 +50,44 @@ export default async function RootLayout({
               <Link href="/" className="text-2xl font-bold">
                 諾澄科技
               </Link>
-              <nav className="flex items-center gap-6">
-                <Link href="/about">關於我們</Link>
-                <Link href="/how-to-cooperate">如何合作</Link>
-                <Link href="/showcase">成果展示</Link>
-                <Link href="/news">新聞</Link>
-                <Link href="/faq">FAQ</Link>
-                <Link href="/contact">聯繫</Link>
+              <div className="flex items-center gap-4">
+                <nav className="hidden md:flex items-center gap-6">
+                  <Link href="/about">關於我們</Link>
+                  <Link href="/how-to-cooperate">如何合作</Link>
+                  <Link href="/showcase">成果展示</Link>
+                  <Link href="/news">新聞</Link>
+                  <Link href="/faq">FAQ</Link>
+                  <Link href="/contact">聯繫</Link>
+                </nav>
+                <div className="md:hidden">
+                  <DropdownMenu>
+                    <DropdownMenuTrigger className="p-2">
+                      <Menu className="h-6 w-6" />
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="end">
+                      <DropdownMenuItem asChild>
+                        <Link href="/about">關於我們</Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem asChild>
+                        <Link href="/how-to-cooperate">如何合作</Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem asChild>
+                        <Link href="/showcase">成果展示</Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem asChild>
+                        <Link href="/news">新聞</Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem asChild>
+                        <Link href="/faq">FAQ</Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem asChild>
+                        <Link href="/contact">聯繫</Link>
+                      </DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                </div>
                 <ThemeToggle />
-              </nav>
+              </div>
             </div>
           </header>
           <main className="min-h-[70vh] container mx-auto">{children}</main>
