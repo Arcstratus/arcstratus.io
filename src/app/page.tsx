@@ -222,20 +222,33 @@ export default function Page() {
         </div>
       </section>
 
-      {/* CTA 按鈕 */}
-      <div className="flex gap-4 mb-10">
-        <Link
-          href="/how-to-cooperate"
-          className="px-6 py-2 rounded bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition"
-        >
-          如何合作
-        </Link>
-        <Link
-          href="/contact"
-          className="px-6 py-2 rounded border border-primary text-primary font-semibold hover:bg-accent transition"
-        >
-          聯繫我們
-        </Link>
+      {/* CTA 區塊 */}
+      <div className="relative overflow-hidden rounded-2xl mb-10 bg-muted">
+        <div className="p-8 md:p-12">
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+              準備好開始合作了嗎？
+            </h2>
+            <p className="text-muted-foreground mb-8">
+              無論是打造新產品、優化現有系統，還是探索 AI
+              的可能性，我們都能提供專業的協助。
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/how-to-cooperate"
+                className="px-6 py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition shadow-lg hover:shadow-primary/20"
+              >
+                如何合作
+              </Link>
+              <Link
+                href="/contact"
+                className="px-6 py-3 rounded-lg border border-primary text-primary font-semibold hover:bg-accent transition"
+              >
+                聯繫我們
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   );
