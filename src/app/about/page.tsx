@@ -3,7 +3,7 @@
 export default function AboutPage() {
   return (
     <main className="container py-8">
-      <h1 className="text-3xl font-bold mb-4">關於諾 🍊 科技</h1>
+      <h1 className="mb-4">關於諾 🍊 科技</h1>
       <section className="mb-6">
         {/* 公司背景簡述 */}
         <p>
@@ -12,8 +12,8 @@ export default function AboutPage() {
       </section>
       <section className="mb-6">
         {/* 技術專長列表 */}
-        <h2 className="text-xl font-semibold mb-2">技術專長</h2>
-        <ul className="list-disc pl-6">
+        <h2 className="mb-2">技術專長</h2>
+        <ul className="list-disc pl-6 text-foreground">
           <li>
             前端：TypeScript（React、Next.js、Svelte）、TailwindCSS、Shadcn
           </li>
@@ -25,8 +25,10 @@ export default function AboutPage() {
       </section>
       <section>
         {/* 合作理念 */}
-        <h2 className="text-xl font-semibold mb-2">合作理念</h2>
-        <p>專注於雲端、AI、軟體及創意項目，尋求跨領域合作，強調專業與彈性。</p>
+        <h2 className="mb-2">合作理念</h2>
+        <p className="text-foreground">
+          專注於雲端、AI、軟體及創意項目，尋求跨領域合作，強調專業與彈性。
+        </p>
       </section>
     </main>
   );

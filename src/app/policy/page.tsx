@@ -3,8 +3,8 @@
 export default function PolicyPage() {
   return (
     <main className="container py-8">
-      <h1 className="text-3xl font-bold mb-4">隱私政策</h1>
-      <p>
+      <h1 className="mb-4">隱私政策</h1>
+      <p className="text-foreground">
         本網站不收集任何個人資訊，聯繫表單資料僅用於回覆合作意向，不儲存。
         <br />
         本政策符合台灣《個人資料保護法》。
