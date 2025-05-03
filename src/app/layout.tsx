@@ -30,7 +30,7 @@ export default async function RootLayout({
           <header className="w-full border-b bg-card text-card-foreground">
             <div className="container mx-auto flex items-center justify-between py-4">
               <Link href="/" className="text-2xl font-bold">
-                諾 🍊 科技
+                諾澄科技
               </Link>
               <nav className="flex gap-6">
                 <Link href="/about">關於我們</Link>
