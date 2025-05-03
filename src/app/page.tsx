@@ -37,33 +37,86 @@ export default function Page() {
           </div>
         </div>
       </div>
-      {/* 精選成果區塊（可選） */}
-      <section className="mb-10 w-full max-w-4xl">
-        <h2 className="mb-4 text-primary">精選成果</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {/* 我們做了什麼？區塊 */}
+      <section className="mb-16 w-full max-w-6xl mx-auto">
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-primary">我們做了什麼？</h2>
+          <Link
+            href="/products"
+            className="text-primary hover:underline text-sm"
+          >
+            查看所有成果 →
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* 範例成果卡片 */}
           <div className="rounded-lg border border-border p-4 text-left bg-card text-card-foreground">
-            <h3 className="mb-1">Next.js 品牌網站</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
+            <h3 className="mb-2">Next.js 品牌網站</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
               現代化響應式網站，支援 SEO 與靜態生成。
             </p>
+            <div className="flex flex-wrap gap-2 mb-4">
+              <span className="px-2 py-1 text-xs rounded-full bg-primary/10 text-primary">
+                Next.js
+              </span>
+              <span className="px-2 py-1 text-xs rounded-full bg-primary/10 text-primary">
+                TypeScript
+              </span>
+              <span className="px-2 py-1 text-xs rounded-full bg-primary/10 text-primary">
+                Tailwind CSS
+              </span>
+            </div>
             <Link
               href="/showcase"
               className="text-primary hover:underline text-sm"
             >
-              查看更多
+              了解更多
             </Link>
           </div>
           <div className="rounded-lg border border-border p-4 text-left bg-card text-card-foreground">
-            <h3 className="mb-1">AI 聊天機器人平台</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
+            <h3 className="mb-2">AI 聊天機器人平台</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
               結合 FastAPI 與 AWS，打造可擴展的 AI 服務。
             </p>
+            <div className="flex flex-wrap gap-2 mb-4">
+              <span className="px-2 py-1 text-xs rounded-full bg-primary/10 text-primary">
+                FastAPI
+              </span>
+              <span className="px-2 py-1 text-xs rounded-full bg-primary/10 text-primary">
+                AWS
+              </span>
+              <span className="px-2 py-1 text-xs rounded-full bg-primary/10 text-primary">
+                Python
+              </span>
+            </div>
             <Link
               href="/showcase"
               className="text-primary hover:underline text-sm"
             >
-              查看更多
+              了解更多
+            </Link>
+          </div>
+          <div className="rounded-lg border border-border p-4 text-left bg-card text-card-foreground">
+            <h3 className="mb-2">雲端監控系統</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+              即時監控與分析系統，提供完整的雲端資源管理。
+            </p>
+            <div className="flex flex-wrap gap-2 mb-4">
+              <span className="px-2 py-1 text-xs rounded-full bg-primary/10 text-primary">
+                AWS
+              </span>
+              <span className="px-2 py-1 text-xs rounded-full bg-primary/10 text-primary">
+                Grafana
+              </span>
+              <span className="px-2 py-1 text-xs rounded-full bg-primary/10 text-primary">
+                Terraform
+              </span>
+            </div>
+            <Link
+              href="/showcase"
+              className="text-primary hover:underline text-sm"
+            >
+              了解更多
             </Link>
           </div>
         </div>
