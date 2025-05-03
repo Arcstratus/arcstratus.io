@@ -5,27 +5,37 @@ import Link from "next/link";
 
 export default function Page() {
   return (
-    <main className="container py-16 flex flex-col items-center text-center">
+    <main className="container py-16">
       {/* Hero 區塊：品牌標題與簡介 */}
-      <h1 className="mb-4">諾 🍊 科技</h1>
-      <p className="text-lg md:text-xl mb-6 max-w-xl text-foreground">
-        Hi, 我是文克,
-        <br />
-        一個熱愛科技、喜歡解決問題的雲端架構師。無論你是想打造專屬軟體、建構雲端天地，還是跨入AI的奇幻國度，我都能成為你的最佳拍檔！
-      </p>
-      <div className="flex gap-4 mb-10">
-        <Link
-          href="/contact"
-          className="px-6 py-2 rounded bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition"
-        >
-          聯絡我們
-        </Link>
-        <Link
-          href="/about"
-          className="px-6 py-2 rounded border border-primary text-primary font-semibold hover:bg-accent transition"
-        >
-          了解更多
-        </Link>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center min-h-[70vh] max-w-6xl mx-auto">
+        <div className="text-center md:text-left">
+          <h1 className="mb-4">諾 🍊 科技</h1>
+          <p className="text-lg md:text-xl mb-6 max-w-xl text-foreground mx-auto md:mx-0">
+            Hi, 我是文克,
+            <br />
+            一個熱愛科技、喜歡解決問題的雲端架構師。無論你是想打造專屬軟體、建構雲端天地，還是跨入AI的奇幻國度，我都能成為你的最佳拍檔！
+          </p>
+          <div className="flex gap-4 justify-center md:justify-start">
+            <Link
+              href="/contact"
+              className="px-6 py-2 rounded bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition"
+            >
+              聯絡我們
+            </Link>
+            <Link
+              href="/about"
+              className="px-6 py-2 rounded border border-primary text-primary font-semibold hover:bg-accent transition"
+            >
+              了解更多
+            </Link>
+          </div>
+        </div>
+        <div className="hidden md:block">
+          {/* 右側圖片或裝飾元素 */}
+          <div className="w-full h-full flex items-center justify-center">
+            <div className="size-80 bg-accent rounded-lg shadow-lg flex items-center justify-center"></div>
+          </div>
+        </div>
       </div>
       {/* 精選成果區塊（可選） */}
       <section className="mb-10 w-full max-w-4xl">
