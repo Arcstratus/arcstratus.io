@@ -57,12 +57,11 @@ export default async function RootLayout({
               </Link>
               <div className="flex items-center gap-4">
                 <nav className="hidden md:flex items-center gap-6">
-                  <Link href="/about">關於我們</Link>
-                  <Link href="/how-to-cooperate">如何合作</Link>
-                  <Link href="/showcase">成果展示</Link>
-                  <Link href="/news">新聞</Link>
-                  <Link href="/faq">FAQ</Link>
-                  <Link href="/contact">聯繫</Link>
+                  <Link href="/about">關於諾澄</Link>
+                  <Link href="/showcase">案例作品</Link>
+                  <Link href="/how-to-cooperate">合作模式</Link>
+                  <Link href="/news">最新動態</Link>
+                  <Link href="/contact">連絡我們</Link>
                 </nav>
                 <ThemeToggle />
 
@@ -73,22 +72,19 @@ export default async function RootLayout({
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="end">
                       <DropdownMenuItem asChild>
-                        <Link href="/about">關於我們</Link>
+                        <Link href="/about">關於諾澄</Link>
                       </DropdownMenuItem>
                       <DropdownMenuItem asChild>
-                        <Link href="/how-to-cooperate">如何合作</Link>
+                        <Link href="/showcase">案例作品</Link>
                       </DropdownMenuItem>
                       <DropdownMenuItem asChild>
-                        <Link href="/showcase">成果展示</Link>
+                        <Link href="/how-to-cooperate">合作模式</Link>
                       </DropdownMenuItem>
                       <DropdownMenuItem asChild>
-                        <Link href="/news">新聞</Link>
+                        <Link href="/news">最新動態</Link>
                       </DropdownMenuItem>
                       <DropdownMenuItem asChild>
-                        <Link href="/faq">FAQ</Link>
-                      </DropdownMenuItem>
-                      <DropdownMenuItem asChild>
-                        <Link href="/contact">聯繫</Link>
+                        <Link href="/contact">連絡我們</Link>
                       </DropdownMenuItem>
                     </DropdownMenuContent>
                   </DropdownMenu>
