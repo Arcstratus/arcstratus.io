@@ -13,22 +13,20 @@ export default function Page() {
         <br />
         一個熱愛科技、喜歡解決問題的雲端架構師。無論你是想打造專屬軟體、建構雲端天地，還是跨入AI的奇幻國度，我都能成為你的最佳拍檔！
       </p>
-      {/* 品牌定位區塊 */}
-      <section className="mb-10 max-w-2xl">
-        <div className="bg-card text-card-foreground rounded-lg p-6 border border-border">
-          <h2 className="mb-2 text-primary">品牌定位</h2>
-          <p className="mb-2">
-            <span className="font-bold text-primary">諾澄科技</span>是一家
-            <strong>一人公司</strong>，以彈性、專業為核心，主要尋求
-            <span className="font-bold text-primary">跨領域合作</span>。
-          </p>
-          <p>
-            聚焦於<strong>雲端架構</strong>、<strong>AI</strong>、
-            <strong>軟體產品</strong>及<strong>創意發展</strong>
-            等合作，歡迎企業、初創團隊、個人創作者洽談合作機會。
-          </p>
-        </div>
-      </section>
+      <div className="flex gap-4 mb-10">
+        <Link
+          href="/contact"
+          className="px-6 py-2 rounded bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition"
+        >
+          聯絡我們
+        </Link>
+        <Link
+          href="/about"
+          className="px-6 py-2 rounded border border-primary text-primary font-semibold hover:bg-accent transition"
+        >
+          了解更多
+        </Link>
+      </div>
       {/* 精選成果區塊（可選） */}
       <section className="mb-10 w-full max-w-4xl">
         <h2 className="mb-4 text-primary">精選成果</h2>
