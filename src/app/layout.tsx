@@ -1,5 +1,6 @@
 import { MicrosoftClarity } from "@/components/microsoft-clarity";
 import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import Link from "next/link";
 
@@ -32,13 +33,14 @@ export default async function RootLayout({
               <Link href="/" className="text-2xl font-bold">
                 諾澄科技
               </Link>
-              <nav className="flex gap-6">
+              <nav className="flex items-center gap-6">
                 <Link href="/about">關於我們</Link>
                 <Link href="/how-to-cooperate">如何合作</Link>
                 <Link href="/showcase">成果展示</Link>
                 <Link href="/news">新聞</Link>
                 <Link href="/faq">FAQ</Link>
                 <Link href="/contact">聯繫</Link>
+                <ThemeToggle />
               </nav>
             </div>
           </header>
