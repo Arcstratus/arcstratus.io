@@ -7,7 +7,7 @@ export default function AboutPage() {
       <div className="text-center pt-8">
         <h1 className="text-4xl font-bold mb-4">關於諾 🍊 科技</h1>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-          專注於雲端架構、人工智慧、軟體產品與創意發展的技術公司
+          專注於創意發展、雲端架構與人工智慧的技術公司
         </p>
       </div>
 
@@ -18,7 +18,7 @@ export default function AboutPage() {
             <div>
               <h2 className="text-2xl font-semibold mb-4">關於我們</h2>
               <p className="mb-4">
-                諾澄科技（Arcstratus）以一人公司模式運營，靈活且高效。我們的使命是通過跨領域合作，將技術專業與創意理念結合，協助企業、初創公司及個人創作者實現創新產品與解決方案。
+                諾澄科技（Arcstratus）以一人公司模式運營，靈活且高效。我們希望透過跨領域合作，將技術專業與創意理念結合，協助個人創作者實現創新產品與解決方案。
               </p>
               <p>
                 創辦人擁有超過 10
