@@ -1,42 +1,25 @@
 // 新聞頁面
 // 依照 spec.md，展示最新動態卡片與歷史新聞列表
-import { Card } from "@/components/shadcn/card";
-
 export default function NewsPage() {
   return (
     <main className="container py-8">
-      <h1 className="mb-4">最新消息</h1>
-      <section className="mb-8">
-        <h2 className="mb-2">最新動態</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* 最新新聞卡片 */}
-          <Card>
-            <div className="p-4">
-              <img
-                src="/news/news1.png"
-                alt="諾澄科技與知名設計師合作推出新產品網站 - 2024年6月"
-                className="mb-2 rounded"
-              />
-              <h3 className="mb-1">合作新案上線</h3>
-              <p className="text-foreground">2024-06-01</p>
-              <p className="text-foreground">
-                與知名設計師合作推出新產品網站。
-              </p>
-            </div>
-          </Card>
-          {/* 其他新聞卡片... */}
+      <div className="flex flex-col items-center justify-center min-h-[60vh] text-center">
+        <div className="animate-bounce mb-8">
+          <span className="text-6xl">📰</span>
         </div>
-      </section>
-      <section>
-        <h2 className="mb-2">歷史新聞</h2>
-        <ul className="list-disc pl-6">
-          <li>
-            <span className="font-medium">2024-05-01</span> -{" "}
-            <span className="text-foreground">API 平台正式上線</span>
-          </li>
-          {/* 其他歷史新聞... */}
-        </ul>
-      </section>
+        <h1 className="text-4xl font-bold mb-4">新聞編輯室施工中！</h1>
+        <p className="text-xl text-gray-600 mb-2">
+          我們的記者正在努力準備精彩內容
+        </p>
+        <p className="text-lg text-gray-500">
+          敬請期待，很快就會有最新消息囉！
+        </p>
+        <div className="mt-8 flex gap-2">
+          <span className="animate-spin">✍️</span>
+          <span className="animate-spin delay-75">📝</span>
+          <span className="animate-spin delay-150">📰</span>
+        </div>
+      </div>
     </main>
   );
 }
