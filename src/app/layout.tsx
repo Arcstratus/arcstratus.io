@@ -96,7 +96,7 @@ export default async function RootLayout({
             {children}
           </main>
           <footer className="w-full border-t bg-card text-card-foreground mt-12">
-            <div className="container mx-auto flex flex-col md:flex-row items-center justify-between py-6 gap-2">
+            <div className="container mx-auto flex flex-col md:flex-row items-center justify-between p-4 gap-2">
               <div className="text-sm text-gray-500">
                 &copy; 2025 諾澄科技 All rights reserved.
               </div>
