@@ -1,53 +1,34 @@
 import { StickyScroll } from "@/components/aceternity/sticky-scroll-reveal";
 import Link from "next/link";
+import ArcstratusCase from "./arcstratus-case";
+import CtaCase from "./cta-case";
+import IslandVoiceCase from "./island-voice-case";
 
 const content = [
   {
-    title: "Collaborative Editing",
+    title: "諾🍊科技官網：我們的數位名片，我們有梗！",
     description:
-      "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
+      "是的，你正在逛的這個網站就是Vibe coding之作！ 使用Next.js和TailwindCSS打造，試圖展現雲端與創意的火花。你是UI/UX設計師嗎？救救AI吧。",
+    content: <ArcstratusCase />,
+  },
+  {
+    title: "島語存真",
+    description:
+      "記錄台灣公眾人物的言行、截圖和影片，打造一個透明、可信的存檔平台，保存台灣的真實聲音",
     content: (
-      <Link href="/">
-        <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] text-whit">
-          Collaborative Editing
-        </div>
+      <a href="https://www.island-voice.com" target="_blank">
+        <IslandVoiceCase />
+      </a>
+    ),
+  },
+  {
+    title: "還在猶豫嗎？",
+    description:
+      "正在計畫你的夢想？想要有人一起討論嗎？沒問題！來跟我們跟你的瘋狂創意！讓我們一起讓它成真吧！",
+    content: (
+      <Link href="/contact">
+        <CtaCase />
       </Link>
-    ),
-  },
-  {
-    title: "Real time changes",
-    description:
-      "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
-    content: (
-      <div className="flex h-full w-full items-center justify-center text-white">
-        <img
-          src="/linear.webp"
-          width={300}
-          height={300}
-          className="h-full w-full object-cover"
-          alt="linear board demo"
-        />
-      </div>
-    ),
-  },
-  {
-    title: "Version control",
-    description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
-    content: (
-      <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] text-white">
-        Version control
-      </div>
-    ),
-  },
-  {
-    title: "Running out of content",
-    description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
-    content: (
-      <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] text-white">
-        Running out of content
-      </div>
     ),
   },
 ];

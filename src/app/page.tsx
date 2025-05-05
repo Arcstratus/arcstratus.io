@@ -148,7 +148,7 @@ export default function Page() {
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-primary">我們做了什麼？</h2>
           <Link
-            href="/products"
+            href="/showcase"
             className="text-primary hover:underline text-sm"
           >
             查看所有成果 →

@@ -6,14 +6,12 @@ import React, { useRef } from "react";
 
 export const StickyScroll = ({
   content,
-  contentClassName,
 }: {
   content: {
     title: string;
     description: string;
     content?: React.ReactNode | any;
   }[];
-  contentClassName?: string;
 }) => {
   const [activeCard, setActiveCard] = React.useState(0);
   const ref = useRef<any>(null);
@@ -58,13 +56,12 @@ export const StickyScroll = ({
                 <motion.p
                   initial={{ opacity: 0 }}
                   animate={{ opacity: activeCard === index ? 1 : 0 }}
-                  className="mt-10 max-w-sm"
+                  className="mt-10 max-w-sm min-h-64"
                 >
                   {item.description}
                 </motion.p>
               </div>
             ))}
-            <div className="h-16" />
           </div>
         </div>
 
