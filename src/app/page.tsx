@@ -76,21 +76,23 @@ const NewsCard = ({
 export default function Page() {
   const showcaseItems = [
     {
-      title: "Next.js 品牌網站",
-      description: "現代化響應式網站，支援 SEO 與靜態生成。",
+      title: "諾🍊科技官網",
+      description:
+        "使用 Next.js 和 TailwindCSS 打造的現代化響應式網站，展現雲端與創意的火花。",
       tags: ["Next.js", "TypeScript", "Tailwind CSS"],
       link: "/showcase",
     },
     {
-      title: "AI 聊天機器人平台",
-      description: "結合 FastAPI 與 AWS，打造可擴展的 AI 服務。",
-      tags: ["FastAPI", "AWS", "Python"],
-      link: "/showcase",
+      title: "島語存真",
+      description:
+        "記錄台灣公眾人物的言行、截圖和影片，打造一個透明、可信的存檔平台。",
+      tags: ["Vercel", "Railway", "Python", "TypeScript"],
+      link: "https://www.island-voice.com",
     },
     {
-      title: "雲端監控系統",
-      description: "即時監控與分析系統，提供完整的雲端資源管理。",
-      tags: ["AWS", "Grafana", "Terraform"],
+      title: "即將發佈",
+      description: "敬請期待我們的下一個精彩作品！",
+      tags: ["Prometheus", "Grafana", "Go", "Terraform"],
       link: "/showcase",
     },
   ];
