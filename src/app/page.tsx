@@ -60,14 +60,15 @@ const NewsCard = ({
           </p>
         </div>
         <Link
-          href={link}
-          className="text-primary hover:underline text-sm mt-auto"
+          href=""
+          scroll={false}
+          className="text-primary/30 hover:cursor-not-allowed hover:underline text-sm mt-auto"
         >
           閱讀更多
         </Link>
       </div>
       <div className="hidden xl:block">
-        <div className="size-64 bg-accent rounded-lg"></div>
+        <div className="size-32 bg-accent rounded-lg"></div>
       </div>
     </div>
   </div>
@@ -99,16 +100,22 @@ export default function Page() {
 
   const newsItems = [
     {
-      date: "2024-06-01",
-      title: "合作新案上線",
-      description: "與知名設計師合作推出新產品網站。",
-      link: "/news",
+      date: "2024-04-20",
+      title: "島語存真開始測試",
+      description: "記錄台灣公眾人物言行的平台開始進行測試階段。",
+      link: "https://www.island-voice.com",
     },
     {
-      date: "2024-05-01",
-      title: "API 平台正式上線",
-      description: "API 平台支援多雲部署，提升彈性。",
-      link: "/news",
+      date: "2024-03-25",
+      title: "官網上線",
+      description: "使用 Vibe Coding 打造的網站正式上線。",
+      link: "/showcase",
+    },
+    {
+      date: "2024-03-20",
+      title: "諾🍊科技成立",
+      description: "專注於創意發展、雲端架構與人工智慧的公司正式成立。",
+      link: "/about",
     },
   ];
 
